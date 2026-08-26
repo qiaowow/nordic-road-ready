@@ -17,7 +17,7 @@
     "sync:manifest": "node scripts/sync-manifest.mjs",
     "package:project": "pwsh -NoProfile -File scripts/package-project.ps1",
     "package:research": "pwsh -NoProfile -File scripts/package-research.ps1",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern pages-dist --ignore-pattern .next",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern pages-dist --ignore-pattern outputs --ignore-pattern .next",
     "typecheck": "tsc --noEmit",
     "db:generate": "drizzle-kit generate"
   },
