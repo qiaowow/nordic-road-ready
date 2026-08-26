@@ -34,11 +34,11 @@ button,a { font:inherit; } button { color:inherit; }
 .text-action { border:0; border-bottom:1px solid var(--ink); padding:0 0 4px; background:transparent; font-size:13px; cursor:pointer; }
 .country-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
 .country-card { min-height:210px; position:relative; isolation:isolate; padding:25px; overflow:hidden; border:1px solid rgba(255,255,255,.18); border-radius:22px; color:#fff; background-color:#173128; background-size:cover; background-position:center; box-shadow:0 12px 30px rgba(19,34,29,.12); text-shadow:0 1px 12px rgba(0,0,0,.32); }
-.country-card::after { content:""; position:absolute; z-index:0; inset:0; background:linear-gradient(105deg,rgba(8,24,18,.9) 0%,rgba(8,24,18,.74) 56%,rgba(8,24,18,.58) 100%); }
+.country-card::after { content:""; position:absolute; z-index:0; inset:0; background:linear-gradient(90deg,rgba(8,24,18,.76) 0%,rgba(8,24,18,.5) 38%,rgba(8,24,18,.16) 72%,rgba(8,24,18,.04) 100%),linear-gradient(0deg,rgba(5,16,12,.5) 0%,rgba(5,16,12,.08) 48%,rgba(5,16,12,0) 72%); }
 .country-card > * { position:relative; z-index:1; }
-.country-card.norway { background-image:url("/assets/photos/norway/norway-tindevegen-hurrungbotn.webp"); background-position:center 52%; }
-.country-card.iceland { background-image:url("/assets/photos/iceland/iceland-landmannaleid-f225.webp"); background-position:center 58%; }
-.country-card.iceland::after { background:linear-gradient(105deg,rgba(27,17,13,.9) 0%,rgba(27,17,13,.74) 56%,rgba(27,17,13,.58) 100%); }
+.country-card.norway { background-image:url("/assets/photos/norway/norway-tindevegen-hurrungbotn.webp"); background-position:center 44%; }
+.country-card.iceland { background-image:url("/assets/photos/iceland/iceland-landmannaleid-f225.webp"); background-position:center 32%; }
+.country-card.iceland::after { background:linear-gradient(90deg,rgba(27,17,13,.74) 0%,rgba(27,17,13,.48) 38%,rgba(27,17,13,.14) 72%,rgba(27,17,13,.03) 100%),linear-gradient(0deg,rgba(20,12,9,.5) 0%,rgba(20,12,9,.08) 48%,rgba(20,12,9,0) 72%); }
 .country-code { width:34px; height:24px; display:grid; place-items:center; border:1px solid rgba(255,255,255,.78); border-radius:5px; background:rgba(0,0,0,.18); font:800 10px var(--font-geist-mono); backdrop-filter:blur(5px); }
 .country-card p { margin:24px 0 4px; opacity:.8; font-size:12px; } .country-card h3 { margin:0; font-size:27px; }
 .card-footer { position:absolute; left:25px; right:25px; bottom:22px; display:flex; justify-content:space-between; align-items:center; font-size:13px; }
