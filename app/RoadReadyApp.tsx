@@ -30,6 +30,76 @@ const categoryName: Record<string, string> = {
   vehicles: "车辆",
 };
 
+const categoryOrder: Question["category"][] = [
+  "safety",
+  "priority",
+  "speed",
+  "lights",
+  "signs",
+  "parking",
+  "tolls",
+  "weather",
+  "vehicles",
+];
+
+const foundationQuestionIds = [
+  "no-seatbelts",
+  "is-seatbelts",
+  "is-child-seat",
+  "is-handsfree",
+  "no-alcohol-breath",
+  "is-alcohol-threshold",
+  "no-roundabout-yield",
+  "no-roundabout-lane",
+  "is-roundabout",
+  "p3-no-bus-leaving-stop",
+  "p3-no-turning-yield-users",
+  "p3-no-overtaking-side-and-ban",
+  "p3-no-cyclist-pedestrian-crossing",
+  "p3-is-single-lane-bridge-priority",
+  "p3-is-cyclist-clearance",
+  "no-speed-default",
+  "is-urban-speed",
+  "is-gravel-speed",
+  "no-lights-tunnel",
+  "is-lights",
+] as const;
+
+const learningStages = [
+  { id: "basics", number: "01", title: "基本交规", copy: "安全、让行、限速与灯光" },
+  { id: "signs", number: "02", title: "官方标志", copy: "认识两国真实道路标志" },
+  { id: "local", number: "03", title: "地区规则", copy: "处罚、停车、收费与路况" },
+  { id: "scenarios", number: "04", title: "开放情境", copy: "游客踩坑与进阶判断" },
+] as const;
+
+type LearningStage = (typeof learningStages)[number]["id"];
+
+function getLearningStage(question: Question): LearningStage {
+  if ((foundationQuestionIds as readonly string[]).includes(question.id)) return "basics";
+  if (question.category === "signs") return "signs";
+  if (question.difficulty === "advanced") return "scenarios";
+  return "local";
+}
+
+function compareCurriculum(a: Question, b: Question) {
+  const stageDifference = learningStages.findIndex((stage) => stage.id === getLearningStage(a))
+    - learningStages.findIndex((stage) => stage.id === getLearningStage(b));
+  if (stageDifference) return stageDifference;
+  if (getLearningStage(a) === "basics") {
+    return foundationQuestionIds.indexOf(a.id as (typeof foundationQuestionIds)[number])
+      - foundationQuestionIds.indexOf(b.id as (typeof foundationQuestionIds)[number]);
+  }
+  const categoryDifference = categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category);
+  if (categoryDifference) return categoryDifference;
+  if (a.tripPriority !== b.tripPriority) return a.tripPriority - b.tripPriority;
+  if (a.country !== b.country) return a.country === "NO" ? -1 : 1;
+  return a.id.localeCompare(b.id);
+}
+
+function learningStageName(question: Question) {
+  return learningStages.find((stage) => stage.id === getLearningStage(question))?.title ?? "课程";
+}
+
 function shuffled<T>(items: T[]) {
   const copy = [...items];
   for (let index = copy.length - 1; index > 0; index -= 1) {
@@ -77,6 +147,10 @@ export function RoadReadyApp({
     () => questions.filter((question) => question.status === "published"),
     [questions],
   );
+  const orderedPublished = useMemo(
+    () => [...published].sort(compareCurriculum),
+    [published],
+  );
   const [view, setView] = useState<View>("home");
   const [country, setCountry] = useState<CountryFilter>("ALL");
   const [category, setCategory] = useState<CategoryFilter>("ALL");
@@ -104,14 +178,14 @@ export function RoadReadyApp({
   }, [published]);
 
   const filtered = useMemo(
-    () => published.filter((question) =>
+    () => orderedPublished.filter((question) =>
       (country === "ALL" || question.country === country) &&
       (category === "ALL" || question.category === category),
     ),
-    [category, country, published],
+    [category, country, orderedPublished],
   );
   const availableCategories = useMemo(
-    () => Array.from(new Set(published.map((question) => question.category))),
+    () => categoryOrder.filter((item) => published.some((question) => question.category === item)),
     [published],
   );
   const dueIds = useMemo(
@@ -142,14 +216,18 @@ export function RoadReadyApp({
     void saveProgress(next);
   }
 
-  function startQuiz(mode: "trip" | "country" | "exam" | "review" | "all-wrong" | "favorites") {
+  function startQuiz(mode: "course" | "country" | "exam" | "review" | "all-wrong" | "favorites") {
     let pool = filtered;
-    if (mode === "trip") pool = [...published].sort((a, b) => a.tripPriority - b.tripPriority);
+    if (mode === "course") {
+      const pending = orderedPublished.filter((question) => !progress.completedIds.includes(question.id));
+      const completed = orderedPublished.filter((question) => progress.completedIds.includes(question.id));
+      pool = [...pending, ...completed];
+    }
     if (mode === "review") pool = published.filter((question) => dueIds.includes(question.id) || refreshDueIds.includes(question.id));
     if (mode === "all-wrong") pool = published.filter((question) => question.id in progress.wrong);
     if (mode === "favorites") pool = published.filter((question) => progress.favorites.includes(question.id));
-    if (mode !== "trip") pool = shuffled(pool);
-    const limit = mode === "exam" ? 40 : mode === "trip" ? 10 : 12;
+    if (mode !== "course") pool = shuffled(pool);
+    const limit = mode === "exam" ? 40 : mode === "course" ? 10 : 12;
     setQuizIds(pool.slice(0, limit).map((question) => question.id));
     setQuizIndex(0);
     setQuizCorrect(0);
@@ -257,9 +335,9 @@ export function RoadReadyApp({
           <section className="hero-card">
             <div>
               <p className="hero-kicker">2026 · 挪威 9月下旬 / 冰岛 10月上旬</p>
-              <h1>今天先避开<br />最贵的 5 个坑</h1>
-              <p className="hero-copy">依据两国官方现行规则，优先学习停车、收费、灯光与秋季路况。</p>
-              <button className="primary-action" type="button" onClick={() => startQuiz("trip")}>
+              <h1>先打牢基础<br />再避开高价坑</h1>
+              <p className="hero-copy">先学安全、让行、限速和灯光，再认官方标志，最后进入两国地区规则与旅行情境。</p>
+              <button className="primary-action" type="button" onClick={() => startQuiz("course")}>
                 开始今日学习 <span>→</span>
               </button>
             </div>
@@ -329,6 +407,15 @@ export function RoadReadyApp({
               </button>
             ))}
           </div>
+          <ol className="curriculum-order" aria-label="推荐学习顺序">
+            {learningStages.map((stage) => (
+              <li key={stage.id}>
+                <span>{stage.number}</span>
+                <strong>{stage.title}</strong>
+                <small>{stage.copy}</small>
+              </li>
+            ))}
+          </ol>
           <p className="filter-result">当前筛选 {filtered.length} 道</p>
           <div className="lesson-list">
             {filtered.slice(0, visibleLessonCount).map((question, index) => {
@@ -351,6 +438,7 @@ export function RoadReadyApp({
                   )}
                   <div className="lesson-body">
                     <div className="tag-line">
+                      <span className="stage-tag">{learningStageName(question)}</span>
                       <span>{countryName[question.country]}</span>
                       <span>{categoryName[question.category] ?? question.category}</span>
                       {question.tripPriority <= 30 && <span className="priority-tag">本次必学</span>}
@@ -391,6 +479,7 @@ export function RoadReadyApp({
                 <strong>{quizIndex + 1}/{quizQuestions.length}</strong>
               </div>
               <div className="question-meta">
+                <span>{learningStageName(currentQuestion)}</span>
                 <span>{countryName[currentQuestion.country]}</span>
                 <span>{categoryName[currentQuestion.category]}</span>
                 <button onClick={() => toggleFavorite(currentQuestion.id)}>
