@@ -113,6 +113,9 @@ button,a { font:inherit; } button { color:inherit; }
 .stats-row div { display:flex; align-items:baseline; gap:8px; padding:18px 20px; background:rgba(255,253,248,.72); }
 .stats-row strong { font-size:24px; letter-spacing:-.05em; } .stats-row span { color:var(--muted); font-size:11px; }
 .country-card { text-align:left; cursor:pointer; }
+.country-card { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; gap: 6px; }
+.country-card .country-code { margin-bottom: auto; }
+.country-card .card-footer { position: static; width: 100%; }
 .risk-strip { width:100%; color:inherit; background:transparent; text-align:left; cursor:pointer; }
 .risk-strip > span:nth-child(2) { display:grid; gap:4px; }
 .risk-strip small { color:var(--muted); font-size:11px; } .risk-strip strong { display:block; }
@@ -229,4 +232,11 @@ button,a { font:inherit; } button { color:inherit; }
   .source-list a { grid-template-columns:32px 1fr auto; padding:14px; }
   .pretrip-checklist a,.pretrip-checklist button { grid-template-columns:1fr auto; gap:6px; }
   .pretrip-checklist span { grid-column:1; } .pretrip-checklist strong { grid-column:1; } .pretrip-checklist b { grid-column:2; grid-row:1/3; }
+}
+
+@media (max-width: 600px) {
+  .country-grid { grid-template-columns: 1fr; gap: 16px; }
+  .country-card { min-height: 225px; padding: 24px; }
+  .country-card p { font-size: 14px; margin-top: 16px; }
+  .country-card .card-footer { font-size: 14px; }
 }
