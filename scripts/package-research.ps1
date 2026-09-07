@@ -1,5 +1,5 @@
 param(
-  [string]$OutputPath = "deliverables/research-archive-2026-08-18.zip"
+  [string]$OutputPath = "deliverables/research-archive-2026-09-07.zip"
 )
 
 $projectRoot = Split-Path -Parent $PSScriptRoot

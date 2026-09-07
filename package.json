@@ -1,6 +1,6 @@
 {
   "name": "nordic-road-ready",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "engines": {
     "node": ">=22.13.0"
@@ -10,7 +10,7 @@
     "build": "vinext build",
     "build:pages": "vite build --config vite.pages.config.ts",
     "start": "vinext start",
-    "test": "node scripts/validate-content.mjs && npm run lint && npm run typecheck && npm run build && node --test tests/rendered-html.test.mjs tests/learning.test.ts",
+    "test": "npm run test:pages",
     "test:content": "node scripts/validate-content.mjs",
     "archive:sources": "node scripts/archive-sources.mjs",
     "merge:assets": "node scripts/merge-research-assets.mjs",
@@ -19,7 +19,11 @@
     "package:research": "pwsh -NoProfile -File scripts/package-research.ps1",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern pages-dist --ignore-pattern outputs --ignore-pattern .next",
     "typecheck": "tsc --noEmit",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "test:unit": "node --test tests/learning.test.ts tests/curriculum.test.ts tests/offline.test.mjs",
+    "test:pages": "npm run test:content && npm run lint && npm run typecheck && npm run test:unit && npm run build:pages && node --test tests/pages.test.mjs",
+    "test:research": "node scripts/validate-content.mjs --research",
+    "test:sites": "npm run build && node --test tests/rendered-html.test.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

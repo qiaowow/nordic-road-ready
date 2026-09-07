@@ -127,10 +127,27 @@ function main() {
     return;
   }
 
+  const evidenceIndex = readJson(path.join(dataRoot,"evidence-index.json"));
+  for (const r of [...evidenceIndex.records,...evidenceIndex.originals]) {
+    const file=path.resolve(defaultRoot,r.path);
+    if(!file.startsWith(defaultRoot+path.sep)) {add(errors,"Unsafe evidence path: "+r.path);continue;}
+    if(fs.existsSync(file)) {
+      const actual=crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex");
+      if(actual!==r.sha256) add(errors,"Evidence archive changed: "+r.id);
+    } else if(argv.includes("--research")) add(errors,"Missing research archive: "+r.path);
+  }
+  const course=readJson(path.join(dataRoot,"course.json"));
+  const curriculumIds=course.chapters.flatMap(c=>c.questionIds);
+  const actualPublished=questions.filter(q=>q.status==="published");
+  if(new Set(curriculumIds).size!==curriculumIds.length || actualPublished.some(q=>!curriculumIds.includes(q.id)) || curriculumIds.some(id=>!actualPublished.some(q=>q.id===id))) add(errors,"Curriculum must assign each published question exactly once");
+  for(const q of actualPublished) {
+   if(/两份官方来源均覆盖|恢复档中的两份|另一个官方图示/.test(q.explanation+" "+q.options.map(o=>o.text).join(" ")))add(errors,"Generic non-teaching text remains: "+q.id);
+   for(const id of q.comparisonAssetIds||[])if(!assets.some(a=>a.id===id&&a.country===q.country))add(errors,"Invalid comparison asset: "+q.id);
+  }
   const questionIds = checkUnique(questions, "questions", errors);
   const sourceIds = checkUnique(sources, "sources", errors);
   const assetIds = checkUnique(assets, "assets", errors);
-  const phase3FactsPath = path.join(defaultRoot, "research", "official-sources-phase3.json");
+  const phase3FactsPath = path.join(dataRoot, "phase3-facts.json");
   const phase3Facts = fs.existsSync(phase3FactsPath) ? readJson(phase3FactsPath).facts ?? [] : [];
   const phase3FactById = new Map(phase3Facts.map((fact) => [fact.id, fact]));
   const countries = new Set(["NO", "IS"]);
@@ -138,7 +155,7 @@ function main() {
   const questionTypes = new Set(["single_choice", "multiple_choice", "true_false", "image_choice"]);
   const categories = new Set(["priority", "signs", "speed", "lights", "safety", "weather", "parking", "tolls", "vehicles"]);
   const riskTypes = new Set(["safety-critical", "seasonal", "cost", "navigation", "general"]);
-  const sourceTypes = new Set(["official-guidance", "official-law", "road-authority", "public-safety", "licensed-media"]);
+  const sourceTypes = new Set(["official-guidance", "official-law", "road-authority", "public-safety", "licensed-media", "operator-contract"]);
   const authorityLevels = new Set(["government", "road-authority", "official-safety", "secondary"]);
   const archiveStatuses = new Set(["snapshot", "evidence-record", "missing"]);
   const assetTypes = new Set(["image", "icon", "diagram"]);
@@ -232,13 +249,14 @@ function main() {
     if (question.status === "published") {
       published.push(question);
       countryPublished.set(question.country, (countryPublished.get(question.country) || 0) + 1);
-      const normalizedPrompt = question.prompt.toLocaleLowerCase("zh-CN").replace(/[\p{P}\p{S}\s]+/gu, "");
+      const normalizedPrompt = question.prompt.toLocaleLowerCase("zh-CN").replace(/[\p{P}\p{S}\s]+/gu, "") + (question.type === "image_choice" ? ":" + question.assetIds.join("|") : "");
       if (publishedPrompts.has(normalizedPrompt)) {
         add(errors, `${label} duplicates published prompt from ${publishedPrompts.get(normalizedPrompt)}`);
       } else publishedPrompts.set(normalizedPrompt, question.id);
-      if (!Array.isArray(question.sourceIds) || new Set(question.sourceIds).size < 2) add(errors, `${label} must cite at least two distinct sources`);
+      if (!Array.isArray(question.sourceIds) || new Set(question.sourceIds).size < 2 && question.evidencePolicy !== "primary-original") add(errors, `${label} must cite at least two distinct sources`);
       const countrySources = (question.sourceIds || []).map((id) => sources.find((source) => source.id === id)).filter(Boolean);
-      if (new Set(countrySources.map((source) => source.url)).size < 2) add(errors, `${label} must cite at least two distinct source URLs`);
+      if (new Set(countrySources.map((source) => source.url)).size < 2 && question.evidencePolicy !== "primary-original") add(errors, `${label} must cite at least two distinct source URLs`);
+      if (question.evidencePolicy === "primary-original" && !countrySources.some(s=>s.archiveStatus==="snapshot" && (["government","road-authority","official-safety"].includes(s.authorityLevel) || s.sourceType==="operator-contract"))) add(errors, `${label} primary-original requires an archived primary authority`);
       if (countrySources.some((source) => source.country !== question.country)) add(errors, `${label} cites a source from another country`);
       if (!countrySources.every((source) => source.claimCoverage?.includes(question.id))) add(errors, `${label} has a cited source without claimCoverage for this question`);
     }
@@ -252,6 +270,8 @@ function main() {
     if (!sourceTypes.has(source.sourceType)) add(errors, `${label}.sourceType is unsupported: ${source.sourceType}`);
     if (!authorityLevels.has(source.authorityLevel)) add(errors, `${label}.authorityLevel is unsupported: ${source.authorityLevel}`);
     if (typeof source.url !== "string" || !/^https:\/\//.test(source.url)) add(errors, `${label}.url must be an https URL`);
+    const evidence=evidenceIndex.records.find(r=>r.id===source.id);
+    if(!evidence || evidence.sha256?.toLowerCase()!==source.sha256.toLowerCase())add(errors,`${label} archive index/hash mismatch`);
     checkDate(source.accessedAt, `${label}.accessedAt`, errors);
     if (source.publishedAt !== undefined) checkDate(source.publishedAt, `${label}.publishedAt`, errors);
     if (source.publishedAt && source.publishedAt > source.accessedAt) add(errors, `${label}.publishedAt cannot be after accessedAt`);
@@ -294,7 +314,10 @@ function main() {
     if (asset.originalArchivePath !== undefined && (typeof asset.originalArchivePath !== "string" || !asset.originalArchivePath.trim() || asset.originalArchivePath.includes(".."))) add(errors, `${label}.originalArchivePath must be a safe non-empty relative path`);
     if (typeof asset.originalArchivePath === "string" && asset.originalArchivePath.trim() && !asset.originalArchivePath.includes("..")) {
       const originalAssetPath = path.resolve(defaultRoot, asset.originalArchivePath);
-      if (!fs.existsSync(originalAssetPath)) add(errors, `${label}.originalArchivePath does not exist: ${asset.originalArchivePath}`);
+      if (!fs.existsSync(originalAssetPath)) {
+        const archived=evidenceIndex.originals.find(x=>x.id===asset.id);
+        if(!archived || archived.sha256.toLowerCase()!==asset.sha256.toLowerCase() || argv.includes("--research")) add(errors,`${label} original archive/hash record is missing`);
+      }
       else {
         const originalHash = crypto.createHash("sha256").update(fs.readFileSync(originalAssetPath)).digest("hex");
         if (originalHash.toLowerCase() !== asset.sha256.toLowerCase()) add(errors, `${label}.sha256 does not match the preserved original file`);

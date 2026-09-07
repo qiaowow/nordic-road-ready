@@ -46,8 +46,8 @@ test("keeps the offline implementation and starter cleanup explicit", async () =
     readFile(new URL("../package.json", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
   ]);
-  assert.match(serviceWorker, /CACHE_VERSION/);
-  assert.match(serviceWorker, /caches\.match/);
+  assert.match(serviceWorker, /PREFIX/);
+  assert.match(serviceWorker, /cache\.match/);
   assert.match(layout, /PwaBootstrap/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   await assert.rejects(access(new URL("../app/_sites-preview/SkeletonPreview.tsx", import.meta.url)));

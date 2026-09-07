@@ -1,0 +1,491 @@
+{
+  "updatedAt": "2026-09-07",
+  "topics": [
+    {
+      "title": "基础让行与指挥",
+      "status": "已覆盖",
+      "questionIds": [
+        "audit-no-right-priority",
+        "audit-is-right-priority",
+        "audit-no-exit-property",
+        "audit-is-exit-property",
+        "audit-no-instructions"
+      ],
+      "note": "分国家解释右方优先与特殊驶出地点。"
+    },
+    {
+      "title": "信号与标线",
+      "status": "部分覆盖",
+      "questionIds": [
+        "audit-is-yellow",
+        "audit-is-solid-line",
+        "audit-no-instructions"
+      ],
+      "note": "已增加基本信号/实线规则。复杂标线与组合副牌尚无逐图核验材料，不用其他国家图代替。"
+    },
+    {
+      "title": "停车实操",
+      "status": "部分覆盖",
+      "questionIds": [
+        "audit-is-meter",
+        "audit-is-garage",
+        "no-parking-scope"
+      ],
+      "note": "市政计时机、车库和标志范围已覆盖；其他城市/私人场所依现场规则，组合牌实景暂不冒充已覆盖。"
+    },
+    {
+      "title": "城市钉胎费",
+      "status": "部分覆盖",
+      "questionIds": [
+        "audit-no-oslo-studs"
+      ],
+      "note": "核验了奥斯陆 2026–2027 季；卑尔根等城市未逐个复核，不能套用奥斯陆金额。"
+    },
+    {
+      "title": "隧道及道路费用",
+      "status": "已覆盖核心流程",
+      "questionIds": [
+        "is-vadla-pay-window",
+        "is-vadla-overdue-payment",
+        "is-horna-auto-toll",
+        "audit-is-horna-rental-window"
+      ],
+      "note": "两处支付窗口分开，税费/通行费/合同手续费分开。隧道新增支付机细节尚未确认，不设计分题。"
+    },
+    {
+      "title": "租车保险与公里费",
+      "status": "已覆盖核对方法",
+      "questionIds": [
+        "audit-is-insurance-contract",
+        "is-rental-daily-fee-mode",
+        "is-km-light-rate"
+      ],
+      "note": "供应商实例只解释合同差异，不作对所有公司或用户保单的承诺。"
+    },
+    {
+      "title": "临时施工、实时开放",
+      "status": "需当日核查",
+      "questionIds": [
+        "is-hval-temp-speed",
+        "is-road-check",
+        "no-road-check"
+      ],
+      "note": "旧施工限速暂停计分；天气和道路开放不能由离线题库替代。"
+    }
+  ],
+  "community": [
+    {
+      "id": "IC-01",
+      "platform": "Reddit",
+      "title": "If you are too scared to drive the speed limit, don't rent a car. Get a tour.",
+      "url": "https://www.reddit.com/r/VisitingIceland/comments/1v97y5t/if_you_are_too_scared_to_drive_the_speed_limit/",
+      "questionIds": [
+        "is-gravel-speed"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-02",
+      "platform": "Reddit",
+      "title": "Yellow Alert for Blizzard Conditions and road closures between Reykjavík and Höfn",
+      "url": "https://www.reddit.com/r/VisitingIceland/comments/1q7bkvd/yellow_alert_for_blizzard_conditions_and_road/",
+      "questionIds": [
+        "is-road-check",
+        "is-closed-road"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-03",
+      "platform": "Reddit",
+      "title": "PSA: Winter is here! Or the story of how I ended up hosting dinner for 10 tourists.",
+      "url": "https://www.reddit.com/r/VisitingIceland/comments/1oj511w/psa_winter_is_here_or_the_story_of_how_i_ended_up/",
+      "questionIds": [
+        "is-road-check"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-04",
+      "platform": "Reddit",
+      "title": "Do I need 4x4 for winter Iceland if we want to drive only the main roads?",
+      "url": "https://www.reddit.com/r/VisitingIceland/comments/1p8dnxh/do_i_need_4x4_for_winter_iceland_if_we_want_to/",
+      "questionIds": [
+        "is-froad"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-05",
+      "platform": "Reddit",
+      "title": "Driving in Iceland — everything I wish every visitor knew before renting a car",
+      "url": "https://www.reddit.com/r/VisitingIceland/comments/1rlfawr/driving_in_iceland_everything_i_wish_every/",
+      "questionIds": [
+        "is-roundabout",
+        "is-lights"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-06",
+      "platform": "Reddit",
+      "title": "Don’t make my $4500 mistake. Get the best rental car insurance the company offers!",
+      "url": "https://www.reddit.com/r/VisitingIceland/comments/1fgk1i3/dont_make_my_4500_mistake_get_the_best_rental_car/",
+      "questionIds": [
+        "audit-is-insurance-contract"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-07",
+      "platform": "Reddit",
+      "title": "Don’t drive into the Icelandic F-Roads in the snow",
+      "url": "https://www.reddit.com/r/VisitingIceland/comments/1ou70ra/psa_dont_drive_into_the_icelandic_froads_in_the/",
+      "questionIds": [
+        "is-closed-road",
+        "is-froad"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-08",
+      "platform": "Reddit",
+      "title": "Logistics, tips, tricks after 7 day summer campervan trip",
+      "url": "https://www.reddit.com/r/VisitingIceland/comments/cc306w/logistics_tips_tricks_after_7_day_summer/",
+      "questionIds": [
+        "p3-is-camper-overnight-permission"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-09",
+      "platform": "Xiaohongshu",
+      "title": "冰岛自驾❌被罚款",
+      "url": "https://www.xiaohongshu.com/search_result/6994d019000000000a02e30b",
+      "questionIds": [
+        "is-parking-towed"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-10",
+      "platform": "Xiaohongshu",
+      "title": "🚗 冰岛自驾避坑指南 👉交通篇",
+      "url": "https://www.xiaohongshu.com/search_result/68ace413000000001d01aa1d",
+      "questionIds": [
+        "is-vadla-pay-window"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-11",
+      "platform": "Xiaohongshu",
+      "title": "🚗 冰岛自驾避坑指南 👉交通篇（停车/罚单部分）",
+      "url": "https://www.xiaohongshu.com/search_result/68ace413000000001d01aa1d",
+      "questionIds": [
+        "audit-is-meter"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-12",
+      "platform": "Xiaohongshu",
+      "title": "冰岛自驾｜爆胎经历和保险避坑指南",
+      "url": "https://www.xiaohongshu.com/search_result/68f07b58000000000301bba3",
+      "questionIds": [
+        "audit-is-insurance-contract"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-13",
+      "platform": "Xiaohongshu",
+      "title": "冰岛内陆高地自驾 车陷了（拖车1.8wrmb版）",
+      "url": "https://www.xiaohongshu.com/search_result/6a3d8bf600000000060363a3",
+      "questionIds": [
+        "p3-is-unbridged-river-crossing"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-14",
+      "platform": "Xiaohongshu",
+      "title": "冰岛自驾❌罚款的停车定位Part2",
+      "url": "https://www.xiaohongshu.com/search_result/6994d664000000000a03c547",
+      "questionIds": [
+        "is-parking-towed"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-15",
+      "platform": "Tripadvisor",
+      "title": "Renting Car for F-Roads",
+      "url": "https://www.tripadvisor.com/ShowTopic-g189952-i223-k11323914-Renting_Car_for_F_Roads-Iceland.html",
+      "questionIds": [
+        "is-froad"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-16",
+      "platform": "Tripadvisor",
+      "title": "car rental insurance",
+      "url": "https://www.tripadvisor.com/ShowTopic-g189952-i223-k13607087-Car_rental_insurance-Iceland.html",
+      "questionIds": [
+        "audit-is-insurance-contract"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-17",
+      "platform": "Tripadvisor",
+      "title": "Gravel Roads Question",
+      "url": "https://www.tripadvisor.com/ShowTopic-g189970-i594-k2223368-Gravel_Roads_Question-Reykjavik_Capital_Region.html",
+      "questionIds": [
+        "is-gravel-speed"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "IC-18",
+      "platform": "Tripadvisor",
+      "title": "Driving & Rental Car in Iceland Tips?",
+      "url": "https://www.tripadvisor.com/ShowTopic-g189970-i594-k12627131-Driving_Rental_Car_in_Iceland_Tips-Reykjavik_Capital_Region.html",
+      "questionIds": [
+        "is-roundabout",
+        "is-livestock"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-01",
+      "platform": "Reddit",
+      "title": "Did a month long roadtrip through Norway drove from London to see some snow",
+      "url": "https://www.reddit.com/r/Norway/comments/1inz1ih/did_a_month_long_roadtrip_through_norway_drove/",
+      "questionIds": [
+        "no-road-check",
+        "no-road-toll-foreign-car"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-02",
+      "platform": "Reddit",
+      "title": "What's the best way to pay tolls and ferries with a foreign rental car?",
+      "url": "https://www.reddit.com/r/Norway/comments/var7i2/whats_the_best_way_to_pay_tolls_and_ferries_with/",
+      "questionIds": [
+        "no-road-toll-foreign-car",
+        "p3-no-ferry-without-tag"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-03",
+      "platform": "Reddit",
+      "title": "Parking Ticket on a Rental Car",
+      "url": "https://www.reddit.com/r/Norway/comments/16g2gq3/parking_ticket_on_a_rental_car/",
+      "questionIds": [
+        "no-parking-scope"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-04",
+      "platform": "Reddit",
+      "title": "Why is it so difficult to pull over???",
+      "url": "https://www.reddit.com/r/Norway/comments/1e3f80u/why_is_it_so_difficult_to_pull_over/",
+      "questionIds": [
+        "no-parking-forbidden-spots"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-05",
+      "platform": "Reddit",
+      "title": "Advise to buy winter tires or not",
+      "url": "https://www.reddit.com/r/Norway/comments/1nhg95k/advise_to_buy_winter_tires_or_not/",
+      "questionIds": [
+        "no-winter-grip",
+        "no-studded-window"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-06",
+      "platform": "Reddit",
+      "title": "Tunnel etiquette question",
+      "url": "https://www.reddit.com/r/Norway/comments/1uwgesl/tunnel_etiquette_question/",
+      "questionIds": [
+        "no-lights-tunnel",
+        "p3-no-tunnel-fire-evacuation"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-07",
+      "platform": "Reddit",
+      "title": "Rental car roadside assistance - did I get scammed",
+      "url": "https://www.reddit.com/r/Norway/comments/1varltl/rental_car_roadside_assistance_did_i_get_scammed/",
+      "questionIds": [],
+      "status": "仅线索，缺合同／账单证据",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-08",
+      "platform": "Reddit",
+      "title": "Can I drive to Oslo this week with non studded winter tires?",
+      "url": "https://www.reddit.com/r/Norway/comments/1irq70l/can_i_drive_to_oslo_this_week_with_non_studded/",
+      "questionIds": [
+        "no-non-studded-year-round"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-09",
+      "platform": "Xiaohongshu",
+      "title": "挪威冰雪自驾详细、实际经验帖",
+      "url": "https://www.xiaohongshu.com/search_result/6988b337000000001b017221",
+      "questionIds": [
+        "no-tyre-conditions"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-10",
+      "platform": "Xiaohongshu",
+      "title": "🇳🇴 挪威避坑血泪实录｜冬季自驾全攻略",
+      "url": "https://www.xiaohongshu.com/search_result/699740f1000000001600ba64",
+      "questionIds": [
+        "no-winter-grip"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-11",
+      "platform": "Xiaohongshu",
+      "title": "🇳🇴 挪威避坑血泪实录｜冬季自驾全攻略（停车部分）",
+      "url": "https://www.xiaohongshu.com/search_result/699740f1000000001600ba64",
+      "questionIds": [
+        "no-parking-forbidden-spots"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-12",
+      "platform": "Xiaohongshu",
+      "title": "挪威自驾游停车tips",
+      "url": "https://www.xiaohongshu.com/search_result/69f7cbc00000000020038240",
+      "questionIds": [
+        "no-parking-scope"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-13",
+      "platform": "Xiaohongshu",
+      "title": "🇳🇴挪威自驾一篇通 ｜ 交规/提车/停车/加油",
+      "url": "https://www.xiaohongshu.com/search_result/68dd40560000000007033dfb",
+      "questionIds": [
+        "no-parking-scope"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-14",
+      "platform": "Xiaohongshu",
+      "title": "🇳🇴挪威自驾详细攻略1️⃣（租车篇）",
+      "url": "https://www.xiaohongshu.com/search_result/69524573000000002200a519",
+      "questionIds": [
+        "no-road-toll-foreign-car"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-15",
+      "platform": "Xiaohongshu",
+      "title": "冬季来罗弗敦要不要自驾",
+      "url": "https://www.xiaohongshu.com/search_result/6977b4cd000000000b00b9ce",
+      "questionIds": [
+        "no-road-check"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-16",
+      "platform": "Xiaohongshu",
+      "title": "挪威开车指南：Do's 和 Don'ts（2025年更新）",
+      "url": "https://www.xiaohongshu.com/search_result/68c50c70000000001c005d53",
+      "questionIds": [
+        "no-lights-tunnel",
+        "no-alcohol-breath"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-17",
+      "platform": "Tripadvisor",
+      "title": "Autopass, ferry and rental car",
+      "url": "https://www.tripadvisor.com/ShowTopic-g190455-i550-k14026677-Autopass_ferry_and_rental_car-Norway.html",
+      "questionIds": [
+        "p3-no-ferry-without-tag"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    },
+    {
+      "id": "NO-18",
+      "platform": "Tripadvisor",
+      "title": "Car Hire and winter tyres",
+      "url": "https://www.tripadvisor.com/ShowTopic-g190475-i2314-k4110517-Car_Hire_and_winter_tyres-Tromso_Troms_Northern_Norway.html",
+      "questionIds": [
+        "no-north-tyre"
+      ],
+      "status": "相关主题已覆盖，个人账单说法未验证",
+      "note": "沿用历史研究线索，本轮未重新获取原帖；映射表示主题关联，不证明帖子中的数字或结论。"
+    }
+  ],
+  "retired": {
+    "no-sign-204-recognition": "与 no-stop-sign 重复",
+    "is-child-height-135": "与 is-child-seat 重复",
+    "is-parking-crosswalk-five-meters": "与 is-parking-five 重复",
+    "is-horna-open": "开放具体时刻非驾驶决策目标",
+    "is-horna-road-shortening": "缩短里程非必要考点",
+    "is-sign-regulation": "法规目录知识转入来源说明",
+    "is-alcohol-breath-threshold": "合并阈值分层，避免将罚表起点当安全界限",
+    "no-summer-tread-16mm": "与 no-tyre-tread 重复"
+  }
+}

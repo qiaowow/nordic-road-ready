@@ -8,7 +8,6 @@ import type {
   ContentBundle,
   CountryCode,
   Manifest,
-  Progress,
   Question,
   Source,
 } from "./types";
@@ -75,65 +74,4 @@ export function getAsset(
   bundle: ContentBundle = loadContent(),
 ): Asset | undefined {
   return bundle.assets.find((asset) => asset.id === id);
-}
-
-export function createInitialProgress(
-  updatedAt = new Date().toISOString(),
-): Progress {
-  return {
-    answeredQuestionIds: [],
-    correctQuestionIds: [],
-    bookmarkedQuestionIds: [],
-    byCountry: {
-      NO: { answered: 0, correct: 0, mastered: 0 },
-      IS: { answered: 0, correct: 0, mastered: 0 },
-    },
-    streakDays: 0,
-    updatedAt,
-  };
-}
-
-/**
- * Apply one answer to a progress snapshot. Re-answering a question updates
- * correctness without inflating the answered counter.
- */
-export function recordAnswer(
-  progress: Progress,
-  question: Question,
-  selectedOptionId: string,
-  answeredAt = new Date().toISOString(),
-): Progress {
-  const answeredBefore = progress.answeredQuestionIds.includes(question.id);
-  const correctBefore = progress.correctQuestionIds.includes(question.id);
-  const isCorrect = question.correctOptionIds.includes(selectedOptionId);
-  const answeredQuestionIds = answeredBefore
-    ? [...progress.answeredQuestionIds]
-    : [...progress.answeredQuestionIds, question.id];
-  const correctQuestionIds = isCorrect
-    ? correctBefore
-      ? [...progress.correctQuestionIds]
-      : [...progress.correctQuestionIds, question.id]
-    : progress.correctQuestionIds.filter((id) => id !== question.id);
-
-  const currentCountry = progress.byCountry[question.country];
-  const answered = answeredBefore ? currentCountry.answered : currentCountry.answered + 1;
-  const correct = correctQuestionIds.includes(question.id)
-    ? correctBefore || isCorrect
-      ? currentCountry.correct + (correctBefore || !isCorrect ? 0 : 1)
-      : currentCountry.correct
-    : Math.max(0, currentCountry.correct - (correctBefore ? 1 : 0));
-  const mastered = correctQuestionIds.includes(question.id)
-    ? Math.max(currentCountry.mastered, correct)
-    : currentCountry.mastered;
-
-  return {
-    ...progress,
-    answeredQuestionIds,
-    correctQuestionIds,
-    byCountry: {
-      ...progress.byCountry,
-      [question.country]: { answered, correct, mastered },
-    },
-    updatedAt: answeredAt,
-  };
 }

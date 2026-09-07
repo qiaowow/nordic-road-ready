@@ -25,7 +25,8 @@
       "no-sign-204-recognition"
     ],
     "notes": "Overview of the rules that apply to drivers, cyclists and pedestrians.",
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-no-roundabouts",
@@ -43,7 +44,8 @@
       "no-roundabout-yield",
       "no-roundabout-lane"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-no-lights",
@@ -63,7 +65,8 @@
       "no-fog-lights",
       "no-drl-rear-lights"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-no-signs",
@@ -109,7 +112,8 @@
       "p3-sign-no-sign-334",
       "p3-sign-no-sign-366"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-no-tourist-safety",
@@ -131,7 +135,8 @@
       "no-no-stopping",
       "no-road-toll-foreign-car"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-no-safe-driving",
@@ -151,7 +156,8 @@
       "no-tunnel",
       "no-speed-points-low"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-no-tyres",
@@ -170,7 +176,8 @@
       "no-studded-all"
     ],
     "notes": "The page identifies the Norwegian Public Roads Administration as the original source. Recovered on 2026-08-18: replaced_current_npra_html. Previous URL: https://www.regjeringen.no/en/topics/transport-and-communications/veg/tyres-and-snow-chains/id2343739/",
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "norwegian ministry of transport and communications"
   },
   {
     "id": "src-no-autopass",
@@ -188,7 +195,8 @@
       "no-tolls",
       "no-road-toll-foreign-car"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "autopass"
   },
   {
     "id": "src-is-driving",
@@ -211,7 +219,8 @@
       "is-livestock"
     ],
     "notes": "Recovered on 2026-08-18: replaced_current_official_safety_guidance. Previous URL: https://www.vegagerdin.is/en/home/exploring-iceland/driving-safely-in-iceland",
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-is-driving-pdf",
@@ -237,7 +246,8 @@
       "is-lights-front-rear"
     ],
     "notes": "Recovered on 2026-08-18: replaced_current_official_pdf_and_guidance. Previous URL: https://www.samgongustofa.is/media/umferd/umferdaroryggi/How-to-drive-in-Iceland.pdf Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "samgöngustofa (icelandic transport authority)"
   },
   {
     "id": "src-is-safetravel",
@@ -262,7 +272,8 @@
       "is-offroad",
       "is-child-seat"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "safetravel (icelandic association for search and rescue)"
   },
   {
     "id": "src-is-signs",
@@ -283,7 +294,8 @@
       "is-froad",
       "is-sign-306-recognition"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "safetravel (icelandic association for search and rescue)"
   },
   {
     "id": "src-is-road-info",
@@ -302,7 +314,8 @@
       "is-closed-road"
     ],
     "archiveStatus": "evidence-record",
-    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json."
+    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json.",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-is-mountain-roads",
@@ -321,7 +334,8 @@
       "is-closed-road"
     ],
     "notes": "Recovered on 2026-08-18: recovered_current_official_url_and_canonical_detail_page. Previous URL: https://www.vegagerdin.is/en/travel-info/mountain-roads Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-is-lights",
@@ -338,7 +352,8 @@
     "claimCoverage": [
       "is-lights"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-eu-no-rules",
@@ -357,7 +372,8 @@
       "no-winter-grip",
       "no-studded-all"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "european union, your europe"
   },
   {
     "id": "src-no-trams",
@@ -375,7 +391,8 @@
       "no-tram-priority"
     ],
     "notes": "Recovered on 2026-08-18: replaced_current_npra_html. Previous URL: https://www.vegvesen.no/en/traffic-information/traffic-safety/norwegian-traffic-rules/giving-way-to-buses-and-trams/",
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-eu-is-rules",
@@ -394,7 +411,8 @@
       "is-child-seat",
       "is-handsfree"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "european union, your europe"
   },
   {
     "id": "src-research-no-speed-law",
@@ -412,7 +430,8 @@
       "no-speed-default",
       "no-speed-major-low"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-research-no-motorcycle",
@@ -429,7 +448,8 @@
     "claimCoverage": [
       "no-speed-default"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-lights-no",
@@ -447,7 +467,8 @@
       "no-lights-tunnel",
       "no-drl-rear-lights"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-points",
@@ -471,7 +492,8 @@
       "no-phone-points",
       "no-red-light-points"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-speed-control",
@@ -489,7 +511,8 @@
       "no-speed-points-high",
       "no-speed-major-high"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-police-alcohol",
@@ -515,7 +538,8 @@
       "no-alcohol-mid-range",
       "no-alcohol-high-range"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "politiet.no"
   },
   {
     "id": "src-research-no-alcohol-22",
@@ -535,7 +559,8 @@
       "no-alcohol-breath",
       "no-alcohol-test-procedure"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-research-no-alcohol-31",
@@ -557,7 +582,8 @@
       "no-alcohol-mid-range",
       "no-alcohol-high-range"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-research-no-tyres-current",
@@ -588,7 +614,8 @@
       "no-studded-four-wheel",
       "no-friction-winter-year-round"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-important-dates",
@@ -617,7 +644,8 @@
       "no-studded-four-wheel",
       "no-friction-winter-year-round"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-heavy-tyres",
@@ -638,7 +666,8 @@
       "no-heavy-vehicle-35t",
       "no-heavy-winter-5mm"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-trucker",
@@ -658,7 +687,8 @@
       "no-heavy-winter-5mm"
     ],
     "notes": "Recovered on 2026-08-18: current_html_replacement;_2021_pdf_recovered_as_archive. Previous URL: https://www.vegvesen.no/globalassets/kjoretoy/yrkestransport/truckersguide/donnadiesel_truckersguide_2021-web-en.pdf",
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-parking",
@@ -679,7 +709,8 @@
       "no-parking-junction-distance",
       "no-parking-fine-cap"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-parking-no",
@@ -697,7 +728,8 @@
       "no-parking-fine",
       "no-parking-fine-cap"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-signs",
@@ -716,7 +748,8 @@
       "no-parking-forbidden-spots",
       "no-parking-junction-distance"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-loading",
@@ -734,7 +767,8 @@
       "no-loading-short",
       "no-loading-no-errands"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-no-loading-no",
@@ -752,7 +786,8 @@
       "no-loading-short",
       "no-loading-no-errands"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-research-is-speed",
@@ -769,7 +804,8 @@
     "claimCoverage": [
       "is-speed-paved-default"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-research-is-alcohol",
@@ -791,7 +827,8 @@
       "is-alcohol-refusal-sample",
       "is-alcohol-drugs-medication"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-research-is-law-current",
@@ -821,7 +858,8 @@
       "is-adult-seatbelt-fine"
     ],
     "notes": "Recovered on 2026-08-18: recovered_current_official_html;_legacy_edition_archived. Previous URL: https://www.althingi.is/lagas/156a/2019077.html Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "alþingi"
   },
   {
     "id": "src-research-is-police-alcohol-test",
@@ -839,7 +877,8 @@
       "is-refuse-test",
       "is-alcohol-refusal-sample"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-research-is-lights",
@@ -857,7 +896,8 @@
       "is-lights-repair-fine",
       "is-lights-front-rear"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-research-is-fine-calculator",
@@ -879,7 +919,8 @@
       "is-child-under15-driver-duty",
       "is-child-height-135"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-research-is-parking",
@@ -901,7 +942,8 @@
       "is-parking-tunnel-bridge",
       "is-parking-tow-or-fine"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-research-is-police-driving",
@@ -919,7 +961,8 @@
       "is-parking-towed",
       "is-parking-tow-or-fine"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "icelandic police"
   },
   {
     "id": "src-research-is-children",
@@ -938,7 +981,8 @@
       "is-child-under15-driver-duty",
       "is-child-height-135"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-research-is-250-gazette",
@@ -988,7 +1032,8 @@
       "p3-sign-is-sign-364"
     ],
     "notes": "Recovered on 2026-08-18: official_html_replacement;_gazette_pdf_403_but_indexed. Previous URL: https://adverts.stjornartidindi.is/B_nr_250_2024.pdf",
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "stjórnartíðindi"
   },
   {
     "id": "src-research-is-signals",
@@ -1008,7 +1053,8 @@
       "is-sign-regulation-effective",
       "is-sign-old-transition"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "icelandic transport authority"
   },
   {
     "id": "src-research-is-km-general",
@@ -1031,7 +1077,8 @@
       "is-km-odometer-duty",
       "is-km-exemption"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-research-is-km-under10",
@@ -1050,7 +1097,8 @@
       "is-km-weight-rate",
       "is-km-exemption"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-research-is-km-news",
@@ -1070,7 +1118,8 @@
       "is-km-energy-date",
       "is-km-odometer-duty"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-research-is-vadla-price",
@@ -1092,7 +1141,8 @@
       "is-vadla-overdue-payment",
       "is-vadla-return-two-payments"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "vadla-operator"
   },
   {
     "id": "src-research-is-vadla-price-pdf",
@@ -1112,7 +1162,8 @@
       "is-vadla-heavy-price"
     ],
     "notes": "Recovered on 2026-08-18: replaced_current_html;_2026_pdf_404. Previous URL: https://www.veggjald.is/static/files/verdskra/tunnel.is-pricelist-valid-from-2.03.2026.pdf Recovered on 2026-08-18: replaced_current_html;_2026_pdf_404. Previous URL: https://www.veggjald.is/static/files/verdskra/vhg-verdskra-gildir-fra-2.1.2024-en.pdf",
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "vadla-operator"
   },
   {
     "id": "src-research-is-vadla-faq",
@@ -1132,7 +1183,8 @@
       "is-vadla-return-two-payments",
       "is-vadla-price"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "vadla-operator"
   },
   {
     "id": "src-research-is-horna-en",
@@ -1155,7 +1207,8 @@
       "is-horna-monthly-cap"
     ],
     "archiveStatus": "evidence-record",
-    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json."
+    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json.",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-research-is-horna-is",
@@ -1178,7 +1231,8 @@
       "is-horna-monthly-cap"
     ],
     "archiveStatus": "evidence-record",
-    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json."
+    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json.",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-research-is-hval-news-en",
@@ -1198,7 +1252,8 @@
       "is-hval-length"
     ],
     "archiveStatus": "evidence-record",
-    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json."
+    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json.",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-research-is-hval-news-is",
@@ -1216,7 +1271,8 @@
       "is-hval-temp-speed"
     ],
     "notes": "Recovered on 2026-08-18: replaced_current_official_icelandic_html. Previous URL: https://www.vegagerdin.is/vegagerdin/starfsemi/frettir/ny-ljos-i-hvalfjardargongum-og-breytt-hamarkshradi Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-research-is-vakt",
@@ -1235,7 +1291,8 @@
       "is-hval-monitoring-events"
     ],
     "archiveStatus": "evidence-record",
-    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json."
+    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json.",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-research-is-tunnels",
@@ -1254,7 +1311,8 @@
       "is-hval-monitoring-events"
     ],
     "archiveStatus": "evidence-record",
-    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json."
+    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json.",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-assets-no-official-signs",
@@ -1297,7 +1355,8 @@
       "p3-sign-no-sign-334",
       "p3-sign-no-sign-366"
     ],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-assets-is-official-signs",
@@ -1341,7 +1400,8 @@
       "p3-sign-is-sign-336",
       "p3-sign-is-sign-364"
     ],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-assets-no-photo-sandnes",
@@ -1356,7 +1416,8 @@
     "archivePath": "research/images/no-photo-sandnes-rv44.json",
     "sha256": "2d4f71d66d0c8c09ede8953254439b15d289af2f4aa9890445e996dd2f925e7c",
     "claimCoverage": [],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-assets-no-photo-rallarvegen",
@@ -1371,7 +1432,8 @@
     "archivePath": "research/images/no-photo-rallarvegen-haugastol.json",
     "sha256": "dbe561c5692c1c33f06f6983eddb31dd1c9a3799b74e9104d2bd2589f4705064",
     "claimCoverage": [],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-assets-is-photo-skaftafell",
@@ -1386,7 +1448,8 @@
     "archivePath": "research/images/is-photo-skaftafell-route1.json",
     "sha256": "8611b1e1a50db3e07f43f8ed710e813198f75f7713e6f32b8937b34c94dd9b50",
     "claimCoverage": [],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-assets-is-photo-road60",
@@ -1401,7 +1464,8 @@
     "archivePath": "research/images/is-photo-road60-gravel.json",
     "sha256": "3d74c4457f06a0e95bb3830c358806f49fa6161fba90470a63f2b06cc7b93d6e",
     "claimCoverage": [],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-assets-no-photo-maridalen",
@@ -1417,7 +1481,8 @@
     "sha256": "02d7c8e1eb30f6ead7dfb62cbbc81360b07e68e6320344698630ea3692ab7df1",
     "claimCoverage": [],
     "notes": "Canonical source-page URL fingerprint; the downloaded binary SHA-256 is recorded on the asset.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-assets-no-photo-gamle",
@@ -1433,7 +1498,8 @@
     "sha256": "084323c11a7ded1d574f3899e8223f44eadc6b2c453f3b7a759f3af26ff79085",
     "claimCoverage": [],
     "notes": "Canonical source-page URL fingerprint; the downloaded binary SHA-256 is recorded on the asset.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-assets-no-photo-butunnelen",
@@ -1449,7 +1515,8 @@
     "sha256": "90f4e79aeb1224e96a732f3216cb08a52e2cf1906da42f71cb22aa2f9e6849a0",
     "claimCoverage": [],
     "notes": "Canonical source-page URL fingerprint; the downloaded binary SHA-256 is recorded on the asset.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-assets-is-photo-f35",
@@ -1465,7 +1532,8 @@
     "sha256": "e36fed53e2bb520725a80965b5db400ef435c99f9d0936cee8a45cd445931968",
     "claimCoverage": [],
     "notes": "Canonical source-page URL fingerprint; the downloaded binary SHA-256 is recorded on the asset.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-assets-is-photo-foss",
@@ -1481,7 +1549,8 @@
     "sha256": "9bb07aaa3768f55c4131d0d54517330b42146eeb0a29e926aaaa63c3c25963b0",
     "claimCoverage": [],
     "notes": "Canonical source-page URL fingerprint; the downloaded binary SHA-256 is recorded on the asset.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-assets-is-photo-landmannaleid",
@@ -1497,7 +1566,8 @@
     "sha256": "37c60b28a0c89212465b60de90f2d6d46a4bacf57c7cee811b1434b886ec531f",
     "claimCoverage": [],
     "notes": "Canonical source-page URL fingerprint; the downloaded binary SHA-256 is recorded on the asset.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-assets-is-photo-namafjall",
@@ -1513,7 +1583,8 @@
     "sha256": "651ff58ee47a42fd902e8e3c8e4780221e1c03c4a0efda4df447eb88915077e1",
     "claimCoverage": [],
     "notes": "Canonical source-page URL fingerprint; the downloaded binary SHA-256 is recorded on the asset.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-research-no-loss-rights",
@@ -1531,7 +1602,8 @@
       "no-points-eight-threshold",
       "no-points-probation-double"
     ],
-    "archiveStatus": "snapshot"
+    "archiveStatus": "snapshot",
+    "originGroup": "politiet.no"
   },
   {
     "id": "src-research-is-hval-risk",
@@ -1550,7 +1622,8 @@
       "is-hval-length"
     ],
     "archiveStatus": "evidence-record",
-    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json."
+    "notes": "Live page/PDF snapshot could not be fetched in this run; verified replacement URLs, status and evidence are preserved in archive-recovery.json.",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-recovery-is-hval-toll-ended",
@@ -1567,7 +1640,8 @@
     "claimCoverage": [
       "is-hval-current-toll-status"
     ],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "rúv"
   },
   {
     "id": "src-recovery-is-hval-2028-proposal",
@@ -1584,7 +1658,8 @@
     "claimCoverage": [
       "is-hval-current-toll-status"
     ],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "rúv"
   },
   {
     "id": "src-recovery-is-rental-daily-fee",
@@ -1601,7 +1676,8 @@
     "claimCoverage": [
       "is-rental-daily-fee-mode"
     ],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-recovery-is-km-collection",
@@ -1619,7 +1695,8 @@
       "is-rental-daily-fee-mode",
       "is-km-estimate-retro-settlement"
     ],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "icelandic transport authority / ísland.is"
   },
   {
     "id": "src-recovery-is-km-estimate",
@@ -1636,7 +1713,8 @@
     "claimCoverage": [
       "is-km-estimate-retro-settlement"
     ],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-recovery-is-1240-index",
@@ -1653,7 +1731,8 @@
     "claimCoverage": [
       "is-1240-current-discount"
     ],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "reglugerðasafn"
   },
   {
     "id": "src-recovery-is-1240-current",
@@ -1670,7 +1749,8 @@
     "claimCoverage": [
       "is-1240-current-discount"
     ],
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "reglugerðasafn"
   },
   {
     "id": "src-asset-no-photo-fjellet-phus-tromso",
@@ -1686,7 +1766,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-frafjordtunnelen",
@@ -1702,7 +1783,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-klostergarasjen-bergen",
@@ -1718,7 +1800,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-oppdal-station-parking",
@@ -1734,7 +1817,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-riksveg50-aurland",
@@ -1750,7 +1834,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-rv15-strynefjellet",
@@ -1766,7 +1851,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-rv827-closed-nordland",
@@ -1782,7 +1868,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-rv827-brattlitunnel",
@@ -1798,7 +1885,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-sandefjord-parkomat",
@@ -1814,7 +1902,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-skibotndalen-e8",
@@ -1830,7 +1919,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-sthansfjell-tunnel",
@@ -1846,7 +1936,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-stromsastunnelen-drammen",
@@ -1862,7 +1953,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-sorastunnelen-bergen",
@@ -1878,7 +1970,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-tindevegen-hurrungbotn",
@@ -1894,7 +1987,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-no-photo-vesttunnelen-sandvika",
@@ -1910,7 +2004,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-fossholli-ring-road-bridge",
@@ -1926,7 +2021,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-gjadalsa-road1-bridge",
@@ -1942,7 +2038,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-f910-kreppa-bridge",
@@ -1958,7 +2055,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-landmannalaugar-dirt-road",
@@ -1974,7 +2072,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-f910-jokulsa-bridge",
@@ -1990,7 +2089,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-f35-bridge",
@@ -2006,7 +2106,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-skeidararsandur-dust-storm",
@@ -2022,7 +2123,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-f98-highland-road",
@@ -2038,7 +2140,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-highway35",
@@ -2054,7 +2157,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-icelandic-sheep-road-risk",
@@ -2070,7 +2174,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-ring-road-vatnajokull",
@@ -2086,7 +2191,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-hoffell-single-lane-bridge",
@@ -2102,7 +2208,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-road1-jokulsa-loni-bridge",
@@ -2118,7 +2225,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-asset-is-photo-monikubru-austurdalur",
@@ -2134,7 +2242,8 @@
     "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
     "claimCoverage": [],
     "notes": "License, location evidence and original binary hash are preserved in the research image manifest.",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "wikimedia commons"
   },
   {
     "id": "src-phase3-no-p3-02-primary",
@@ -2152,7 +2261,8 @@
       "p3-no-bus-leaving-stop"
     ],
     "notes": "two official sources verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-02-secondary",
@@ -2170,7 +2280,8 @@
       "p3-no-bus-leaving-stop"
     ],
     "notes": "two official sources verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-phase3-no-p3-04-primary",
@@ -2188,7 +2299,8 @@
       "p3-no-cyclist-pedestrian-crossing"
     ],
     "notes": "two official sources verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-04-secondary",
@@ -2206,7 +2318,8 @@
       "p3-no-cyclist-pedestrian-crossing"
     ],
     "notes": "two official sources verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-phase3-no-p3-05-primary",
@@ -2224,7 +2337,8 @@
       "p3-no-cyclist-crowded-path"
     ],
     "notes": "two official NPRA pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-05-secondary",
@@ -2242,7 +2356,8 @@
       "p3-no-cyclist-crowded-path"
     ],
     "notes": "two official NPRA pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-phase3-no-p3-07-primary",
@@ -2260,7 +2375,8 @@
       "p3-no-overtaking-side-and-ban"
     ],
     "notes": "statute and official sign guidance verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-phase3-no-p3-07-secondary",
@@ -2278,7 +2394,8 @@
       "p3-no-overtaking-side-and-ban"
     ],
     "notes": "statute and official sign guidance verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-08-primary",
@@ -2296,7 +2413,8 @@
       "p3-no-turning-yield-users"
     ],
     "notes": "two statutory sections verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-phase3-no-p3-08-secondary",
@@ -2314,7 +2432,8 @@
       "p3-no-turning-yield-users"
     ],
     "notes": "two statutory sections verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-phase3-no-p3-09-primary",
@@ -2332,7 +2451,8 @@
       "p3-no-traffic-accident-first-actions"
     ],
     "notes": "official guidance and statute verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-09-secondary",
@@ -2350,7 +2470,8 @@
       "p3-no-traffic-accident-first-actions"
     ],
     "notes": "official guidance and statute verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-phase3-no-p3-10-primary",
@@ -2368,7 +2489,8 @@
       "p3-no-animal-collision-report"
     ],
     "notes": "two official authorities verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-10-secondary",
@@ -2386,7 +2508,8 @@
       "p3-no-animal-collision-report"
     ],
     "notes": "two official authorities verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "politiet"
   },
   {
     "id": "src-phase3-no-p3-11-primary",
@@ -2404,7 +2527,8 @@
       "p3-no-tunnel-fire-evacuation"
     ],
     "notes": "two official NPRA pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-11-secondary",
@@ -2422,7 +2546,8 @@
       "p3-no-tunnel-fire-evacuation"
     ],
     "notes": "two official NPRA pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-12-primary",
@@ -2440,7 +2565,8 @@
       "p3-no-emergency-numbers"
     ],
     "notes": "two official authorities verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "politiet"
   },
   {
     "id": "src-phase3-no-p3-12-secondary",
@@ -2458,7 +2584,8 @@
       "p3-no-emergency-numbers"
     ],
     "notes": "two official authorities verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-13-primary",
@@ -2476,7 +2603,8 @@
       "p3-no-mountain-route-status"
     ],
     "notes": "two official NPRA pages verified; dynamic status requires departure-day check",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-13-secondary",
@@ -2494,7 +2622,8 @@
       "p3-no-mountain-route-status"
     ],
     "notes": "two official NPRA pages verified; dynamic status requires departure-day check",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-15-primary",
@@ -2512,7 +2641,8 @@
       "p3-no-ferry-without-tag"
     ],
     "notes": "two official AutoPASS-for-ferry pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "autopass for ferry"
   },
   {
     "id": "src-phase3-no-p3-15-secondary",
@@ -2530,7 +2660,8 @@
       "p3-no-ferry-without-tag"
     ],
     "notes": "two official AutoPASS-for-ferry pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "autopass for ferry"
   },
   {
     "id": "src-phase3-no-p3-16-primary",
@@ -2548,7 +2679,8 @@
       "p3-no-ferry-prepayment-discount"
     ],
     "notes": "two official AutoPASS-for-ferry pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "autopass for ferry"
   },
   {
     "id": "src-phase3-no-p3-16-secondary",
@@ -2566,7 +2698,8 @@
       "p3-no-ferry-prepayment-discount"
     ],
     "notes": "two official AutoPASS-for-ferry pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "autopass for ferry"
   },
   {
     "id": "src-phase3-no-p3-21-primary",
@@ -2584,7 +2717,8 @@
       "p3-no-parking-near-transit-stop"
     ],
     "notes": "statutory rule and municipal enforcement guidance verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-phase3-no-p3-21-secondary",
@@ -2602,7 +2736,8 @@
       "p3-no-parking-near-transit-stop"
     ],
     "notes": "statutory rule and municipal enforcement guidance verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "oslo kommune"
   },
   {
     "id": "src-phase3-no-p3-23-primary",
@@ -2620,7 +2755,8 @@
       "p3-no-hov-lane-2plus"
     ],
     "notes": "two official NPRA pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "statens-vegvesen"
   },
   {
     "id": "src-phase3-no-p3-23-secondary",
@@ -2638,7 +2774,8 @@
       "p3-no-hov-lane-2plus"
     ],
     "notes": "two official NPRA pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "lovdata"
   },
   {
     "id": "src-phase3-is-p3-01-primary",
@@ -2656,7 +2793,8 @@
       "p3-is-froad-definition"
     ],
     "notes": "two official IRCA pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-phase3-is-p3-01-secondary",
@@ -2674,7 +2812,8 @@
       "p3-is-froad-definition"
     ],
     "notes": "two official IRCA pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-phase3-is-p3-02-primary",
@@ -2692,7 +2831,8 @@
       "p3-is-froad-season-vehicle"
     ],
     "notes": "two official IRCA pages verified; route status requires departure-day check",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-phase3-is-p3-02-secondary",
@@ -2710,7 +2850,8 @@
       "p3-is-froad-season-vehicle"
     ],
     "notes": "two official IRCA pages verified; route status requires departure-day check",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-phase3-is-p3-03-primary",
@@ -2728,7 +2869,8 @@
       "p3-is-mountain-opening-decision"
     ],
     "notes": "two official IRCA pages verified; dynamic fact",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-phase3-is-p3-03-secondary",
@@ -2746,7 +2888,8 @@
       "p3-is-mountain-opening-decision"
     ],
     "notes": "two official IRCA pages verified; dynamic fact",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-phase3-is-p3-05-primary",
@@ -2764,7 +2907,8 @@
       "p3-is-single-lane-bridge-priority"
     ],
     "notes": "Transport-authority-linked safety guidance and IRCA page verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "safetravel"
   },
   {
     "id": "src-phase3-is-p3-05-secondary",
@@ -2782,7 +2926,8 @@
       "p3-is-single-lane-bridge-priority"
     ],
     "notes": "Transport-authority-linked safety guidance and IRCA page verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-phase3-is-p3-06-primary",
@@ -2800,7 +2945,8 @@
       "p3-is-unbridged-river-crossing"
     ],
     "notes": "two official/authority-linked sources verified; river state requires live check",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "safetravel"
   },
   {
     "id": "src-phase3-is-p3-06-secondary",
@@ -2818,7 +2964,8 @@
       "p3-is-unbridged-river-crossing"
     ],
     "notes": "two official/authority-linked sources verified; river state requires live check",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-phase3-is-p3-08-primary",
@@ -2836,7 +2983,8 @@
       "p3-is-wild-tent-limit"
     ],
     "notes": "two official Environment Agency pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "umhverfisstofnun"
   },
   {
     "id": "src-phase3-is-p3-08-secondary",
@@ -2854,7 +3002,8 @@
       "p3-is-wild-tent-limit"
     ],
     "notes": "two official Environment Agency pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "umhverfisstofnun"
   },
   {
     "id": "src-phase3-is-p3-09-primary",
@@ -2872,7 +3021,8 @@
       "p3-is-camper-overnight-permission"
     ],
     "notes": "two official Environment Agency pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "umhverfisstofnun"
   },
   {
     "id": "src-phase3-is-p3-09-secondary",
@@ -2890,7 +3040,8 @@
       "p3-is-camper-overnight-permission"
     ],
     "notes": "two official Environment Agency pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "umhverfisstofnun"
   },
   {
     "id": "src-phase3-is-p3-11-primary",
@@ -2908,7 +3059,8 @@
       "p3-is-trailer-wind-threshold"
     ],
     "notes": "two official Ísland.is/Transport Authority pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-phase3-is-p3-11-secondary",
@@ -2926,7 +3078,8 @@
       "p3-is-trailer-wind-threshold"
     ],
     "notes": "two official Ísland.is/Transport Authority pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-phase3-is-p3-12-primary",
@@ -2944,7 +3097,8 @@
       "p3-is-park-door-against-wind"
     ],
     "notes": "authority-linked safety guidance plus government page verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "safetravel"
   },
   {
     "id": "src-phase3-is-p3-12-secondary",
@@ -2962,7 +3116,8 @@
       "p3-is-park-door-against-wind"
     ],
     "notes": "authority-linked safety guidance plus government page verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-phase3-is-p3-13-primary",
@@ -2980,7 +3135,8 @@
       "p3-is-trailer-speed-rule"
     ],
     "notes": "two official government pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-phase3-is-p3-13-secondary",
@@ -2998,7 +3154,8 @@
       "p3-is-trailer-speed-rule"
     ],
     "notes": "two official government pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-phase3-is-p3-16-primary",
@@ -3016,7 +3173,8 @@
       "p3-is-cyclist-clearance"
     ],
     "notes": "two official government pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-phase3-is-p3-16-secondary",
@@ -3034,7 +3192,8 @@
       "p3-is-cyclist-clearance"
     ],
     "notes": "two official government pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-phase3-is-p3-19-primary",
@@ -3052,7 +3211,8 @@
       "p3-is-collision-reporting"
     ],
     "notes": "official government and police pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-phase3-is-p3-19-secondary",
@@ -3070,7 +3230,8 @@
       "p3-is-collision-reporting"
     ],
     "notes": "official government and police pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-phase3-is-p3-20-primary",
@@ -3088,7 +3249,8 @@
       "p3-is-emergency-112"
     ],
     "notes": "two official Ísland.is pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-phase3-is-p3-20-secondary",
@@ -3106,7 +3268,8 @@
       "p3-is-emergency-112"
     ],
     "notes": "two official Ísland.is pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "ísland.is"
   },
   {
     "id": "src-phase3-is-p3-21-primary",
@@ -3124,7 +3287,8 @@
       "p3-is-traffic-service-1777"
     ],
     "notes": "two official IRCA pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
   },
   {
     "id": "src-phase3-is-p3-21-secondary",
@@ -3142,6 +3306,388 @@
       "p3-is-traffic-service-1777"
     ],
     "notes": "two official IRCA pages verified",
-    "archiveStatus": "evidence-record"
+    "archiveStatus": "evidence-record",
+    "originGroup": "vegagerdin"
+  },
+  {
+    "id": "src-audit-is-law-current",
+    "country": "IS",
+    "publisher": "Alþingi",
+    "title": "交通法 77/2019 现行合并文本",
+    "url": "https://www.althingi.is/lagas/nuna/2019077.html",
+    "archiveStatus": "evidence-record",
+    "error": "HTTP 403",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-law-current.json",
+    "sha256": "eca8e5614d03cbe344a4f6292f36b5523392b57d4c4952c6248ce0c6a5067219",
+    "sourceType": "official-law",
+    "authorityLevel": "government",
+    "language": "is",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "is-alcohol-threshold",
+      "audit-is-right-priority",
+      "audit-is-exit-property",
+      "audit-is-yellow",
+      "audit-is-solid-line"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "alþingi"
+  },
+  {
+    "id": "src-audit-is-fines-current",
+    "country": "IS",
+    "publisher": "Reglugerðasafn",
+    "title": "1240/2019 现行罚则 PDF",
+    "url": "https://files.reglugerd.is/pdf/1240-2019/current",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-fines-current.pdf",
+    "archiveStatus": "snapshot",
+    "sha256": "7f19ce85893a54b562cb56a3ae05a78fa1a4886af28e6b13b8056bd21f155975",
+    "bytes": 218761,
+    "httpStatus": 200,
+    "resolvedUrl": "https://files.reglugerd.is/pdf/1240-2019/current",
+    "retrievedAt": "2026-09-07T03:32:28.311Z",
+    "sourceType": "official-law",
+    "authorityLevel": "government",
+    "language": "is",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "is-alcohol-threshold",
+      "is-1240-current-discount",
+      "audit-is-right-priority",
+      "audit-is-exit-property",
+      "audit-is-yellow",
+      "audit-is-solid-line"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "reglugerðasafn"
+  },
+  {
+    "id": "src-audit-no-oslo-studs",
+    "country": "NO",
+    "publisher": "Oslo kommune",
+    "title": "Studded tyre fee 2026–2027",
+    "url": "https://www.oslo.kommune.no/english/street-transport-and-parking/studded-tyre-fee/",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-no-oslo-studs.html",
+    "archiveStatus": "snapshot",
+    "sha256": "85c46564f437ff8ca35ab8797b50c2eb459134d4a6923700549b28eb2bf3c25a",
+    "bytes": 43223,
+    "httpStatus": 200,
+    "resolvedUrl": "https://www.oslo.kommune.no/english/street-transport-and-parking/studded-tyre-fee/",
+    "retrievedAt": "2026-09-07T03:32:29.351Z",
+    "sourceType": "official-guidance",
+    "authorityLevel": "government",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "audit-no-oslo-studs"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "oslo kommune"
+  },
+  {
+    "id": "src-audit-is-reyk-meter",
+    "country": "IS",
+    "publisher": "Reykjavík",
+    "title": "Parking meters",
+    "url": "https://reykjavik.is/en/parking/parking-meters",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-reyk-meter.html",
+    "archiveStatus": "snapshot",
+    "sha256": "e0619f0fa79c0ff9a34ed969096bb2f7c48a188fed578c7239ba5d6b082c1228",
+    "bytes": 46493,
+    "httpStatus": 200,
+    "resolvedUrl": "https://reykjavik.is/en/parking/parking-meters",
+    "retrievedAt": "2026-09-07T03:32:30.196Z",
+    "sourceType": "official-guidance",
+    "authorityLevel": "government",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "audit-is-meter"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "reykjavík"
+  },
+  {
+    "id": "src-audit-no-yield-current",
+    "country": "NO",
+    "publisher": "Statens vegvesen",
+    "title": "When do you have to give way?",
+    "url": "https://www.vegvesen.no/en/traffic-information/traffic-safety/norwegian-traffic-rules/giving-way/when-give-way/",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-no-yield-current.html",
+    "archiveStatus": "snapshot",
+    "sha256": "bab3b09221ab4b1f479812042155e5b6c8ae90e6bff30249cf58d76701501502",
+    "bytes": 114356,
+    "httpStatus": 200,
+    "resolvedUrl": "https://www.vegvesen.no/en/traffic-information/traffic-safety/norwegian-traffic-rules/giving-way/when-give-way/",
+    "retrievedAt": "2026-09-07T03:32:30.409Z",
+    "sourceType": "official-guidance",
+    "authorityLevel": "government",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "audit-no-right-priority",
+      "audit-no-exit-property"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "statens-vegvesen"
+  },
+  {
+    "id": "src-audit-is-reyk-garage",
+    "country": "IS",
+    "publisher": "Reykjavík",
+    "title": "Parking garage guidelines",
+    "url": "https://reykjavik.is/en/parking-garage-guidelines",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-reyk-garage.html",
+    "archiveStatus": "snapshot",
+    "sha256": "c5dec0c2290b035575a74a874f4bdcdc42059b1937892efb131168abca94f96c",
+    "bytes": 46734,
+    "httpStatus": 200,
+    "resolvedUrl": "https://reykjavik.is/en/parking-garage-guidelines",
+    "retrievedAt": "2026-09-07T03:32:30.601Z",
+    "sourceType": "official-guidance",
+    "authorityLevel": "government",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "audit-is-garage"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "reykjavík"
+  },
+  {
+    "id": "src-audit-is-reyk-parking",
+    "country": "IS",
+    "publisher": "Reykjavík",
+    "title": "Parking in Reykjavík",
+    "url": "https://reykjavik.is/en/parking",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-reyk-parking.html",
+    "archiveStatus": "snapshot",
+    "sha256": "ba6ca4afbdccbc4ceed740f6ed8be68ea9a61c9bd3de8bfada4fa1aac03e463f",
+    "bytes": 66852,
+    "httpStatus": 200,
+    "resolvedUrl": "https://reykjavik.is/en/parking",
+    "retrievedAt": "2026-09-07T03:32:30.721Z",
+    "sourceType": "official-guidance",
+    "authorityLevel": "government",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "audit-is-meter",
+      "audit-is-garage"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "reykjavík"
+  },
+  {
+    "id": "src-audit-is-vadla-current",
+    "country": "IS",
+    "publisher": "Vaðlaheiðargöng",
+    "title": "Current prices and payment methods",
+    "url": "https://www.veggjald.is/en-gb/verd-greidsluleidir",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-vadla-current.html",
+    "archiveStatus": "snapshot",
+    "sha256": "7d0416758dfe06dfbe0a5eb8402c0f186d75a6cebf8b0ba22ca297a0065e4242",
+    "bytes": 97878,
+    "httpStatus": 200,
+    "resolvedUrl": "https://www.veggjald.is/en-gb/verd-greidsluleidir",
+    "retrievedAt": "2026-09-07T03:32:31.485Z",
+    "sourceType": "official-guidance",
+    "authorityLevel": "government",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "is-vadla-price",
+      "is-vadla-pay-window",
+      "is-vadla-overdue-payment"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "vadla-operator"
+  },
+  {
+    "id": "src-audit-is-spolur-price",
+    "country": "IS",
+    "publisher": "Spölur",
+    "title": "Hornafjörður price list",
+    "url": "https://www.spolur.is/verdskra",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-spolur-price.html",
+    "archiveStatus": "snapshot",
+    "sha256": "fe454bc6b96ad8c9d80ede7d6866bd309a27fad3db375484324b7cda4c28b424",
+    "bytes": 691750,
+    "httpStatus": 200,
+    "resolvedUrl": "https://www.spolur.is/verdskra",
+    "retrievedAt": "2026-09-07T03:32:31.997Z",
+    "sourceType": "official-guidance",
+    "authorityLevel": "road-authority",
+    "language": "is",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "is-horna-tiered"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "spölur"
+  },
+  {
+    "id": "src-audit-is-spolur-faq",
+    "country": "IS",
+    "publisher": "Spölur",
+    "title": "Hornafjörður payment FAQ",
+    "url": "https://www.spolur.is/spurt-og-svarad",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-spolur-faq.html",
+    "archiveStatus": "snapshot",
+    "sha256": "eb341c079812b78b95c6f98bbec6f527ff1d427f5bc68e687392de9fd780eaf4",
+    "bytes": 1028116,
+    "httpStatus": 200,
+    "resolvedUrl": "https://www.spolur.is/spurt-og-svarad",
+    "retrievedAt": "2026-09-07T03:32:32.064Z",
+    "sourceType": "official-guidance",
+    "authorityLevel": "road-authority",
+    "language": "is",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "is-horna-auto-toll",
+      "audit-is-horna-rental-window"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "spölur"
+  },
+  {
+    "id": "src-audit-no-rules-pdf",
+    "country": "NO",
+    "publisher": "Statens vegvesen",
+    "title": "Traffic Rules — Sections 3, 7, 17",
+    "url": "https://www.vegvesen.no/globalassets/kjoretoy/yrkestransport/traffic-rules---regulations-relating-to-pedestrian-and-vehicle-traffic-.pdf?v=4a49f6",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-no-rules-pdf.pdf",
+    "archiveStatus": "snapshot",
+    "sha256": "9b7b0b6ee5e3b4768ce8bd5f3c285c14cba56e4a973d62bf896a347f8172d1fb",
+    "bytes": 158603,
+    "httpStatus": 200,
+    "resolvedUrl": "https://www.vegvesen.no/globalassets/kjoretoy/yrkestransport/traffic-rules---regulations-relating-to-pedestrian-and-vehicle-traffic-.pdf?v=4a49f6",
+    "retrievedAt": "2026-09-07T03:32:32.815Z",
+    "sourceType": "official-guidance",
+    "authorityLevel": "government",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "audit-no-right-priority",
+      "audit-no-exit-property",
+      "audit-no-instructions"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "statens-vegvesen"
+  },
+  {
+    "id": "src-audit-is-km-current",
+    "country": "IS",
+    "publisher": "Ísland.is / Skatturinn",
+    "title": "Kilometer fee for vehicles under 10 tonnes",
+    "url": "https://island.is/en/kilometer-fee/fee-for-vehicles-under-10-tonnes",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-km-current.html",
+    "archiveStatus": "snapshot",
+    "sha256": "c89532c03c74d26e91f67c9f3ebf61bceec8fb19c5d08dedc8e994adbaf669ce",
+    "bytes": 599192,
+    "httpStatus": 200,
+    "resolvedUrl": "https://island.is/en/kilometer-fee/fee-for-vehicles-under-10-tonnes",
+    "retrievedAt": "2026-09-07T03:32:33.287Z",
+    "sourceType": "official-guidance",
+    "authorityLevel": "government",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "is-km-all-vehicles",
+      "is-km-light-rate",
+      "is-km-weight-rate"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "island-government"
+  },
+  {
+    "id": "src-audit-is-daily-current",
+    "country": "IS",
+    "publisher": "Ísland.is / Skatturinn",
+    "title": "Daily fee for rental cars",
+    "url": "https://island.is/en/daily-fee-for-rental-cars",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-daily-current.html",
+    "archiveStatus": "snapshot",
+    "sha256": "5c6914e875ec917a91de23137195e43963d00269466ee74a1557cf59e4b3be65",
+    "bytes": 251103,
+    "httpStatus": 200,
+    "resolvedUrl": "https://island.is/en/daily-fee-for-rental-cars",
+    "retrievedAt": "2026-09-07T03:32:34.364Z",
+    "sourceType": "official-guidance",
+    "authorityLevel": "government",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "is-rental-daily-fee-mode"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "island-government"
+  },
+  {
+    "id": "src-audit-is-blue-waiver",
+    "country": "IS",
+    "publisher": "Blue Car Rental",
+    "title": "Liability Waiver — supplier-specific coverage",
+    "url": "https://www.bluecarrental.is/useful-information/insurance/liability-waiver/",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-blue-waiver.html",
+    "archiveStatus": "snapshot",
+    "sha256": "9b5386c16866418eb904b19f3933e8357b6dc3107e648a6d4b7597c76a0d58f8",
+    "bytes": 52561,
+    "httpStatus": 200,
+    "resolvedUrl": "https://www.bluecarrental.is/useful-information/insurance/liability-waiver/",
+    "retrievedAt": "2026-09-07T03:32:34.663Z",
+    "sourceType": "operator-contract",
+    "authorityLevel": "secondary",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "audit-is-insurance-contract"
+    ],
+    "notes": "仅作为供应商合同实例，不是全国法规。",
+    "originGroup": "blue car rental"
+  },
+  {
+    "id": "src-audit-is-blue-contract",
+    "country": "IS",
+    "publisher": "Blue Car Rental",
+    "title": "Insurance — supplier-specific contract example",
+    "url": "https://www.bluecarrental.is/useful-information/insurance/insurances/",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-blue-contract.html",
+    "archiveStatus": "snapshot",
+    "sha256": "9958ab87300a39bc915acb70a1b8c9bf611911408301dc979058d62d3169d253",
+    "bytes": 64475,
+    "httpStatus": 200,
+    "resolvedUrl": "https://www.bluecarrental.is/useful-information/insurance/insurances/",
+    "retrievedAt": "2026-09-07T03:32:34.698Z",
+    "sourceType": "operator-contract",
+    "authorityLevel": "secondary",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "audit-is-insurance-contract"
+    ],
+    "notes": "仅作为供应商合同实例，不是全国法规。",
+    "originGroup": "blue car rental"
+  },
+  {
+    "id": "src-audit-is-horna-announcement",
+    "country": "IS",
+    "publisher": "Vegagerðin",
+    "title": "Hornafjörður September toll announcement, 31 Aug 2026",
+    "url": "https://www.vegagerdin.is/vegagerdin/starfsemi/frettir/gjaldtaka-a-hringvegi-1-um-hornafjord-hefst-i-september",
+    "archiveStatus": "evidence-record",
+    "error": "fetch failed",
+    "archivePath": "source-archive/review-2026-09-07/src-audit-is-horna-announcement.json",
+    "sha256": "3272a3834489e4f352ce8121ccec89dcf795d429c267fa960dd68e532508a9b4",
+    "sourceType": "official-guidance",
+    "authorityLevel": "government",
+    "language": "en",
+    "accessedAt": "2026-09-07",
+    "claimCoverage": [
+      "is-horna-auto-toll",
+      "is-horna-tiered"
+    ],
+    "notes": "2026-09-07 定向复核；不代表其他旧题已重新核验。",
+    "originGroup": "vegagerdin"
   }
 ]

@@ -69,6 +69,9 @@ export interface Question {
   explanation: string;
   sourceIds: string[];
   assetIds: string[];
+  /** Additional authentic images shown only after answering / during study. */
+  comparisonAssetIds?: string[];
+  evidencePolicy?: "primary-original";
   tags: string[];
   status: QuestionStatus;
   lastReviewedAt: string;
@@ -80,6 +83,7 @@ export const SOURCE_TYPES = [
   "road-authority",
   "public-safety",
   "licensed-media",
+  "operator-contract",
 ] as const;
 export type SourceType = (typeof SOURCE_TYPES)[number];
 
@@ -112,6 +116,7 @@ export interface Source {
   /** Optional because many government pages do not expose a publication date. */
   publishedAt?: string;
   notes?: string;
+  originGroup?: string;
 }
 
 export const ASSET_TYPES = ["image", "icon", "diagram"] as const;
@@ -191,24 +196,6 @@ export interface Manifest {
     requireTwoSources: boolean;
     requireLicensedAssets: boolean;
   };
-}
-
-export interface CountryProgress {
-  answered: number;
-  correct: number;
-  mastered: number;
-}
-
-export interface Progress {
-  /** Optional because anonymous/offline learners may not have an account. */
-  learnerId?: string;
-  answeredQuestionIds: string[];
-  correctQuestionIds: string[];
-  bookmarkedQuestionIds: string[];
-  byCountry: Record<CountryCode, CountryProgress>;
-  streakDays: number;
-  lastStudiedAt?: string;
-  updatedAt: string;
 }
 
 export interface ContentBundle {

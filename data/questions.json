@@ -33,9 +33,7 @@
       "src-no-tourist-safety",
       "src-eu-no-rules"
     ],
-    "assetIds": [
-      "no-photo-skibotndalen-e8"
-    ],
+    "assetIds": [],
     "tags": [
       "安全带",
       "出发前"
@@ -121,9 +119,7 @@
       "src-no-roundabouts",
       "src-no-rules"
     ],
-    "assetIds": [
-      "no-photo-sthansfjell-tunnel"
-    ],
+    "assetIds": [],
     "tags": [
       "环岛",
       "变道",
@@ -206,21 +202,23 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "挪威标志说明区分了禁止停车和禁止停靠；禁止停车标志在规定路段内限制停车。",
+    "explanation": "主图 372 是禁止停车（Parking prohibited），不是对照图 370 的禁止停靠（No stopping）。驾驶员留在车内也可能属于停车；必要的最短上下客、装卸与一般停车应区分。结合箭头、时间副牌和后续标志判断范围，双闪不能免除限制。",
     "sourceIds": [
       "src-no-signs",
       "src-no-tourist-safety"
     ],
     "assetIds": [
-      "no-sign-372",
-      "no-sign-370"
+      "no-sign-372"
     ],
     "tags": [
       "停车",
       "道路标志"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-08-18",
+    "comparisonAssetIds": [
+      "no-sign-370"
+    ]
   },
   {
     "id": "no-tolls",
@@ -475,9 +473,7 @@
       "src-no-trams",
       "src-no-rules"
     ],
-    "assetIds": [
-      "no-photo-stromsastunnelen-drammen"
-    ],
+    "assetIds": [],
     "tags": [
       "有轨电车",
       "让行",
@@ -563,9 +559,7 @@
       "src-is-driving-pdf",
       "src-is-safetravel"
     ],
-    "assetIds": [
-      "is-photo-ring-road-vatnajokull"
-    ],
+    "assetIds": [],
     "tags": [
       "安全带",
       "乘客"
@@ -785,9 +779,7 @@
       "src-is-road-info"
     ],
     "assetIds": [
-      "is-photo-hoffell-single-lane-bridge",
-      "is-sign-306-0",
-      "is-sign-302"
+      "is-sign-306-0"
     ],
     "tags": [
       "封路",
@@ -876,10 +868,7 @@
       "src-is-signs",
       "src-is-safetravel"
     ],
-    "assetIds": [
-      "is-photo-road1-jokulsa-loni-bridge",
-      "is-sign-202"
-    ],
+    "assetIds": [],
     "tags": [
       "环岛",
       "内车道",
@@ -923,7 +912,6 @@
       "src-is-safetravel"
     ],
     "assetIds": [
-      "is-photo-highway35",
       "is-sign-844-2",
       "is-sign-844-3"
     ],
@@ -1753,7 +1741,6 @@
       "src-research-no-signs"
     ],
     "assetIds": [
-      "no-photo-sorastunnelen-bergen",
       "no-sign-372"
     ],
     "tags": [
@@ -1865,28 +1852,30 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 1,
-    "prompt": "冰岛官方资料列出的血液酒精处罚阈值是多少？",
+    "prompt": "在冰岛，为什么不能把罚则表中的 0.5‰ 当作可安全驾驶的界限？",
     "options": [
       {
         "id": "a",
-        "text": "0.5‰（呼气对应 0.25 mg/L）"
+        "text": "交通法自血液 0.20‰／呼气 0.1 mg/L 起认定不能安全驾驶，处罚分层是另一个问题"
       },
       {
         "id": "b",
-        "text": "1.0‰（呼气对应 0.5 mg/L）"
+        "text": "只有达到 0.5‰ 才禁止驾驶，低于它都安全"
       },
       {
         "id": "c",
-        "text": "完全没有任何酒精阈值"
+        "text": "所有血液与呼气数字可以不换单位直接比较"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "Ísland.is 酒驾页面与 Alþingi 现行交通法均列出 0.5‰ 血液酒精和 0.25 mg/L 呼气对应阈值；不要将阈值理解为饮酒许可。",
+    "explanation": "交通法 77/2019 第 49 条与第 95、101 条处理的是不同层面：安全驾驶能力、处罚和驾驶资格。罚则表起点不构成饮酒许可；即使测值更低但已受酒精影响也不能安全驾驶。出行最稳妥的安排是不饮酒。",
     "sourceIds": [
       "src-research-is-alcohol",
-      "src-research-is-law-current"
+      "src-research-is-law-current",
+      "src-audit-is-law-current",
+      "src-audit-is-fines-current"
     ],
     "assetIds": [],
     "tags": [
@@ -1895,7 +1884,7 @@
       "阈值"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-09-07"
   },
   {
     "id": "is-refuse-test",
@@ -2017,9 +2006,7 @@
       "src-research-is-parking",
       "src-research-is-law-current"
     ],
-    "assetIds": [
-      "is-sign-650-1"
-    ],
+    "assetIds": [],
     "tags": [
       "停车",
       "5米",
@@ -2062,9 +2049,7 @@
       "src-research-is-parking",
       "src-research-is-police-driving"
     ],
-    "assetIds": [
-      "is-sign-650-1"
-    ],
+    "assetIds": [],
     "tags": [
       "停车",
       "拖车",
@@ -2148,7 +2133,8 @@
     "explanation": "冰岛公里费总览和登记缴费公告均说明，自 2026-01-01 起制度不按能源来源豁免，费用按里程和车辆重量计算。",
     "sourceIds": [
       "src-research-is-km-general",
-      "src-research-is-km-news"
+      "src-research-is-km-news",
+      "src-audit-is-km-current"
     ],
     "assetIds": [],
     "tags": [
@@ -2157,7 +2143,7 @@
       "能源"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-09-07"
   },
   {
     "id": "is-km-light-rate",
@@ -2191,7 +2177,8 @@
     "explanation": "冰岛轻型车辆公里费页给出不超过 3.5 t 普通乘用车和 SUV/Jeep 的 6.95 ISK/km 费率；费率变更时以最新表为准。",
     "sourceIds": [
       "src-research-is-km-under10",
-      "src-research-is-km-general"
+      "src-research-is-km-general",
+      "src-audit-is-km-current"
     ],
     "assetIds": [],
     "tags": [
@@ -2200,7 +2187,7 @@
       "3.5吨"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-09-07"
   },
   {
     "id": "is-km-odometer",
@@ -2277,18 +2264,17 @@
     "explanation": "隧道运营方价目页和自 2026-03-02 生效的价目 PDF 均列出低于 3.5 t 车辆单程 2,216 ISK；出发前仍应复核最新价目。",
     "sourceIds": [
       "src-research-is-vadla-price",
-      "src-research-is-vadla-faq"
+      "src-research-is-vadla-faq",
+      "src-audit-is-vadla-current"
     ],
-    "assetIds": [
-      "is-sign-650-1"
-    ],
+    "assetIds": [],
     "tags": [
       "隧道",
       "通行费",
       "Vaðlaheiði"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-09-07"
   },
   {
     "id": "is-vadla-pay-window",
@@ -2322,18 +2308,17 @@
     "explanation": "运营方价目页和 FAQ 都列出通行前或通行后 24 小时内的支付窗口；逾期可能进入追缴并产生附加费用。",
     "sourceIds": [
       "src-research-is-vadla-price",
-      "src-research-is-vadla-faq"
+      "src-research-is-vadla-faq",
+      "src-audit-is-vadla-current"
     ],
-    "assetIds": [
-      "is-sign-650-1"
-    ],
+    "assetIds": [],
     "tags": [
       "隧道",
       "缴费",
       "24小时"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-09-07"
   },
   {
     "id": "is-horna-open",
@@ -2373,9 +2358,10 @@
     "tags": [
       "Hornafjörður",
       "环城公路",
-      "2026"
+      "2026",
+      "audit-retired"
     ],
-    "status": "published",
+    "status": "retired",
     "lastReviewedAt": "2026-08-18"
   },
   {
@@ -2386,31 +2372,33 @@
     "category": "tolls",
     "difficulty": "advanced",
     "riskType": "cost",
-    "appliesFrom": "2026-09-01",
+    "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "按 Vegagerðin 公告，Hornafjörður 新路段计划如何收取通行费？",
+    "prompt": "Hornafjörður 新路段按 Spölur 现行说明如何收费？",
     "options": [
       {
         "id": "a",
-        "text": "计划自 2026-09-01 起自动识别车牌，账单按月发送给登记车主"
+        "text": "摄像头识别车牌，无路上收费站；通常按月出账，也可在线支付单次通行"
       },
       {
         "id": "b",
-        "text": "必须在路中央停车并现金缴费"
+        "text": "只有路上收费站拦车才需要支付"
       },
       {
         "id": "c",
-        "text": "只对步行者收取费用"
+        "text": "沿用其他隧道的同一个网站和付款期限"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "Vegagerðin 英文和冰岛语公告均描述计划中的自动车牌收费和月度账单；这是访问日后的计划，出发前必须重新核实上线状态。",
+    "explanation": "收费点识别车牌，通常向车主按月出账；租车用户可按运营方说明自付，未付则按租车合同代收。不要把 Vaðlaheiði 的网站与时间窗口照搬过来。最新道路部门公告只说 9 月开始，本题不考尚未交叉确认的具体首日。",
     "sourceIds": [
       "src-research-is-horna-en",
-      "src-research-is-horna-is"
+      "src-research-is-horna-is",
+      "src-audit-is-spolur-faq",
+      "src-audit-is-horna-announcement"
     ],
     "assetIds": [],
     "tags": [
@@ -2420,7 +2408,7 @@
       "2026"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-09-07"
   },
   {
     "id": "is-horna-tiered",
@@ -2430,10 +2418,10 @@
     "category": "tolls",
     "difficulty": "advanced",
     "riskType": "cost",
-    "appliesFrom": "2026-09-01",
+    "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 3,
-    "prompt": "按计划中的 Hornafjörður 2026 价目，低于 3.5 t 车辆单程费是多少？",
+    "prompt": "Spölur 现行价目中，Hornafjörður 新路段低于 3.5 t 车辆的单次基础通行费是多少？",
     "options": [
       {
         "id": "a",
@@ -2441,20 +2429,22 @@
       },
       {
         "id": "b",
-        "text": "2,100 ISK"
+        "text": "2,216 ISK"
       },
       {
         "id": "c",
-        "text": "4,500 ISK"
+        "text": "6.95 ISK"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "Vegagerðin 英文与冰岛语公告均列出低于 3.5 t 车辆计划单程 1,500 ISK；收费尚未在研究访问日开始，出发前要复核。",
+    "explanation": "先区分是哪个道路收费点，再按重量档查看基础价。运营方还列有同月多次通行优惠，租车公司管理费另看合同；不要与全国公里费或另一条隧道混淆。",
     "sourceIds": [
       "src-research-is-horna-en",
-      "src-research-is-horna-is"
+      "src-research-is-horna-is",
+      "src-audit-is-spolur-price",
+      "src-audit-is-horna-announcement"
     ],
     "assetIds": [],
     "tags": [
@@ -2464,7 +2454,7 @@
       "2026"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-09-07"
   },
   {
     "id": "is-hval-temp-speed",
@@ -2495,7 +2485,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "Vegagerðin 英文和冰岛语公告均说明，施工导致照明减少，南侧入口约 500 m 路段由 70 降为 50 km/h；施工状态会变化，必须看现场标志。",
+    "explanation": "这是旧施工／隧道限速资料，未确认当前工程状态，不计分。不得把旧数字当今天的限速；进入隧道前查看当日公告与现场标志。",
     "sourceIds": [
       "src-research-is-hval-news-en",
       "src-research-is-hval-news-is"
@@ -2507,7 +2497,9 @@
       "Hvalfjörður",
       "隧道",
       "施工",
-      "限速"
+      "限速",
+      "needs-review",
+      "dynamic"
     ],
     "status": "published",
     "lastReviewedAt": "2026-08-18"
@@ -2597,16 +2589,17 @@
     "tags": [
       "标志",
       "规章",
-      "2024"
+      "2024",
+      "audit-retired"
     ],
-    "status": "published",
+    "status": "retired",
     "lastReviewedAt": "2026-08-18"
   },
   {
     "id": "is-sign-numbering",
     "country": "IS",
     "locale": "zh-CN",
-    "type": "image_choice",
+    "type": "single_choice",
     "category": "signs",
     "difficulty": "advanced",
     "riskType": "navigation",
@@ -2636,9 +2629,7 @@
       "src-research-is-signals",
       "src-research-is-250-gazette"
     ],
-    "assetIds": [
-      "is-sign-402-1"
-    ],
+    "assetIds": [],
     "tags": [
       "标志",
       "数字分类",
@@ -2676,7 +2667,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "限速不高于 60 km/h、超出 11–15 km/h 对应 2 分。先区分道路限速与超速幅度；记分与罚款是不同后果，不是可购买的超速额度。",
     "sourceIds": [
       "src-research-no-points",
       "src-no-safe-driving"
@@ -2719,7 +2710,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "本题原道路限速至少 70 km/h、超出 16–20 km/h 对应 2 分。不要将低速道路的分档直接套用；始终遵守现场限速。",
     "sourceIds": [
       "src-research-no-points",
       "src-research-no-speed-control"
@@ -2934,7 +2925,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "血液的 ‰ 和呼气的 mg/L 是不同测量单位，不能直接比较数值。0.2‰ 不是推荐饮酒量，个体代谢不能靠杯数推算，旅行自驾按不饮酒安排。",
     "sourceIds": [
       "src-research-no-police-alcohol",
       "src-research-no-alcohol-22"
@@ -2977,7 +2968,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "拒绝呼气不等于证明没有饮酒，警方仍可能进一步检查及采血。配合依法要求的检查，不将拒测当成规避执法的方法。",
     "sourceIds": [
       "src-research-no-police-alcohol",
       "src-research-no-alcohol-22"
@@ -3020,7 +3011,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "这是酒精违法后的处罚分层，不是饮酒许可。低于更重刑罚档仍可能被罚；实际处理取决于危险驾驶、事故等情节。",
     "sourceIds": [
       "src-research-no-alcohol-31",
       "src-research-no-police-alcohol"
@@ -3063,7 +3054,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "后果不止罚钱，还可能包括缓刑或实刑。网上某个罚金案例不是所有人的统一价格；安排不饮酒驾驶人。",
     "sourceIds": [
       "src-research-no-alcohol-31",
       "src-research-no-police-alcohol"
@@ -3106,7 +3097,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "这一档通常涉及罚款和无条件监禁，不是付费即可继续驾车。不要以自己感觉清醒作为判断依据。",
     "sourceIds": [
       "src-research-no-alcohol-31",
       "src-research-no-police-alcohol"
@@ -3201,9 +3192,10 @@
     "tags": [
       "挪威",
       "夏胎",
-      "胎纹"
+      "胎纹",
+      "audit-retired"
     ],
-    "status": "published",
+    "status": "retired",
     "lastReviewedAt": "2026-08-18"
   },
   {
@@ -3579,7 +3571,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "这些位置承担行人、自行车或公交通行功能。驾驶员留在车内、只停一会儿或开双闪，都不自动取得占用受保护位置的权利。",
     "sourceIds": [
       "src-research-no-parking",
       "src-research-no-signs"
@@ -3622,7 +3614,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "路口附近至少留出 5 m；从道路边缘开始转弯的位置判断，不从路口中心估算。还须避开出入口等其他禁停位置。",
     "sourceIds": [
       "src-research-no-parking",
       "src-research-no-signs"
@@ -3751,7 +3743,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "通行费不是违章罚款，注册会影响账单处理和适用折扣。租车时先问公司是否已有协议，以免重复登记或付款。",
     "sourceIds": [
       "src-no-autopass",
       "src-no-tourist-safety"
@@ -3794,7 +3786,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "记分在三年窗口内累计，不能按每次被查孤立计算。累计 8 分通常对应 6 个月失去驾驶资格；此前记录也要考虑。",
     "sourceIds": [
       "src-research-no-points",
       "src-research-no-loss-rights"
@@ -3837,7 +3829,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "这是挪威 B 类驾照试用期制度，不可直接推定所有外国驾照都处于该试用期。游客仍须遵守交通规则。",
     "sourceIds": [
       "src-research-no-points",
       "src-research-no-loss-rights"
@@ -3880,7 +3872,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "手机违法的记分与可能的罚款是两种后果。出发前设好导航，途中要操作手机先到安全合法地点停车。",
     "sourceIds": [
       "src-research-no-points",
       "src-no-rules"
@@ -3923,7 +3915,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "闯红灯制造横向冲突。提前观察灯色，不能因路口看起来没人就越过红灯；记分不是唯一后果。",
     "sourceIds": [
       "src-research-no-points",
       "src-no-rules"
@@ -3977,9 +3969,10 @@
     "tags": [
       "挪威",
       "图片识别",
-      "STOP"
+      "STOP",
+      "audit-retired"
     ],
-    "status": "published",
+    "status": "retired",
     "lastReviewedAt": "2026-08-18"
   },
   {
@@ -4106,9 +4099,10 @@
     "tags": [
       "冰岛",
       "酒驾",
-      "呼气"
+      "呼气",
+      "audit-retired"
     ],
-    "status": "published",
+    "status": "retired",
     "lastReviewedAt": "2026-08-18"
   },
   {
@@ -4183,7 +4177,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "合法获得的处方药也可能影响反应和警觉。阅读驾驶警告并向医生或药师确认，困倦或受影响时不驾车。",
     "sourceIds": [
       "src-research-is-alcohol",
       "src-research-is-law-current"
@@ -4321,9 +4315,10 @@
     "tags": [
       "冰岛",
       "停车",
-      "人行横道"
+      "人行横道",
+      "audit-retired"
     ],
-    "status": "published",
+    "status": "retired",
     "lastReviewedAt": "2026-08-18"
   },
   {
@@ -4355,7 +4350,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "桥上与隧道的通行和逃生空间有限，不能为观景随意停靠。留在车内或开双闪不免除禁停要求。",
     "sourceIds": [
       "src-research-is-parking",
       "src-research-is-law-current"
@@ -4579,9 +4574,10 @@
     "tags": [
       "冰岛",
       "儿童座椅",
-      "身高"
+      "身高",
+      "audit-retired"
     ],
-    "status": "published",
+    "status": "retired",
     "lastReviewedAt": "2026-08-18"
   },
   {
@@ -4742,10 +4738,11 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "按登记的许可总重，不按当天行李重量或车型外观判断。较重车辆不能统一套普通车费率。",
     "sourceIds": [
       "src-research-is-km-general",
-      "src-research-is-km-under10"
+      "src-research-is-km-under10",
+      "src-audit-is-km-current"
     ],
     "assetIds": [],
     "tags": [
@@ -4754,7 +4751,7 @@
       "重量"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-09-07"
   },
   {
     "id": "is-km-odometer-duty",
@@ -4828,7 +4825,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "豁免需要符合法定类别和登记／证明条件。普通游客租车或四驱车型不因身份或驱动方式自动免缴。",
     "sourceIds": [
       "src-research-is-km-under10",
       "src-research-is-km-general"
@@ -4943,24 +4940,25 @@
     "options": [
       {
         "id": "a",
-        "text": "会向登记车主发送收费请求，逾期可能进入催收并加收费用"
+        "text": "先向登记车主建立不额外收费的网银请求；账单仍逾期才可能催收"
       },
       {
         "id": "b",
-        "text": "自动免除通行费"
+        "text": "24 小时一过就自动产生统一全国罚款"
       },
       {
         "id": "c",
-        "text": "只需下次进隧道时现金补缴"
+        "text": "超过 24 小时就无需再付通行费"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "超过通行后 24 小时，运营方向登记车主建立网银收费请求，此步骤本身不加收费。账单再逾期才可能催收；租车公司的管理费按合同另计，不能当成全国统一罚款。",
     "sourceIds": [
       "src-research-is-vadla-price",
-      "src-research-is-vadla-faq"
+      "src-research-is-vadla-faq",
+      "src-audit-is-vadla-current"
     ],
     "assetIds": [],
     "tags": [
@@ -4969,7 +4967,7 @@
       "缴费"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-09-07"
   },
   {
     "id": "is-vadla-return-two-payments",
@@ -5052,9 +5050,10 @@
     "tags": [
       "冰岛",
       "Hornafjörður",
-      "路线"
+      "路线",
+      "audit-retired"
     ],
-    "status": "published",
+    "status": "retired",
     "lastReviewedAt": "2026-08-18"
   },
   {
@@ -5172,7 +5171,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "这是旧施工／隧道限速资料，未确认当前工程状态，不计分。不得把旧数字当今天的限速；进入隧道前查看当日公告与现场标志。",
     "sourceIds": [
       "src-research-is-hval-risk",
       "src-research-is-hval-news-en"
@@ -5181,7 +5180,9 @@
     "tags": [
       "冰岛",
       "Hvalfjörður",
-      "隧道"
+      "隧道",
+      "needs-review",
+      "dynamic"
     ],
     "status": "published",
     "lastReviewedAt": "2026-08-18"
@@ -5301,7 +5302,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "两份官方来源均覆盖该结论；现场标志、当前价目或处罚表优先，出发前应复核。",
+    "explanation": "红圈内没有限定某类车辆的图案，限制对象是所有车辆，而不只是机动车。应停止进入，选择合法路线；它不是停车提示，也不是可以自行忽略的危险警告。官方编号为 306.0。",
     "sourceIds": [
       "src-is-signs",
       "src-research-is-250-gazette"
@@ -5346,7 +5347,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "恢复档中的两份官方证据共同覆盖该结论；收费、日期或结算规则出发前仍应复核。",
+    "explanation": "不要把 Hvalfjörður 与 Vaðlaheiði 混为一条隧道。旧攻略预付费说明可能早已失效；未来提议不能当已生效规则，临行核对现行公告。",
     "sourceIds": [
       "src-recovery-is-hval-toll-ended",
       "src-recovery-is-hval-2028-proposal"
@@ -5390,10 +5391,11 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "恢复档中的两份官方证据共同覆盖该结论；收费、日期或结算规则出发前仍应复核。",
+    "explanation": "持牌租车公司在符合条件的短租中可用固定日费：每个开始的租赁日 1,390 ISK，以每日 200 km 为评估基准，不再按该期实际里程结算。应问清自己合同用日费还是里程方式，及另加的税费、管理费。",
     "sourceIds": [
       "src-recovery-is-rental-daily-fee",
-      "src-recovery-is-km-collection"
+      "src-recovery-is-km-collection",
+      "src-audit-is-daily-current"
     ],
     "assetIds": [],
     "tags": [
@@ -5403,7 +5405,7 @@
       "日费"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-09-07"
   },
   {
     "id": "is-km-estimate-retro-settlement",
@@ -5434,7 +5436,7 @@
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "恢复档中的两份官方证据共同覆盖该结论；收费、日期或结算规则出发前仍应复核。",
+    "explanation": "普通模式先估算暂缴，再用实际里程读数校正；它不同于符合条件的固定日费模式。取还车保存里程读数并核对合同结算规则。",
     "sourceIds": [
       "src-recovery-is-km-estimate",
       "src-recovery-is-km-collection"
@@ -5460,28 +5462,29 @@
     "appliesFrom": "2020-01-01",
     "appliesTo": null,
     "tripPriority": 1,
-    "prompt": "冰岛 1240/2019 罚则条例的现行版本和警察罚款折扣应如何理解？",
+    "prompt": "冰岛警方罚金符合 1240/2019 第 2 条时，及时缴款折扣应如何理解？",
     "options": [
       {
         "id": "a",
-        "text": "应看 2026-08-12 日期的 current consolidated 版本；警察罚款及费用在 30 日内全额缴清可减免 25%"
+        "text": "按规定起算的 30 日内将罚金及诉讼费用全额付清，可减免罚金部分 25%"
       },
       {
         "id": "b",
-        "text": "288/2018 仍是现行版本，逾期 60 日可减免 50%"
+        "text": "在 30 日内只付一部分，也能将所有费用减免 25%"
       },
       {
         "id": "c",
-        "text": "1240/2019 已被废止，警察罚款没有支付期限折扣"
+        "text": "所有租车手续费和通行费都自动打 75 折"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "恢复档中的两份官方证据共同覆盖该结论；收费、日期或结算规则出发前仍应复核。",
+    "explanation": "1240/2019 现行合并 PDF 第 2 条：符合条款的警方罚金，连同诉讼费用在规定起算的 30 日内全额缴清，可减免罚金部分的 25%。不是诉讼费用本身打折，也不自动适用于租车手续费。",
     "sourceIds": [
       "src-recovery-is-1240-index",
-      "src-recovery-is-1240-current"
+      "src-recovery-is-1240-current",
+      "src-audit-is-fines-current"
     ],
     "assetIds": [],
     "tags": [
@@ -5491,7 +5494,7 @@
       "25%折扣"
     ],
     "status": "published",
-    "lastReviewedAt": "2026-08-18"
+    "lastReviewedAt": "2026-09-07"
   },
   {
     "id": "p3-no-bus-leaving-stop",
@@ -5527,9 +5530,7 @@
       "src-phase3-no-p3-02-primary",
       "src-phase3-no-p3-02-secondary"
     ],
-    "assetIds": [
-      "no-photo-sandnes-rv44"
-    ],
+    "assetIds": [],
     "tags": [
       "公交车让行",
       "NO",
@@ -5572,9 +5573,7 @@
       "src-phase3-no-p3-04-primary",
       "src-phase3-no-p3-04-secondary"
     ],
-    "assetIds": [
-      "no-photo-rallarvegen-haugastol"
-    ],
+    "assetIds": [],
     "tags": [
       "自行车与人行横道",
       "NO",
@@ -5617,9 +5616,7 @@
       "src-phase3-no-p3-05-primary",
       "src-phase3-no-p3-05-secondary"
     ],
-    "assetIds": [
-      "no-photo-maridalen-oslo"
-    ],
+    "assetIds": [],
     "tags": [
       "自行车与行人",
       "NO",
@@ -5662,9 +5659,7 @@
       "src-phase3-no-p3-07-primary",
       "src-phase3-no-p3-07-secondary"
     ],
-    "assetIds": [
-      "no-photo-gamle-aurlandsvegen"
-    ],
+    "assetIds": [],
     "tags": [
       "超车",
       "NO",
@@ -5707,9 +5702,7 @@
       "src-phase3-no-p3-08-primary",
       "src-phase3-no-p3-08-secondary"
     ],
-    "assetIds": [
-      "no-photo-butunnelen-hardangerbridge"
-    ],
+    "assetIds": [],
     "tags": [
       "转弯让行",
       "NO",
@@ -5752,9 +5745,7 @@
       "src-phase3-no-p3-09-primary",
       "src-phase3-no-p3-09-secondary"
     ],
-    "assetIds": [
-      "no-photo-fjellet-phus-tromso"
-    ],
+    "assetIds": [],
     "tags": [
       "事故处置",
       "NO",
@@ -5797,9 +5788,7 @@
       "src-phase3-no-p3-10-primary",
       "src-phase3-no-p3-10-secondary"
     ],
-    "assetIds": [
-      "no-photo-frafjordtunnelen"
-    ],
+    "assetIds": [],
     "tags": [
       "动物横穿",
       "NO",
@@ -5842,9 +5831,7 @@
       "src-phase3-no-p3-11-primary",
       "src-phase3-no-p3-11-secondary"
     ],
-    "assetIds": [
-      "no-photo-klostergarasjen-bergen"
-    ],
+    "assetIds": [],
     "tags": [
       "隧道火灾",
       "NO",
@@ -5887,9 +5874,7 @@
       "src-phase3-no-p3-12-primary",
       "src-phase3-no-p3-12-secondary"
     ],
-    "assetIds": [
-      "no-photo-oppdal-station-parking"
-    ],
+    "assetIds": [],
     "tags": [
       "紧急号码",
       "NO",
@@ -5977,9 +5962,7 @@
       "src-phase3-no-p3-15-primary",
       "src-phase3-no-p3-15-secondary"
     ],
-    "assetIds": [
-      "no-photo-rv15-strynefjellet"
-    ],
+    "assetIds": [],
     "tags": [
       "渡轮缴费",
       "NO",
@@ -6022,9 +6005,7 @@
       "src-phase3-no-p3-16-primary",
       "src-phase3-no-p3-16-secondary"
     ],
-    "assetIds": [
-      "no-photo-rv827-closed-nordland"
-    ],
+    "assetIds": [],
     "tags": [
       "渡轮折扣",
       "NO",
@@ -6067,9 +6048,7 @@
       "src-phase3-no-p3-21-primary",
       "src-phase3-no-p3-21-secondary"
     ],
-    "assetIds": [
-      "no-photo-rv827-brattlitunnel"
-    ],
+    "assetIds": [],
     "tags": [
       "站点停车",
       "NO",
@@ -6112,9 +6091,7 @@
       "src-phase3-no-p3-23-primary",
       "src-phase3-no-p3-23-secondary"
     ],
-    "assetIds": [
-      "no-photo-sandefjord-parkomat"
-    ],
+    "assetIds": [],
     "tags": [
       "HOV车道",
       "NO",
@@ -6157,9 +6134,7 @@
       "src-phase3-is-p3-01-primary",
       "src-phase3-is-p3-01-secondary"
     ],
-    "assetIds": [
-      "is-photo-skaftafell-route1"
-    ],
+    "assetIds": [],
     "tags": [
       "F-road",
       "IS",
@@ -6202,9 +6177,7 @@
       "src-phase3-is-p3-02-primary",
       "src-phase3-is-p3-02-secondary"
     ],
-    "assetIds": [
-      "is-photo-road60-gravel"
-    ],
+    "assetIds": [],
     "tags": [
       "山路季节",
       "IS",
@@ -6247,9 +6220,7 @@
       "src-phase3-is-p3-03-primary",
       "src-phase3-is-p3-03-secondary"
     ],
-    "assetIds": [
-      "is-photo-route-f35"
-    ],
+    "assetIds": [],
     "tags": [
       "山路开放",
       "IS",
@@ -6292,9 +6263,7 @@
       "src-phase3-is-p3-05-primary",
       "src-phase3-is-p3-05-secondary"
     ],
-    "assetIds": [
-      "is-photo-foss-a-sidu-ring-road"
-    ],
+    "assetIds": [],
     "tags": [
       "单车道桥",
       "IS",
@@ -6382,9 +6351,7 @@
       "src-phase3-is-p3-08-primary",
       "src-phase3-is-p3-08-secondary"
     ],
-    "assetIds": [
-      "is-photo-namafjall-route1"
-    ],
+    "assetIds": [],
     "tags": [
       "野外露营",
       "IS",
@@ -6427,9 +6394,7 @@
       "src-phase3-is-p3-09-primary",
       "src-phase3-is-p3-09-secondary"
     ],
-    "assetIds": [
-      "is-photo-fossholli-ring-road-bridge"
-    ],
+    "assetIds": [],
     "tags": [
       "房车过夜",
       "IS",
@@ -6472,9 +6437,7 @@
       "src-phase3-is-p3-11-primary",
       "src-phase3-is-p3-11-secondary"
     ],
-    "assetIds": [
-      "is-photo-gjadalsa-road1-bridge"
-    ],
+    "assetIds": [],
     "tags": [
       "拖挂风力",
       "IS",
@@ -6517,9 +6480,7 @@
       "src-phase3-is-p3-12-primary",
       "src-phase3-is-p3-12-secondary"
     ],
-    "assetIds": [
-      "is-photo-f910-kreppa-bridge"
-    ],
+    "assetIds": [],
     "tags": [
       "强风开门",
       "IS",
@@ -6562,9 +6523,7 @@
       "src-phase3-is-p3-13-primary",
       "src-phase3-is-p3-13-secondary"
     ],
-    "assetIds": [
-      "is-photo-landmannalaugar-dirt-road"
-    ],
+    "assetIds": [],
     "tags": [
       "拖挂限速",
       "IS",
@@ -6607,9 +6566,7 @@
       "src-phase3-is-p3-16-primary",
       "src-phase3-is-p3-16-secondary"
     ],
-    "assetIds": [
-      "is-photo-f910-jokulsa-bridge"
-    ],
+    "assetIds": [],
     "tags": [
       "自行车超越",
       "IS",
@@ -6652,9 +6609,7 @@
       "src-phase3-is-p3-19-primary",
       "src-phase3-is-p3-19-secondary"
     ],
-    "assetIds": [
-      "is-photo-f35-bridge"
-    ],
+    "assetIds": [],
     "tags": [
       "事故报告",
       "IS",
@@ -6697,9 +6652,7 @@
       "src-phase3-is-p3-20-primary",
       "src-phase3-is-p3-20-secondary"
     ],
-    "assetIds": [
-      "is-photo-skeidararsandur-dust-storm"
-    ],
+    "assetIds": [],
     "tags": [
       "冰岛紧急号码",
       "IS",
@@ -6742,9 +6695,7 @@
       "src-phase3-is-p3-21-primary",
       "src-phase3-is-p3-21-secondary"
     ],
-    "assetIds": [
-      "is-photo-f98-highland-road"
-    ],
+    "assetIds": [],
     "tags": [
       "道路服务",
       "IS",
@@ -6764,25 +6715,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 100.1 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威交通标志 100.1：右急弯"
+        "text": "右急弯"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 366：Fartsgrensesone (speed-limit zone)"
+        "text": "左急弯"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威交通标志 302：禁止驶入"
+        "text": "连续弯路"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是右急弯标志（官方编号 100.1）。观察右向弯道图案，入弯前减速，不当作路口转向指令。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -6810,25 +6761,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 302 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威交通标志 302：禁止驶入"
+        "text": "禁止驶入"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威交通标志 100.1：右急弯"
+        "text": "禁止停车"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威交通标志 402.1：强制行驶方向"
+        "text": "禁止所有车辆双向通行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是禁止驶入标志（官方编号 302）。禁止从这一方向驶入，不是禁止停车。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -6856,25 +6807,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 402.1 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威交通标志 402.1：强制行驶方向"
+        "text": "按箭头规定方向行驶"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威交通标志 302：禁止驶入"
+        "text": "建议行驶方向，可任选"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威交通标志 780：安装防滑链区域"
+        "text": "禁止按箭头方向行驶"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是按箭头规定方向行驶标志（官方编号 402.1）。按图中箭头规定的方向行驶，不是可忽略的推荐路线。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -6902,25 +6853,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 780 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威交通标志 780：安装防滑链区域"
+        "text": "安装防滑链区域"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威交通标志 402.1：强制行驶方向"
+        "text": "普通停车区域"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 100.2：Farlig sving, til venstre (dangerous bend left)"
+        "text": "防滑链使用结束"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是安装防滑链区域标志（官方编号 780）。与安装防滑链有关，不是普通停车场；结合路况及现场指示使用装备。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -6948,25 +6899,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 100.2 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 100.2：Farlig sving, til venstre (dangerous bend left)"
+        "text": "左急弯"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威交通标志 780：安装防滑链区域"
+        "text": "右急弯"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 104.1：Bratt bakke, stigning (steep uphill)"
+        "text": "连续弯路"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是左急弯标志（官方编号 100.2）。弯曲箭头朝左；先减速再平稳入弯，区别于右急弯牌。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -6994,25 +6945,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 104.1 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 104.1：Bratt bakke, stigning (steep uphill)"
+        "text": "陡坡上行"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 100.2：Farlig sving, til venstre (dangerous bend left)"
+        "text": "陡坡下行"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 104.2：Bratt bakke, fall (steep downhill)"
+        "text": "道路变窄"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是陡坡上行标志（官方编号 104.1）。坡面上升，提示上坡而非下坡；提前选择合适挡位并观察视距。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7040,25 +6991,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 104.2 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 104.2：Bratt bakke, fall (steep downhill)"
+        "text": "陡坡下行"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 104.1：Bratt bakke, stigning (steep uphill)"
+        "text": "陡坡上行"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 106.1：Smalere veg, innsnevring på begge sider (road narrows on both sides)"
+        "text": "路面不平"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是陡坡下行标志（官方编号 104.2）。坡面下降；下坡前控制速度，避免只在坡底急刹。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7086,25 +7037,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 106.1 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 106.1：Smalere veg, innsnevring på begge sider (road narrows on both sides)"
+        "text": "道路变窄"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 104.2：Bratt bakke, fall (steep downhill)"
+        "text": "道路拓宽"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 108：Ujevn veg (uneven road)"
+        "text": "单向交通"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是道路变窄标志（官方编号 106.1）。道路边界向内收窄；减速评估会车空间，不假定本方向优先。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7132,25 +7083,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 108 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 108：Ujevn veg (uneven road)"
+        "text": "路面不平"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 106.1：Smalere veg, innsnevring på begge sider (road narrows on both sides)"
+        "text": "路面湿滑"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 110：Vegarbeid (roadworks)"
+        "text": "飞石／松散碎石"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是路面不平标志（官方编号 108）。图案提示前方可能出现路面不平相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7178,25 +7129,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 110 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 110：Vegarbeid (roadworks)"
+        "text": "道路施工"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 108：Ujevn veg (uneven road)"
+        "text": "交通事故"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 112：Steinsprut (loose chippings)"
+        "text": "禁止机动车通行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是道路施工标志（官方编号 110）。图案提示前方可能出现道路施工相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7224,25 +7175,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 112 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 112：Steinsprut (loose chippings)"
+        "text": "飞石／松散碎石"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 110：Vegarbeid (roadworks)"
+        "text": "路面湿滑"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 114：Rasfare (risk of falling rocks/avalanche)"
+        "text": "落石风险"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是飞石／松散碎石标志（官方编号 112）。警告轮胎扬起碎石；减速并拉开距离，与边坡滚落岩石不同。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7270,25 +7221,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 114 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 114：Rasfare (risk of falling rocks/avalanche)"
+        "text": "落石或雪崩风险"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 112：Steinsprut (loose chippings)"
+        "text": "飞石／松散碎石"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 116：Glatt kjørebane (slippery road)"
+        "text": "路面不平"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是落石或雪崩风险标志（官方编号 114）。留意边坡和路面，不在危险区停留拍照；不是单纯路面松散碎石。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7316,25 +7267,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 116 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 116：Glatt kjørebane (slippery road)"
+        "text": "路面湿滑"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 114：Rasfare (risk of falling rocks/avalanche)"
+        "text": "飞石／松散碎石"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 117：Farlig vegskulder (dangerous road shoulder)"
+        "text": "危险路肩"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是路面湿滑标志（官方编号 116）。打滑图案提示抓地力不足，应平稳操作而非急转急刹。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7362,25 +7313,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 117 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 117：Farlig vegskulder (dangerous road shoulder)"
+        "text": "危险路肩"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 116：Glatt kjørebane (slippery road)"
+        "text": "道路变窄"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 120：Kai, strand eller ferjeleie (quay, shore or ferry landing)"
+        "text": "陡坡下行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是危险路肩标志（官方编号 117）。图案提示前方可能出现危险路肩相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7408,25 +7359,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 120 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 120：Kai, strand eller ferjeleie (quay, shore or ferry landing)"
+        "text": "码头、岸边或渡口"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 117：Farlig vegskulder (dangerous road shoulder)"
+        "text": "单车道桥"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 124：Farlig vegkryss (dangerous crossroads)"
+        "text": "隧道"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是码头、岸边或渡口标志（官方编号 120）。图案提示前方可能出现码头、岸边或渡口相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7454,25 +7405,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 124 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 124：Farlig vegkryss (dangerous crossroads)"
+        "text": "危险交叉路口"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 120：Kai, strand eller ferjeleie (quay, shore or ferry landing)"
+        "text": "优先道路"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 126：Rundkjøring (roundabout warning)"
+        "text": "必须停车让行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是危险交叉路口标志（官方编号 124）。警告交叉冲突，不能据此推断自己有优先权。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7500,25 +7451,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 126 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 126：Rundkjøring (roundabout warning)"
+        "text": "前方环岛"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 124：Farlig vegkryss (dangerous crossroads)"
+        "text": "强制沿环岛方向行驶"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 132：Trafikklyssignal (traffic lights)"
+        "text": "优先道路"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是前方环岛标志（官方编号 126）。前方环岛警告不是优先通行许可；提前观察进入让行要求。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7546,25 +7497,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 132 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 132：Trafikklyssignal (traffic lights)"
+        "text": "前方交通信号灯"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 126：Rundkjøring (roundabout warning)"
+        "text": "无栏杆铁路道口"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 135：Planovergang uten bom (level crossing without barrier)"
+        "text": "人行横道"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是前方交通信号灯标志（官方编号 132）。提前观察实际灯色，警告牌本身不等于绿灯。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7592,25 +7543,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 135 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 135：Planovergang uten bom (level crossing without barrier)"
+        "text": "无栏杆铁路道口"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 132：Trafikklyssignal (traffic lights)"
+        "text": "有栏杆铁路道口"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 146.1：Dyr (wild animals)"
+        "text": "道路施工"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是无栏杆铁路道口标志（官方编号 135）。图案提示前方可能出现无栏杆铁路道口相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7638,25 +7589,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 146.1 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 146.1：Dyr (wild animals)"
+        "text": "野生动物"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 135：Planovergang uten bom (level crossing without barrier)"
+        "text": "羊"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 148：Møtende trafikk (two-way traffic)"
+        "text": "牛"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是野生动物标志（官方编号 146.1）。图案提示前方可能出现野生动物相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7684,25 +7635,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 148 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 148：Møtende trafikk (two-way traffic)"
+        "text": "双向交通"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 146.1：Dyr (wild animals)"
+        "text": "单向交通"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 153：Trafikkulykke (traffic accident)"
+        "text": "让对向车辆先行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是双向交通标志（官方编号 148）。图案提示前方可能出现双向交通相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7730,25 +7681,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 153 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 153：Trafikkulykke (traffic accident)"
+        "text": "交通事故"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 148：Møtende trafikk (two-way traffic)"
+        "text": "道路施工"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 206：Forkjørsveg (priority road)"
+        "text": "路面不平"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是交通事故标志（官方编号 153）。图案提示前方可能出现交通事故相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7776,25 +7727,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 206 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 206：Forkjørsveg (priority road)"
+        "text": "优先道路"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 153：Trafikkulykke (traffic accident)"
+        "text": "优先道路终止"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 212：Vikeplikt overfor møtende kjørende (give way to oncoming traffic)"
+        "text": "让对向车辆先行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是优先道路标志（官方编号 206）。优先道路仍须注意现场信号和其他道路使用者。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7822,25 +7773,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 212 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 212：Vikeplikt overfor møtende kjørende (give way to oncoming traffic)"
+        "text": "让对向车辆先行"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 206：Forkjørsveg (priority road)"
+        "text": "本方向优先于对向"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 306.0：Forbudt for alle kjøretøy (all vehicles prohibited)"
+        "text": "单向交通"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是让对向车辆先行标志（官方编号 212）。本方向须让对向先过，不要与本方向优先牌混淆。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7868,25 +7819,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 306.0 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 306.0：Forbudt for alle kjøretøy (all vehicles prohibited)"
+        "text": "禁止所有车辆通行"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 212：Vikeplikt overfor møtende kjørende (give way to oncoming traffic)"
+        "text": "仅禁止机动车通行"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 334：Forbikjøringsforbud (no overtaking)"
+        "text": "只禁止从背面驶入"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是禁止所有车辆通行标志（官方编号 306.0）。对象是所有车辆，不限于机动车；四驱也不能进入。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7914,25 +7865,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 334 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 334：Forbikjøringsforbud (no overtaking)"
+        "text": "禁止超车"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 306.0：Forbudt for alle kjøretøy (all vehicles prohibited)"
+        "text": "禁止所有车辆通行"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威官方交通标志 366：Fartsgrensesone (speed-limit zone)"
+        "text": "禁止超车结束"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是禁止超车标志（官方编号 334）。保持跟车，等待允许且安全的路段；不是禁止车辆进入。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -7960,25 +7911,25 @@
     "appliesFrom": null,
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：挪威官方交通标志 366 的含义是什么？",
+    "prompt": "看图：这枚挪威官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "挪威官方交通标志 366：Fartsgrensesone (speed-limit zone)"
+        "text": "限速区域"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：挪威官方交通标志 334：Forbikjøringsforbud (no overtaking)"
+        "text": "仅限标志处一个点的速度"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：挪威交通标志 100.1：右急弯"
+        "text": "建议车速"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与 Vegvesen 标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是限速区域标志（官方编号 366）。数字适用于标明的区域，不是只在标志旁减速即可。",
     "sourceIds": [
       "src-assets-no-official-signs",
       "src-no-signs"
@@ -8006,25 +7957,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 100.2 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 100.2：Hættuleg beygja til vinstri (dangerous curve left)"
+        "text": "左急弯"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 364：Sérstök takmörkun hámarkshraða afnumin (special speed limit ends)"
+        "text": "右急弯"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 106.1：Vegur mjókkar (road narrows)"
+        "text": "连续弯路"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是左急弯标志（官方编号 100.2）。弯曲箭头朝左；先减速再平稳入弯，区别于右急弯牌。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8052,25 +8003,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 106.1 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 106.1：Vegur mjókkar (road narrows)"
+        "text": "道路变窄"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 100.2：Hættuleg beygja til vinstri (dangerous curve left)"
+        "text": "道路拓宽"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 108.1：Ósléttur vegur (uneven road)"
+        "text": "单向交通"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是道路变窄标志（官方编号 106.1）。道路边界向内收窄；减速评估会车空间，不假定本方向优先。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8098,25 +8049,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 108.1 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 108.1：Ósléttur vegur (uneven road)"
+        "text": "路面不平"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 106.1：Vegur mjókkar (road narrows)"
+        "text": "路面湿滑"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 110：Vegavinna (roadworks)"
+        "text": "陡坡上行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是路面不平标志（官方编号 108.1）。图案提示前方可能出现路面不平相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8144,25 +8095,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 110 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 110：Vegavinna (roadworks)"
+        "text": "道路施工"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 108.1：Ósléttur vegur (uneven road)"
+        "text": "交通事故"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 112：Steinkast (loose chippings)"
+        "text": "禁止机动车通行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是道路施工标志（官方编号 110）。图案提示前方可能出现道路施工相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8190,25 +8141,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 112 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 112：Steinkast (loose chippings)"
+        "text": "飞石／松散碎石"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 110：Vegavinna (roadworks)"
+        "text": "路面湿滑"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 115：Skert sýn vegna veðurs (reduced visibility due to weather)"
+        "text": "落石风险"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是飞石／松散碎石标志（官方编号 112）。警告轮胎扬起碎石；减速并拉开距离，与边坡滚落岩石不同。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8236,25 +8187,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 115 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 115：Skert sýn vegna veðurs (reduced visibility due to weather)"
+        "text": "天气导致能见度降低"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 112：Steinkast (loose chippings)"
+        "text": "侧风"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 116.1：Sleipur vegur (slippery road)"
+        "text": "路面湿滑"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是天气导致能见度降低标志（官方编号 115）。图案提示前方可能出现天气导致能见度降低相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8282,25 +8233,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 116.1 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 116.1：Sleipur vegur (slippery road)"
+        "text": "路面湿滑"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 115：Skert sýn vegna veðurs (reduced visibility due to weather)"
+        "text": "飞石／松散碎石"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 122：Jarðgöng (tunnel)"
+        "text": "能见度降低"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是路面湿滑标志（官方编号 116.1）。打滑图案提示抓地力不足，应平稳操作而非急转急刹。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8328,25 +8279,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 122 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 122：Jarðgöng (tunnel)"
+        "text": "隧道"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 116.1：Sleipur vegur (slippery road)"
+        "text": "单车道桥"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 124：Hættuleg vegamót (dangerous intersection)"
+        "text": "车辆限高"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是隧道标志（官方编号 122）。图案提示前方可能出现隧道相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8374,25 +8325,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 124 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 124：Hættuleg vegamót (dangerous intersection)"
+        "text": "危险交叉路口"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 122：Jarðgöng (tunnel)"
+        "text": "优先道路"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 126：Hringtorg (roundabout warning)"
+        "text": "必须停车让行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是危险交叉路口标志（官方编号 124）。警告交叉冲突，不能据此推断自己有优先权。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8420,25 +8371,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 126 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 126：Hringtorg (roundabout warning)"
+        "text": "前方环岛"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 124：Hættuleg vegamót (dangerous intersection)"
+        "text": "强制沿环岛方向行驶"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 132：Umferðarljós (traffic lights)"
+        "text": "优先道路"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是前方环岛标志（官方编号 126）。前方环岛警告不是优先通行许可；提前观察进入让行要求。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8466,25 +8417,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 132 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 132：Umferðarljós (traffic lights)"
+        "text": "前方交通信号灯"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 126：Hringtorg (roundabout warning)"
+        "text": "无栏杆铁路道口"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 146.5：Dýr: sauðfé (animals: sheep)"
+        "text": "人行横道"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是前方交通信号灯标志（官方编号 132）。提前观察实际灯色，警告牌本身不等于绿灯。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8512,25 +8463,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 146.5 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 146.5：Dýr: sauðfé (animals: sheep)"
+        "text": "羊"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 132：Umferðarljós (traffic lights)"
+        "text": "马"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 148：Tvístefnuakstur (two-way traffic)"
+        "text": "牛"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是羊标志（官方编号 146.5）。图案提示前方可能出现羊相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8558,25 +8509,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 148 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 148：Tvístefnuakstur (two-way traffic)"
+        "text": "双向交通"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 146.5：Dýr: sauðfé (animals: sheep)"
+        "text": "单向交通"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 140：Gangbraut (pedestrian crossing)"
+        "text": "让对向车辆先行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是双向交通标志（官方编号 148）。图案提示前方可能出现双向交通相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8604,25 +8555,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 140 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 140：Gangbraut (pedestrian crossing)"
+        "text": "前方人行横道"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 148：Tvístefnuakstur (two-way traffic)"
+        "text": "行人步行专用道"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 141：Gangandi vegfarendur (pedestrians)"
+        "text": "儿童出入"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是前方人行横道标志（官方编号 140）。提前减速观察人行横道；不是车辆可进入步行专用道。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8650,25 +8601,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 141 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 141：Gangandi vegfarendur (pedestrians)"
+        "text": "行人"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 140：Gangbraut (pedestrian crossing)"
+        "text": "骑车人"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 142：Börn (children)"
+        "text": "人行横道"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是行人标志（官方编号 141）。图案提示前方可能出现行人相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8696,25 +8647,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 142 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 142：Börn (children)"
+        "text": "儿童"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 141：Gangandi vegfarendur (pedestrians)"
+        "text": "行人步行专用道"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 144：Hjólandi vegfarendur (cyclists)"
+        "text": "骑车人"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是儿童标志（官方编号 142）。图案提示前方可能出现儿童相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8742,25 +8693,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 144 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 144：Hjólandi vegfarendur (cyclists)"
+        "text": "骑车人"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 142：Börn (children)"
+        "text": "自行车专用道"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 146.1：Dýr: hestar (animals: horses)"
+        "text": "禁止自行车通行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是骑车人标志（官方编号 144）。图案提示前方可能出现骑车人相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8788,25 +8739,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 146.1 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 146.1：Dýr: hestar (animals: horses)"
+        "text": "马"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 144：Hjólandi vegfarendur (cyclists)"
+        "text": "羊"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 146.4：Dýr: nautgripir (animals: cattle)"
+        "text": "牛"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是马标志（官方编号 146.1）。图案提示前方可能出现马相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8834,25 +8785,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 146.4 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 146.4：Dýr: nautgripir (animals: cattle)"
+        "text": "牛"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 146.1：Dýr: hestar (animals: horses)"
+        "text": "马"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 204：Stöðvunarskylda (STOP)"
+        "text": "羊"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是牛标志（官方编号 146.4）。图案提示前方可能出现牛相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8880,25 +8831,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 204 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 204：Stöðvunarskylda (STOP)"
+        "text": "停车让行（STOP）"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 146.4：Dýr: nautgripir (animals: cattle)"
+        "text": "减速让行，不要求完全停车"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 206：Aðalbraut (priority road)"
+        "text": "优先通行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是停车让行（STOP）标志（官方编号 204）。必须完全停车，再确认可安全通行；滑行不算停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8926,25 +8877,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 206 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 206：Aðalbraut (priority road)"
+        "text": "优先道路"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 204：Stöðvunarskylda (STOP)"
+        "text": "优先道路终止"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 208：Aðalbraut endar (priority road ends)"
+        "text": "让对向车辆先行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是优先道路标志（官方编号 206）。优先道路仍须注意现场信号和其他道路使用者。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -8972,25 +8923,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 208 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 208：Aðalbraut endar (priority road ends)"
+        "text": "优先道路终止"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 206：Aðalbraut (priority road)"
+        "text": "优先道路开始"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 212：Veita umferð sem kemur á móti forgang (give way to oncoming traffic)"
+        "text": "禁止所有车辆通行"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是优先道路终止标志（官方编号 208）。优先道路状态终止，之后重新判断让行关系。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -9018,25 +8969,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 212 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 212：Veita umferð sem kemur á móti forgang (give way to oncoming traffic)"
+        "text": "让对向车辆先行"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 208：Aðalbraut endar (priority road ends)"
+        "text": "本方向优先于对向"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 306.1：Akstur vélknúinna ökutækja bannaður (motor vehicles prohibited)"
+        "text": "单向交通"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是让对向车辆先行标志（官方编号 212）。本方向须让对向先过，不要与本方向优先牌混淆。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -9064,25 +9015,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 306.1 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 306.1：Akstur vélknúinna ökutækja bannaður (motor vehicles prohibited)"
+        "text": "禁止机动车通行"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 212：Veita umferð sem kemur á móti forgang (give way to oncoming traffic)"
+        "text": "禁止所有车辆通行"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 330.1：Beygja bönnuð (turn prohibited)"
+        "text": "禁止停车"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是禁止机动车通行标志（官方编号 306.1）。对象是机动车，不能缩小成只禁止停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -9110,25 +9061,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 330.1 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 330.1：Beygja bönnuð (turn prohibited)"
+        "text": "禁止转弯"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 306.1：Akstur vélknúinna ökutækja bannaður (motor vehicles prohibited)"
+        "text": "按箭头强制转弯"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 334：Framúrakstur bannaður (no overtaking)"
+        "text": "禁止超车"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是禁止转弯标志（官方编号 330.1）。图案提示前方可能出现禁止转弯相关风险，应减速观察并预留应对空间。警告风险不等于赋予通行优先权，也不是要求在标志处停车。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -9156,25 +9107,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 334 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 334：Framúrakstur bannaður (no overtaking)"
+        "text": "禁止超车"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 330.1：Beygja bönnuð (turn prohibited)"
+        "text": "禁止所有车辆通行"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 336：Bann við framúrakstri afnumið (overtaking ban ends)"
+        "text": "禁止超车结束"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是禁止超车标志（官方编号 334）。保持跟车，等待允许且安全的路段；不是禁止车辆进入。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -9202,25 +9153,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 336 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 336：Bann við framúrakstri afnumið (overtaking ban ends)"
+        "text": "禁止超车结束"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 334：Framúrakstur bannaður (no overtaking)"
+        "text": "禁止超车开始"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 364：Sérstök takmörkun hámarkshraða afnumin (special speed limit ends)"
+        "text": "特定最高限速结束"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是禁止超车结束标志（官方编号 336）。只结束此前超车禁令，视距和对向交通等安全条件仍须满足。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -9248,25 +9199,25 @@
     "appliesFrom": "2024-03-01",
     "appliesTo": null,
     "tripPriority": 2,
-    "prompt": "看图：冰岛官方交通标志 364 的含义是什么？",
+    "prompt": "看图：这枚冰岛官方标志的含义是什么？",
     "options": [
       {
         "id": "a",
-        "text": "冰岛官方交通标志 364：Sérstök takmörkun hámarkshraða afnumin (special speed limit ends)"
+        "text": "特定最高限速结束"
       },
       {
         "id": "b",
-        "text": "另一个官方图示含义：冰岛官方交通标志 336：Bann við framúrakstri afnumið (overtaking ban ends)"
+        "text": "所有道路规则结束"
       },
       {
         "id": "c",
-        "text": "另一个官方图示含义：冰岛官方交通标志 100.2：Hættuleg beygja til vinstri (dangerous curve left)"
+        "text": "限速区域开始"
       }
     ],
     "correctOptionIds": [
       "a"
     ],
-    "explanation": "这是一道仅看官方标志图选含义的识别题；正确含义来自该资产的官方标题与冰岛标志来源，现场附加牌和道路状况优先。",
+    "explanation": "这是特定最高限速结束标志（官方编号 364）。不是取消一切限速；道路一般限速与安全速度要求仍适用。",
     "sourceIds": [
       "src-assets-is-official-signs",
       "src-research-is-250-gazette"
@@ -9282,5 +9233,518 @@
     ],
     "status": "published",
     "lastReviewedAt": "2026-08-18"
+  },
+  {
+    "id": "audit-no-right-priority",
+    "country": "NO",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "priority",
+    "difficulty": "core",
+    "riskType": "safety-critical",
+    "appliesFrom": null,
+    "appliesTo": null,
+    "tripPriority": 1,
+    "prompt": "挪威无信号、无优先标志的普通交叉路口，通常先让哪一侧来车？",
+    "options": [
+      {
+        "id": "a",
+        "text": "右侧来车"
+      },
+      {
+        "id": "b",
+        "text": "左侧来车"
+      },
+      {
+        "id": "c",
+        "text": "道路看起来更宽的一方"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "无另行规定时右方优先。不能因自己车速更快或道路看起来更宽而认定主路；有信号、标志或特殊驶出地点时先检查那些规定。",
+    "sourceIds": [
+      "src-audit-no-yield-current",
+      "src-audit-no-rules-pdf"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-basics"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
+  },
+  {
+    "id": "audit-no-exit-property",
+    "country": "NO",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "priority",
+    "difficulty": "core",
+    "riskType": "safety-critical",
+    "appliesFrom": null,
+    "appliesTo": null,
+    "tripPriority": 1,
+    "prompt": "从挪威停车场或加油站驶入道路时，可以按右方优先抢先进入吗？",
+    "options": [
+      {
+        "id": "a",
+        "text": "不可以，驶出方应让道路上的其他交通先行"
+      },
+      {
+        "id": "b",
+        "text": "可以，只要自己位于来车右侧"
+      },
+      {
+        "id": "c",
+        "text": "可以，只要已经打开转向灯"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "这是从停车场、物业等区域驶入道路的让行义务，不适用简单的普通路口右方优先推断。打灯只表达意图，不产生优先权。",
+    "sourceIds": [
+      "src-audit-no-yield-current",
+      "src-audit-no-rules-pdf"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-basics"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
+  },
+  {
+    "id": "audit-no-instructions",
+    "country": "NO",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "priority",
+    "difficulty": "core",
+    "riskType": "safety-critical",
+    "appliesFrom": null,
+    "appliesTo": null,
+    "tripPriority": 1,
+    "prompt": "挪威路口有授权人员指挥，指挥与信号灯不一致时，首先服从什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "授权人员的交通指挥"
+      },
+      {
+        "id": "b",
+        "text": "任何时候都只服从灯色"
+      },
+      {
+        "id": "c",
+        "text": "自己所在道路原有优先权"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "Traffic Rules 第 3 条规定授权交通指挥优先。交通灯对让行类标志的要求也有优先关系；不要将一般让行习惯凌驾于现场指挥。",
+    "sourceIds": [
+      "src-audit-no-rules-pdf"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-basics"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
+  },
+  {
+    "id": "audit-is-right-priority",
+    "country": "IS",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "priority",
+    "difficulty": "core",
+    "riskType": "safety-critical",
+    "appliesFrom": null,
+    "appliesTo": null,
+    "tripPriority": 1,
+    "prompt": "冰岛普通路口无其他优先安排，双方行驶路线交叉时，一般如何让行？",
+    "options": [
+      {
+        "id": "a",
+        "text": "让右方车辆先行"
+      },
+      {
+        "id": "b",
+        "text": "谁先鸣笛谁先行"
+      },
+      {
+        "id": "c",
+        "text": "较大车辆一律先行"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "交通法第 26 条规定一般右方优先；有标志、信号、转弯或特殊出入口等其他规定时必须结合判断。不要靠车型大小决定优先权。",
+    "sourceIds": [
+      "src-audit-is-law-current",
+      "src-audit-is-fines-current"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-basics"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
+  },
+  {
+    "id": "audit-is-exit-property",
+    "country": "IS",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "priority",
+    "difficulty": "core",
+    "riskType": "safety-critical",
+    "appliesFrom": null,
+    "appliesTo": null,
+    "tripPriority": 1,
+    "prompt": "在冰岛从停车位、加油站或私人出入口开上道路，应怎么做？",
+    "options": [
+      {
+        "id": "a",
+        "text": "向道路上的其他交通让行"
+      },
+      {
+        "id": "b",
+        "text": "只让机动车，不观察行人骑车人"
+      },
+      {
+        "id": "c",
+        "text": "有右方优先就可以直接驶出"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "交通法第 26 条把停车场、物业、加油站等驶出列为让行情形。先观察道路和人行／自行车路径，再在不制造危险或妨碍时进入。",
+    "sourceIds": [
+      "src-audit-is-law-current",
+      "src-audit-is-fines-current"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-basics"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
+  },
+  {
+    "id": "audit-is-yellow",
+    "country": "IS",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "priority",
+    "difficulty": "core",
+    "riskType": "safety-critical",
+    "appliesFrom": null,
+    "appliesTo": null,
+    "tripPriority": 1,
+    "prompt": "冰岛绿灯转为单独黄灯时，通常应如何做？",
+    "options": [
+      {
+        "id": "a",
+        "text": "停车；若距离已近到停车反而造成危险，则适用例外"
+      },
+      {
+        "id": "b",
+        "text": "加速通过，因为黄灯表示优先权增加"
+      },
+      {
+        "id": "c",
+        "text": "一律急刹，不考虑后车与距离"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "交通法第 7 条：黄灯通常要求停车，但对过近、停车将造成危险的情形规定例外。提前观察并控制速度，不把例外当作加速抢灯的理由。",
+    "sourceIds": [
+      "src-audit-is-law-current",
+      "src-audit-is-fines-current"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-basics"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
+  },
+  {
+    "id": "audit-is-solid-line",
+    "country": "IS",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "priority",
+    "difficulty": "core",
+    "riskType": "safety-critical",
+    "appliesFrom": null,
+    "appliesTo": null,
+    "tripPriority": 1,
+    "prompt": "冰岛对向车道间为实线，你想跨线超越另一辆机动车，应如何判断？",
+    "options": [
+      {
+        "id": "a",
+        "text": "不得跨该实线超车；组合虚实线也要看自己这一侧"
+      },
+      {
+        "id": "b",
+        "text": "只要对向暂时无车就可以跨线"
+      },
+      {
+        "id": "c",
+        "text": "只要前车低于限速就可以跨线"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "交通法第 25 条对实线分隔对向车道的机动车超车作了禁止规定。虚实组合不能只看远侧的虚线；是否允许与是否安全都必须满足。",
+    "sourceIds": [
+      "src-audit-is-law-current",
+      "src-audit-is-fines-current"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-basics"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
+  },
+  {
+    "id": "audit-is-meter",
+    "country": "IS",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "parking",
+    "difficulty": "advanced",
+    "riskType": "safety-critical",
+    "appliesFrom": null,
+    "appliesTo": null,
+    "tripPriority": 1,
+    "prompt": "使用雷克雅未克市政停车计时机时，怎样确认支付有效？",
+    "options": [
+      {
+        "id": "a",
+        "text": "核对车牌、时段和金额，确认交易完成；该系统不要求把纸票放在仪表台"
+      },
+      {
+        "id": "b",
+        "text": "只要拿到一张纸就不必核对车牌"
+      },
+      {
+        "id": "c",
+        "text": "同一天任何停车场的付款都通用"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "市政计时机以车牌登记，打印收据可作留存而非必须展示。这里讲的是 Reykjavík 该系统，不应推断全冰岛所有私人停车场都相同。",
+    "sourceIds": [
+      "src-audit-is-reyk-meter",
+      "src-audit-is-reyk-parking"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-local"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
+  },
+  {
+    "id": "audit-is-garage",
+    "country": "IS",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "parking",
+    "difficulty": "advanced",
+    "riskType": "safety-critical",
+    "appliesFrom": null,
+    "appliesTo": null,
+    "tripPriority": 1,
+    "prompt": "雷克雅未克市政车库准备驶出时，App 付款要特别检查什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "正确车库、正确车牌，并在到出口前完成付款"
+      },
+      {
+        "id": "b",
+        "text": "只要付了路边停车费就能出车库"
+      },
+      {
+        "id": "c",
+        "text": "离开车库后再任意选择一个停车区付款"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "市政车库说明要求出口前完成付款，选错车库或路边停车服务不会结清这次车库停车。支付机需核对识别出的车牌图片；异常时联系运营方。",
+    "sourceIds": [
+      "src-audit-is-reyk-garage",
+      "src-audit-is-reyk-parking"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-local"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
+  },
+  {
+    "id": "audit-no-oslo-studs",
+    "country": "NO",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "vehicles",
+    "difficulty": "advanced",
+    "riskType": "cost",
+    "appliesFrom": "2026-11-01",
+    "appliesTo": "2027-04-04",
+    "tripPriority": 1,
+    "prompt": "奥斯陆 2026–2027 钉胎收费季内，租车使用钉胎进入市界应额外核对什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "该车牌是否有有效钉胎缴费许可，不能只确认轮胎本身允许使用"
+      },
+      {
+        "id": "b",
+        "text": "全国允许使用钉胎就自动免城市费用"
+      },
+      {
+        "id": "c",
+        "text": "驾驶员不离开车辆就无须许可"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "奥斯陆市公布该季为 2026-11-01 至 2027-04-04，车辆使用钉胎行驶的日子需缴费（法定豁免另论），仅停放的日子无需缴。许可电子绑定车牌，未有效缴费额外收费为 750 NOK；不可把这套价目推广到其他城市。",
+    "sourceIds": [
+      "src-audit-no-oslo-studs"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-local"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
+  },
+  {
+    "id": "audit-is-horna-rental-window",
+    "country": "IS",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "tolls",
+    "difficulty": "advanced",
+    "riskType": "cost",
+    "appliesFrom": null,
+    "appliesTo": null,
+    "tripPriority": 1,
+    "prompt": "按 Spölur 现行租车说明，Hornafjörður 通行费由游客自付时的窗口是什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "12 小时内在 spolur.is 支付；否则由租车公司依合同收取"
+      },
+      {
+        "id": "b",
+        "text": "使用 Vaðlaheiði 的 24 小时规则与付款页面"
+      },
+      {
+        "id": "c",
+        "text": "必须停车在桥上等待现金收费"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "这是 Hornafjörður 运营方 FAQ 的租车条款，不能与另一条隧道的 24 小时混用。先和租车公司确认谁付款并保存凭证，避免重复支付。",
+    "sourceIds": [
+      "src-audit-is-spolur-faq"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-local"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
+  },
+  {
+    "id": "audit-is-insurance-contract",
+    "country": "IS",
+    "locale": "zh-CN",
+    "type": "single_choice",
+    "category": "vehicles",
+    "difficulty": "advanced",
+    "riskType": "cost",
+    "appliesFrom": null,
+    "appliesTo": null,
+    "tripPriority": 1,
+    "prompt": "看到攻略说“冰岛风掀车门和涉水永远不赔”，你应如何核对？",
+    "options": [
+      {
+        "id": "a",
+        "text": "按租车公司具体产品和合同读覆盖、除外责任、免赔额及道路许可"
+      },
+      {
+        "id": "b",
+        "text": "只要购买任何全险就能开进封闭道路"
+      },
+      {
+        "id": "c",
+        "text": "同在冰岛，所有公司及所有保险产品的范围都一样"
+      }
+    ],
+    "correctOptionIds": [
+      "a"
+    ],
+    "explanation": "以 Blue Car Rental 当前 Liability Waiver 为合同实例，它列有风掀车门与水损扩展保障，同时仍排除违规、故意或疏忽等情形。这个实例只说明不能把攻略绝对化，不是对你合同的承诺，也不是推荐冒险涉水。",
+    "sourceIds": [
+      "src-audit-is-blue-contract",
+      "src-audit-is-blue-waiver"
+    ],
+    "assetIds": [],
+    "tags": [
+      "audit-2026-09",
+      "chapter-local"
+    ],
+    "status": "published",
+    "lastReviewedAt": "2026-09-07",
+    "evidencePolicy": "primary-original"
   }
 ]

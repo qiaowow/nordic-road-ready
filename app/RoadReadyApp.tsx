@@ -1,618 +1,322 @@
 "use client";
-
+/* eslint-disable @next/next/no-img-element -- Static Pages uses pre-optimized local WebP and original official SVG files. */
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Asset, Question, Source } from "@/src/content/types";
-import { recordAnswer } from "./learning";
-import {
-  emptyProgress,
-  exportProgress,
-  importProgress,
-  loadProgress,
-  requestPersistentStorage,
-  saveProgress,
-  type ProgressState,
-} from "./storage";
-
-type View = "home" | "learn" | "quiz" | "review" | "sources";
-type CountryFilter = "ALL" | "NO" | "IS";
-type CategoryFilter = "ALL" | Question["category"];
-
-const countryName = { NO: "挪威", IS: "冰岛" } as const;
-const categoryName: Record<string, string> = {
-  priority: "行程重点",
-  signs: "标志识别",
-  speed: "限速",
-  lights: "灯光",
-  safety: "安全驾驶",
-  weather: "天气路况",
-  parking: "停车",
-  tolls: "收费",
-  vehicles: "车辆",
-};
-
-const categoryOrder: Question["category"][] = [
-  "safety",
-  "priority",
-  "speed",
-  "lights",
-  "signs",
-  "parking",
-  "tolls",
-  "weather",
-  "vehicles",
-];
-
-const foundationQuestionIds = [
-  "no-seatbelts",
-  "is-seatbelts",
-  "is-child-seat",
-  "is-handsfree",
-  "no-alcohol-breath",
-  "is-alcohol-threshold",
-  "no-roundabout-yield",
-  "no-roundabout-lane",
-  "is-roundabout",
-  "p3-no-bus-leaving-stop",
-  "p3-no-turning-yield-users",
-  "p3-no-overtaking-side-and-ban",
-  "p3-no-cyclist-pedestrian-crossing",
-  "p3-is-single-lane-bridge-priority",
-  "p3-is-cyclist-clearance",
-  "no-speed-default",
-  "is-urban-speed",
-  "is-gravel-speed",
-  "no-lights-tunnel",
-  "is-lights",
-] as const;
-
-const learningStages = [
-  { id: "basics", number: "01", title: "基本交规", copy: "安全、让行、限速与灯光" },
-  { id: "signs", number: "02", title: "官方标志", copy: "认识两国真实道路标志" },
-  { id: "local", number: "03", title: "地区规则", copy: "处罚、停车、收费与路况" },
-  { id: "scenarios", number: "04", title: "开放情境", copy: "游客踩坑与进阶判断" },
-] as const;
-
-type LearningStage = (typeof learningStages)[number]["id"];
-
-function getLearningStage(question: Question): LearningStage {
-  if ((foundationQuestionIds as readonly string[]).includes(question.id)) return "basics";
-  if (question.category === "signs") return "signs";
-  if (question.difficulty === "advanced") return "scenarios";
-  return "local";
-}
-
-function compareCurriculum(a: Question, b: Question) {
-  const stageDifference = learningStages.findIndex((stage) => stage.id === getLearningStage(a))
-    - learningStages.findIndex((stage) => stage.id === getLearningStage(b));
-  if (stageDifference) return stageDifference;
-  if (getLearningStage(a) === "basics") {
-    return foundationQuestionIds.indexOf(a.id as (typeof foundationQuestionIds)[number])
-      - foundationQuestionIds.indexOf(b.id as (typeof foundationQuestionIds)[number]);
-  }
-  const categoryDifference = categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category);
-  if (categoryDifference) return categoryDifference;
-  if (a.tripPriority !== b.tripPriority) return a.tripPriority - b.tripPriority;
-  if (a.country !== b.country) return a.country === "NO" ? -1 : 1;
-  return a.id.localeCompare(b.id);
-}
-
-function learningStageName(question: Question) {
-  return learningStages.find((stage) => stage.id === getLearningStage(question))?.title ?? "课程";
-}
-
-function shuffled<T>(items: T[]) {
-  const copy = [...items];
-  for (let index = copy.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1));
-    [copy[index], copy[swapIndex]] = [copy[swapIndex], copy[index]];
-  }
-  return copy;
-}
-
-function getAsset(question: Question, assets: Asset[]) {
-  return assets.find((asset) => question.assetIds.includes(asset.id));
-}
-
-function assetSrc(asset: Asset) {
-  return asset.localPath
-    ? asset.localPath.replace(/^public[\\/]/, "").replaceAll("\\", "/")
-    : asset.url;
-}
-
-function localAppUrl(path = "") {
-  const appRoot = new URL("./", window.location.href);
-  return new URL(path.replace(/^\/+/, ""), appRoot).href;
-}
-
-function restrictProgressToPublished(progress: ProgressState, allowedIds: Set<string>): ProgressState {
-  return {
-    ...progress,
-    completedIds: progress.completedIds.filter((id) => allowedIds.has(id)),
-    favorites: progress.favorites.filter((id) => allowedIds.has(id)),
-    wrong: Object.fromEntries(Object.entries(progress.wrong).filter(([id]) => allowedIds.has(id))),
-    refresh: Object.fromEntries(Object.entries(progress.refresh).filter(([id]) => allowedIds.has(id))),
-  };
-}
-
-export function RoadReadyApp({
-  questions,
-  sources,
-  assets,
-}: {
-  questions: Question[];
-  sources: Source[];
-  assets: Asset[];
+import { recordAnswer, dueQuestions } from "./learning";
+import { emptyProgress, exportProgress, importProgress, loadProgress, saveProgress, mergeProgress, requestPersistentStorage, type ProgressState } from "./storage";
+import { chapters, contentVersion, countryName, categoryName, chapterOf, compareCurriculum, questionState, questionAssets, assetSrc, isCorrect, stratifiedExam, createSession, restoreSession, type Session } from "./curriculum";
+import { offlineAction, type PackStatus } from "./offline";
+import scenarios from "../data/scenarios.json";
+import coverage from "../data/coverage.json";
+type Country = "ALL" | "NO" | "IS";
+const sessionKey = "nordic-road-ready:session-v2";
+const settingsKey = "nordic-road-ready:settings";
+const today = () => new Date().toISOString().slice(0, 10);
+const message = (e: unknown) => e instanceof Error ? e.message : "操作失败，请重试";
+export function RoadReadyApp({ questions, sources, assets }: {
+    questions: Question[];
+    sources: Source[];
+    assets: Asset[];
 }) {
-  const published = useMemo(
-    () => questions.filter((question) => question.status === "published"),
-    [questions],
-  );
-  const orderedPublished = useMemo(
-    () => [...published].sort(compareCurriculum),
-    [published],
-  );
-  const [view, setView] = useState<View>("home");
-  const [country, setCountry] = useState<CountryFilter>("ALL");
-  const [category, setCategory] = useState<CategoryFilter>("ALL");
-  const [visibleLessonCount, setVisibleLessonCount] = useState(40);
-  const [progress, setProgress] = useState<ProgressState>(emptyProgress);
-  const [quizIds, setQuizIds] = useState<string[]>([]);
-  const [quizIndex, setQuizIndex] = useState(0);
-  const [quizCorrect, setQuizCorrect] = useState(0);
-  const [quizComplete, setQuizComplete] = useState(false);
-  const [selected, setSelected] = useState<string[]>([]);
-  const [checked, setChecked] = useState(false);
-  const [storageMessage, setStorageMessage] = useState("尚未检查");
-  const [offlinePackMessage, setOfflinePackMessage] = useState("尚未下载完整离线包");
-  const importRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    const publishedIds = new Set(published.map((question) => question.id));
-    loadProgress()
-      .then((stored) => setProgress(restrictProgressToPublished(stored, publishedIds)))
-      .catch(() => setProgress(emptyProgress));
-    const downloadedAt = window.localStorage.getItem("offline-pack-downloaded-at");
-    if (downloadedAt) {
-      Promise.resolve().then(() => setOfflinePackMessage(`最近下载：${downloadedAt}`));
+    const published = useMemo(() => questions.filter(q => q.status === "published").sort(compareCurriculum), [questions]);
+    const [route, setRoute] = useState("#/");
+    const [progress, setProgress] = useState<ProgressState>(emptyProgress);
+    const progressRef = useRef(progress);
+    const [loaded, setLoaded] = useState(false);
+    const [storageWritable, setStorageWritable] = useState(false);
+    const [notice, setNotice] = useState("");
+    const [country, setCountry] = useState<Country>("ALL");
+    const [category, setCategory] = useState("ALL");
+    const [stateFilter, setStateFilter] = useState("ALL");
+    const [search, setSearch] = useState("");
+    const [date, setDate] = useState("");
+    const [vehicle, setVehicle] = useState("car");
+    const [session, setSession] = useState<Session | null>(null);
+    const [selection, setSelection] = useState<string[]>([]);
+    const [examCountry, setExamCountry] = useState<Country>("ALL");
+    const [examCount, setExamCount] = useState(20);
+    const [pack, setPack] = useState<PackStatus | null>(null);
+    const [offlineMessage, setOfflineMessage] = useState("尚未检查当前设备的离线完整性");
+    const [offlineBusy, setOfflineBusy] = useState(false);
+    const [online, setOnline] = useState(true);
+    const [imported, setImported] = useState<ProgressState | null>(null);
+    const [zoom, setZoom] = useState<Asset | null>(null);
+    const [confirmation, setConfirmation] = useState<{ text: string; label: string; accept: () => void } | null>(null);
+    const confirmDialog = useRef<HTMLDialogElement>(null);
+    const dialog = useRef<HTMLDialogElement>(null);
+    const importRef = useRef<HTMLInputElement>(null);
+    const [drafts, setDrafts] = useState<Record<string, string>>({});
+    const [revealed, setRevealed] = useState<Record<string, boolean>>({});
+    const scrolls = useRef<Record<string, number>>({});
+    const routeRef = useRef("#/");
+    useEffect(() => {
+        const onRoute = () => { scrolls.current[routeRef.current] = window.scrollY; const r = location.hash || "#/"; routeRef.current = r; setRoute(r); requestAnimationFrame(() => window.scrollTo(0, scrolls.current[r] ?? 0)); };
+        const onNetwork = () => setOnline(navigator.onLine);
+        onRoute();
+        onNetwork();
+        window.addEventListener("hashchange", onRoute);
+        window.addEventListener("online", onNetwork);
+        window.addEventListener("offline", onNetwork);
+        let alive = true;
+        void loadProgress().then(p => { if (alive) {
+            progressRef.current = p;
+            setProgress(p);
+            setStorageWritable(true);
+        } }).catch(e => { if (alive)
+            setNotice("未能读取已有进度，本次不会覆盖原记录：" + message(e)); }).finally(() => { if (alive)
+            setLoaded(true); });
+        void Promise.resolve().then(() => {
+            if (!alive)
+                return;
+            try {
+                const raw = localStorage.getItem(sessionKey);
+                if (raw)
+                    setSession(restoreSession(raw, published));
+                const settings = JSON.parse(localStorage.getItem(settingsKey) || "{}");
+                if (["ALL", "NO", "IS"].includes(settings.country))
+                    setCountry(settings.country);
+                if (typeof settings.search === "string")
+                    setSearch(settings.search);
+                if (settings.category === "ALL" || Object.hasOwn(categoryName, settings.category))
+                    setCategory(settings.category);
+                if (["ALL", "new", "wrong", "mastered", "pending"].includes(settings.stateFilter))
+                    setStateFilter(settings.stateFilter);
+                if (typeof settings.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(settings.date))
+                    setDate(settings.date);
+                if (["car", "camper", "heavy"].includes(settings.vehicle))
+                    setVehicle(settings.vehicle);
+                const d = JSON.parse(localStorage.getItem("nordic-road-ready:scenarios") || "{}");
+                if (d && typeof d === "object")
+                    setDrafts(Object.fromEntries(Object.entries(d).filter(([, v]) => typeof v === "string")) as Record<string, string>);
+            }
+            catch (e) {
+                setNotice(message(e));
+            }
+        });
+        return () => { alive = false; window.removeEventListener("hashchange", onRoute); window.removeEventListener("online", onNetwork); window.removeEventListener("offline", onNetwork); };
+    }, [published]);
+    useEffect(() => { if (!loaded)
+        return; try {
+        localStorage.setItem(settingsKey, JSON.stringify({ date, vehicle, country, search, category, stateFilter }));
     }
-  }, [published]);
-
-  const filtered = useMemo(
-    () => orderedPublished.filter((question) =>
-      (country === "ALL" || question.country === country) &&
-      (category === "ALL" || question.category === category),
-    ),
-    [category, country, orderedPublished],
-  );
-  const availableCategories = useMemo(
-    () => categoryOrder.filter((item) => published.some((question) => question.category === item)),
-    [published],
-  );
-  const dueIds = useMemo(
-    () =>
-      Object.entries(progress.wrong)
-        .filter(([, item]) => new Date(item.dueAt) <= new Date())
-        .map(([id]) => id),
-    [progress.wrong],
-  );
-  const refreshDueIds = useMemo(
-    () => Object.entries(progress.refresh)
-      .filter(([, dueAt]) => new Date(dueAt) <= new Date())
-      .map(([id]) => id),
-    [progress.refresh],
-  );
-  const quizQuestions = useMemo(
-    () => quizIds.map((id) => published.find((item) => item.id === id)).filter(Boolean) as Question[],
-    [published, quizIds],
-  );
-  const currentQuestion = quizQuestions[quizIndex];
-  const currentAsset = currentQuestion ? getAsset(currentQuestion, assets) : undefined;
-  const currentAnswerCorrect = currentQuestion
-    ? [...currentQuestion.correctOptionIds].sort().join("|") === [...selected].sort().join("|")
-    : false;
-
-  function persist(next: ProgressState) {
-    setProgress(next);
-    void saveProgress(next);
-  }
-
-  function startQuiz(mode: "course" | "country" | "exam" | "review" | "all-wrong" | "favorites") {
-    let pool = filtered;
-    if (mode === "course") {
-      const pending = orderedPublished.filter((question) => !progress.completedIds.includes(question.id));
-      const completed = orderedPublished.filter((question) => progress.completedIds.includes(question.id));
-      pool = [...pending, ...completed];
+    catch {
+        void Promise.resolve().then(() => setNotice("无法保存筛选与行程设置，请导出进度备份。"));
+    } }, [country, date, vehicle, loaded, search, category, stateFilter]);
+    useEffect(() => { if (zoom)
+        dialog.current?.showModal();
+    else
+        dialog.current?.close(); }, [zoom]);
+    useEffect(() => {
+        if (confirmation) confirmDialog.current?.showModal();
+        else confirmDialog.current?.close();
+    }, [confirmation]);
+    useEffect(() => {
+        if (!loaded || !storageWritable || !session)
+            return;
+        void Promise.resolve().then(() => {
+            let p = progressRef.current;
+            if (session.mode === "practice" || session.finished)
+                for (const id of session.ids) {
+                    const q = published.find(q => q.id === id);
+                    const response = session.answers[id];
+                    if (q && (response || session.finished))
+                        p = recordAnswer(p, id, isCorrect(q, response || []), new Date(), session.id + ":" + id);
+                }
+            if (p !== progressRef.current) {
+                progressRef.current = p;
+                setProgress(p);
+                void saveProgress(p).catch(e => setNotice("补存学习记录失败：" + message(e)));
+            }
+        });
+    }, [loaded, storageWritable, session, published]);
+    const activeDate = date || today();
+    const eligible = published.filter(q => !questionState(q, activeDate));
+    const due = dueQuestions(progress).filter(id => eligible.some(q => q.id === id));
+    const wrong = eligible.filter(q => progress.items[q.id] && !progress.items[q.id].lastCorrect);
+    const mastered = published.filter(q => progress.items[q.id]?.mastered).length;
+    const view = route.split("/")[1] || "home";
+    const chapterId = route.split("/")[2] || "ALL";
+    const filtered = published.filter(q => (country === "ALL" || q.country === country) && (category === "ALL" || q.category === category) && (chapterId === "ALL" || chapterOf(q.id)?.id === chapterId) && (!search || [q.prompt, q.explanation, ...q.options.map(o => o.text), ...q.tags].join(" ").toLowerCase().includes(search.toLowerCase())) && (stateFilter === "ALL" || (stateFilter === "new" && !progress.items[q.id]) || (stateFilter === "wrong" && progress.items[q.id] && !progress.items[q.id].lastCorrect) || (stateFilter === "mastered" && progress.items[q.id]?.mastered) || (stateFilter === "pending" && questionState(q, activeDate))));
+    const current = session ? published.find(q => q.id === session.ids[session.index]) : undefined;
+    const answered = current && session?.answers[current.id];
+    const checked = Boolean(answered);
+    function navigate(hash: string) { if (location.hash === hash) {
+        setRoute(hash);
+        window.scrollTo(0, 0);
     }
-    if (mode === "review") pool = published.filter((question) => dueIds.includes(question.id) || refreshDueIds.includes(question.id));
-    if (mode === "all-wrong") pool = published.filter((question) => question.id in progress.wrong);
-    if (mode === "favorites") pool = published.filter((question) => progress.favorites.includes(question.id));
-    if (mode !== "course") pool = shuffled(pool);
-    const limit = mode === "exam" ? 40 : mode === "course" ? 10 : 12;
-    setQuizIds(pool.slice(0, limit).map((question) => question.id));
-    setQuizIndex(0);
-    setQuizCorrect(0);
-    setQuizComplete(false);
-    setSelected([]);
-    setChecked(false);
-    setView("quiz");
-  }
-
-  function submitAnswer() {
-    if (!currentQuestion || selected.length === 0) return;
-    const expected = [...currentQuestion.correctOptionIds].sort().join("|");
-    const actual = [...selected].sort().join("|");
-    const isCorrect = expected === actual;
-    persist(recordAnswer(progress, currentQuestion.id, isCorrect));
-    if (isCorrect) setQuizCorrect((count) => count + 1);
-    setChecked(true);
-  }
-
-  function nextQuestion() {
-    if (quizIndex + 1 >= quizQuestions.length) {
-      setQuizComplete(true);
-      return;
+    else
+        location.hash = hash; }
+    function persist(next: ProgressState) {
+        progressRef.current = next;
+        setProgress(next);
+        if (!storageWritable) {
+            setNotice("进度仅保存在本次页面内，请立即导出备份；已有存储未被覆盖。");
+            return;
+        }
+        void saveProgress(next).catch(e => setNotice("进度保存失败，请导出备份：" + message(e)));
     }
-    setQuizIndex((index) => index + 1);
-    setSelected([]);
-    setChecked(false);
-  }
-
-  function toggleOption(optionId: string) {
-    if (checked || !currentQuestion) return;
-    if (currentQuestion.type === "multiple_choice") {
-      setSelected((values) =>
-        values.includes(optionId) ? values.filter((value) => value !== optionId) : [...values, optionId],
-      );
-    } else setSelected([optionId]);
-  }
-
-  function toggleFavorite(questionId: string) {
-    const favorites = progress.favorites.includes(questionId)
-      ? progress.favorites.filter((id) => id !== questionId)
-      : [...progress.favorites, questionId];
-    persist({ ...progress, favorites, updatedAt: new Date().toISOString() });
-  }
-
-  async function checkStorage() {
-    const status = await requestPersistentStorage();
-    if (!status.supported) setStorageMessage("浏览器不支持持久化授权，请定期导出备份");
-    else {
-      const used = status.usage === undefined ? "" : ` · 已用 ${(status.usage / 1024 / 1024).toFixed(1)} MB`;
-      const quota = status.quota === undefined ? "" : ` / 配额 ${(status.quota / 1024 / 1024).toFixed(0)} MB`;
-      setStorageMessage(`${status.granted ? "已获得持久化存储" : "未获授权，请在出发前导出备份"}${used}${quota}`);
+    function saveSession(next: Session) { setSession(next); try {
+        localStorage.setItem(sessionKey, JSON.stringify(next));
     }
-  }
-
-  async function downloadOfflinePack() {
-    if (!("caches" in window)) {
-      setOfflinePackMessage("当前浏览器不支持离线缓存");
-      return;
+    catch {
+        setNotice("无法保存本轮练习，请不要关闭页面，并导出学习进度。");
+    } }
+    function start(pool: Question[], mode: Session["mode"] = "practice", confirmed = false) {
+        if (!loaded) {
+            setNotice("正在读取学习进度，请稍候。");
+            return;
+        }
+        const safe = pool.filter(q => !questionState(q, activeDate));
+        if (!safe.length) {
+            setNotice("此范围没有可计分题目。请查看待复核提示或调整筛选。");
+            return;
+        }
+        if (session && !session.finished && route !== "#/quiz" && !confirmed) {
+            setConfirmation({ text: "开始新一轮会替换尚未完成的练习。已提交的学习记录会保留。", label: "确认开始新一轮", accept: () => start(safe, mode, true) });
+            return;
+        }
+        saveSession(createSession(safe, mode, route === "#/quiz" ? session?.returnTo || "#/learn" : route));
+        setSelection([]);
+        navigate("#/quiz");
     }
-    setOfflinePackMessage("正在下载并验证…");
-    try {
-      const localAssets = Array.from(new Set(assets
-        .map(assetSrc)
-        .filter((url) => !/^https?:\/\//i.test(url))
-        .map((url) => localAppUrl(url))));
-      const cache = await caches.open("nordic-road-ready-v3");
-      const urls = [localAppUrl(), localAppUrl("manifest.webmanifest"), ...localAssets];
-      let completed = 0;
-      for (let start = 0; start < urls.length; start += 12) {
-        const batch = urls.slice(start, start + 12);
-        await Promise.all(batch.map(async (url) => {
-          const response = await fetch(url, { cache: "no-cache" });
-          if (!response.ok) throw new Error(`Offline asset failed: ${url}`);
-          await cache.put(url, response);
-          completed += 1;
-          setOfflinePackMessage(`正在下载并验证… ${completed}/${urls.length}`);
-        }));
-      }
-      const downloadedAt = new Date().toLocaleString("zh-CN", { hour12: false });
-      window.localStorage.setItem("offline-pack-downloaded-at", downloadedAt);
-      setOfflinePackMessage(`下载完成：${downloadedAt} · ${localAssets.length} 张真实素材`);
-    } catch {
-      setOfflinePackMessage("下载未完成，请联网后重试");
+    function daily() { const duePool = due.map(id => eligible.find(q => q.id === id)!); const unseen = eligible.filter(q => !progress.items[q.id]); start([...duePool.slice(0, 5), ...unseen.slice(0, 10 - Math.min(duePool.length, 5)), ...duePool.slice(5)].slice(0, 10).length ? [...duePool.slice(0, 5), ...unseen.slice(0, 10 - Math.min(duePool.length, 5)), ...duePool.slice(5)].slice(0, 10) : eligible.slice(0, 10)); }
+    function submit() {
+        if (!session || !current || !selection.length || checked)
+            return;
+        const next = { ...session, answers: { ...session.answers, [current.id]: selection } };
+        saveSession(next);
+        if (session.mode === "practice")
+            persist(recordAnswer(progressRef.current, current.id, isCorrect(current, selection), new Date(), session.id + ":" + current.id));
     }
-  }
-
-  const accuracy = progress.answered ? Math.round((progress.correct / progress.answered) * 100) : 0;
-  const reviewedAt = published.map((item) => item.lastReviewedAt).sort().at(-1) ?? "待核验";
-
-  return (
-    <main className="app-shell" id="top">
-      <header className="topbar">
-        <button className="brand-button" onClick={() => setView("home")} aria-label="返回首页">
-          <span className="brand-mark">N·I</span>
-          <span><small>NORDIC ROAD READY</small><strong>北境自驾课</strong></span>
-        </button>
-        <button className="offline-pill" onClick={() => setView("sources")} type="button">
-          <span /> 离线与来源
-        </button>
-      </header>
-
-      {view === "home" && (
-        <>
-          <section className="hero-card">
-            <div>
-              <p className="hero-kicker">2026 · 挪威 9月下旬 / 冰岛 10月上旬</p>
-              <h1>先打牢基础<br />再避开高价坑</h1>
-              <p className="hero-copy">先学安全、让行、限速和灯光，再认官方标志，最后进入两国地区规则与旅行情境。</p>
-              <button className="primary-action" type="button" onClick={() => startQuiz("course")}>
-                开始今日学习 <span>→</span>
-              </button>
-            </div>
-            <div className="route-orbit" aria-label="行程学习进度">
-              <div className="orbit-line" />
-              <span className="route-dot norway-dot">NO</span>
-              <span className="route-dot iceland-dot">IS</span>
-              <div className="progress-ring"><strong>{progress.completedIds.length}</strong><small>/ {published.length}</small></div>
-            </div>
-          </section>
-
-          <section className="stats-row" aria-label="学习数据">
-            <div><strong>{published.length}</strong><span>已发布题目</span></div>
-            <div><strong>{accuracy}%</strong><span>当前正确率</span></div>
-            <div><strong>{Object.keys(progress.wrong).length}</strong><span>错题待巩固</span></div>
-          </section>
-
-          <section className="section-block">
-            <div className="section-heading">
-              <div><p className="eyebrow">TRIP FOCUS</p><h2>本次行程优先课</h2></div>
-              <button className="text-action" type="button" onClick={() => { setCountry("ALL"); setCategory("ALL"); setView("learn"); }}>全部专题</button>
-            </div>
-            <div className="country-grid">
-              {(["NO", "IS"] as const).map((code) => (
-                <button
-                  className={`country-card ${code === "NO" ? "norway" : "iceland"}`}
-                  key={code}
-                  onClick={() => { setCountry(code); setCategory("ALL"); setView("learn"); }}
-                >
-                  <div className="country-code">{code}</div>
-                  <p>{code === "NO" ? "9月下旬重点" : "10月上旬重点"}</p>
-                  <h3>{countryName[code]}</h3>
-                  <div className="card-footer">
-                    <span>{published.filter((q) => q.country === code).length} 道已核验</span>
-                    <span className="arrow-button">↗</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </section>
-
-          <button className="risk-strip" onClick={() => { setCountry("IS"); setCategory("tolls"); setView("learn"); }}>
-            <span className="risk-index">01</span>
-            <span><small>今日高风险提醒</small><strong>冰岛无收费站，不等于无需缴费</strong></span>
-            <span className="chevron">›</span>
-          </button>
-        </>
-      )}
-
-      {view === "learn" && (
-        <section className="workspace-view">
-          <div className="view-heading">
-            <div><p className="eyebrow">LEARN BY TOPIC</p><h1>专题学习</h1><small className="scope-copy">图片专项仅为“看两国官方标志图选含义”，不调用摄像头识别。</small></div>
-            <button className="exam-button" onClick={() => startQuiz("exam")}>模拟考试</button>
-          </div>
-          <div className="filter-row" role="group" aria-label="国家筛选">
-            {(["ALL", "NO", "IS"] as const).map((code) => (
-              <button className={country === code ? "active" : ""} onClick={() => { setCountry(code); setVisibleLessonCount(40); }} key={code}>
-                {code === "ALL" ? "全部" : countryName[code]}
-              </button>
-            ))}
-          </div>
-          <div className="filter-row topic-filter" role="group" aria-label="专题筛选">
-            {(["ALL", ...availableCategories] as CategoryFilter[]).map((code) => (
-              <button className={category === code ? "active" : ""} onClick={() => { setCategory(code); setVisibleLessonCount(40); }} key={code}>
-                {code === "ALL" ? "全部专题" : categoryName[code]}
-              </button>
-            ))}
-          </div>
-          <ol className="curriculum-order" aria-label="推荐学习顺序">
-            {learningStages.map((stage) => (
-              <li key={stage.id}>
-                <span>{stage.number}</span>
-                <strong>{stage.title}</strong>
-                <small>{stage.copy}</small>
-              </li>
-            ))}
-          </ol>
-          <p className="filter-result">当前筛选 {filtered.length} 道</p>
-          <div className="lesson-list">
-            {filtered.slice(0, visibleLessonCount).map((question, index) => {
-              const asset = getAsset(question, assets);
-              return (
-                <article className="lesson-card" key={question.id}>
-                  <div className="lesson-number">{String(index + 1).padStart(2, "0")}</div>
-                  {asset && (
-                    <figure className="asset-evidence">
-                      {/* Source dimensions vary across official SVGs and licensed photos. */}
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={assetSrc(asset)} alt={asset.alt} loading="lazy" decoding="async" />
-                      <figcaption>
-                        {asset.signCode ? "官方标志" : "当地实景"} ·{" "}
-                        <a href={asset.sourcePageUrl ?? asset.url} target="_blank" rel="noreferrer">
-                          {asset.attribution} ↗
-                        </a>
-                      </figcaption>
-                    </figure>
-                  )}
-                  <div className="lesson-body">
-                    <div className="tag-line">
-                      <span className="stage-tag">{learningStageName(question)}</span>
-                      <span>{countryName[question.country]}</span>
-                      <span>{categoryName[question.category] ?? question.category}</span>
-                      {question.tripPriority <= 30 && <span className="priority-tag">本次必学</span>}
-                    </div>
-                    <h2>{question.prompt}</h2>
-                    <p>{question.explanation}</p>
-                    <div className="evidence-line">
-                      <span>核验于 {question.lastReviewedAt}</span>
-                      <button onClick={() => { setQuizIds([question.id]); setQuizIndex(0); setQuizCorrect(0); setQuizComplete(false); setSelected([]); setChecked(false); setView("quiz"); }}>练这一题 →</button>
-                    </div>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-          {filtered.length > visibleLessonCount && (
-            <button className="load-more" onClick={() => setVisibleLessonCount((count) => count + 40)}>
-              再显示 {Math.min(40, filtered.length - visibleLessonCount)} 道
-            </button>
-          )}
-        </section>
-      )}
-
-      {view === "quiz" && (
-        <section className="quiz-view">
-          {quizComplete ? (
-            <div className="empty-state">
-              <strong>本轮完成：{quizCorrect}/{quizQuestions.length}</strong>
-              <p>正确率 {quizQuestions.length ? Math.round((quizCorrect / quizQuestions.length) * 100) : 0}%。答错题已进入 1 / 3 / 7 / 15 天复习节奏。</p>
-              <button onClick={() => setView("home")}>返回首页</button>
-              <button onClick={() => startQuiz("all-wrong")}>复习全部错题</button>
-            </div>
-          ) : currentQuestion ? (
-            <>
-              <div className="quiz-topline">
-                <button onClick={() => setView("home")} aria-label="退出答题">×</button>
-                <div><span style={{ width: `${((quizIndex + 1) / quizQuestions.length) * 100}%` }} /></div>
-                <strong>{quizIndex + 1}/{quizQuestions.length}</strong>
-              </div>
-              <div className="question-meta">
-                <span>{learningStageName(currentQuestion)}</span>
-                <span>{countryName[currentQuestion.country]}</span>
-                <span>{categoryName[currentQuestion.category]}</span>
-                <button onClick={() => toggleFavorite(currentQuestion.id)}>
-                  {progress.favorites.includes(currentQuestion.id) ? "★ 已收藏" : "☆ 收藏"}
-                </button>
-              </div>
-              {currentAsset && (
-                <figure className="question-asset asset-evidence">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img className="question-image" src={assetSrc(currentAsset)} alt={currentAsset.alt} />
-                  <figcaption>
-                    {currentAsset.signCode ? "官方标志" : "当地实景"} ·{" "}
-                    <a href={currentAsset.sourcePageUrl ?? currentAsset.url} target="_blank" rel="noreferrer">
-                      {currentAsset.attribution} ↗
-                    </a>
-                  </figcaption>
-                </figure>
-              )}
-              <h1 className="question-title">{currentQuestion.prompt}</h1>
-              <div className="option-list">
-                {currentQuestion.options.map((option, index) => {
-                  const isCorrect = checked && currentQuestion.correctOptionIds.includes(option.id);
-                  const isWrong = checked && selected.includes(option.id) && !isCorrect;
-                  return (
-                    <button
-                      className={`quiz-option ${selected.includes(option.id) ? "selected" : ""} ${isCorrect ? "correct" : ""} ${isWrong ? "wrong" : ""}`}
-                      onClick={() => toggleOption(option.id)}
-                      key={option.id}
-                    >
-                      <span>{String.fromCharCode(65 + index)}</span>{option.text}
-                    </button>
-                  );
-                })}
-              </div>
-              {checked && (
-                <div className="answer-panel">
-                  <strong>{currentAnswerCorrect ? "回答正确" : "这题值得再看一遍"}</strong>
-                  <p>{currentQuestion.explanation}</p>
-                  <small>官方依据：{currentQuestion.sourceIds.length} 项 · 核验日期 {currentQuestion.lastReviewedAt}</small>
-                </div>
-              )}
-              <button className="submit-answer" disabled={!selected.length} onClick={checked ? nextQuestion : submitAnswer}>
-                {checked ? (quizIndex + 1 >= quizQuestions.length ? "完成练习" : "下一题") : "确认答案"}
-              </button>
-            </>
-          ) : (
-            <div className="empty-state"><strong>当前没有可练题目</strong><p>继续学习新题；错题会按 1/3/7/15 天安排，收藏题可在复习页集中练习。</p><button onClick={() => setView("home")}>返回首页</button></div>
-          )}
-        </section>
-      )}
-
-      {view === "review" && (
-        <section className="workspace-view">
-          <div className="view-heading"><div><p className="eyebrow">SPACED REVIEW</p><h1>复习与备份</h1></div></div>
-          <div className="review-grid">
-            <article className="review-card important"><span>今日到期</span><strong>{dueIds.length + refreshDueIds.length}</strong><p>连续答对 3 次移出错题本，第 15 天再巩固一次。</p><button onClick={() => startQuiz("review")}>开始复习</button></article>
-            <article className="review-card"><span>全部错题</span><strong>{Object.keys(progress.wrong).length}</strong><p>按 1 / 3 / 7 天复习，掌握后第 15 天确认。</p><button onClick={() => startQuiz("all-wrong")}>练全部错题</button></article>
-            <article className="review-card"><span>我的收藏</span><strong>{progress.favorites.length}</strong><p>集中复习高风险规则和易混标志。</p><button onClick={() => startQuiz("favorites")}>练收藏题</button></article>
-          </div>
-          <div className="backup-panel">
-            <div><h2>进度只保存在这台设备</h2><p>出发前建议导出一份 JSON 备份，避免浏览器清理存储后丢失。</p></div>
-            <div className="backup-actions">
-              <button onClick={() => exportProgress(progress)}>导出备份</button>
-              <button onClick={() => importRef.current?.click()}>导入备份</button>
-              <input
-                ref={importRef}
-                type="file"
-                accept="application/json"
-                hidden
-                onChange={async (event) => {
-                  const file = event.target.files?.[0];
-                  if (!file) return;
-                  try {
-                    const imported = await importProgress(file);
-                    const next = restrictProgressToPublished(imported, new Set(published.map((question) => question.id)));
-                    persist(next);
-                  }
-                  catch { setStorageMessage("备份文件无法读取"); }
-                }}
-              />
-            </div>
-          </div>
-        </section>
-      )}
-
-      {view === "sources" && (
-        <section className="workspace-view">
-          <div className="view-heading"><div><p className="eyebrow">EVIDENCE & OFFLINE</p><h1>来源与离线</h1></div></div>
-          <div className="freshness-card">
-            <div><span className="status-dot" /><strong>题库核验状态</strong><p>最新内容核验：{reviewedAt}。数字类规则在出发前 30 天需要再次集中复查。</p></div>
-            <div className="offline-actions"><button onClick={downloadOfflinePack}>下载完整离线包</button><button onClick={checkStorage}>检查存储保障</button></div>
-          </div>
-          <p className="storage-message">{offlinePackMessage} · {storageMessage}</p>
-          <aside className="scope-note">
-            <strong>使用边界</strong>
-            <p>这是旅行前学习工具，不替代现场标志、警方指示、官方实时路况或租车合同。题目会明确区分交通罚款、道路通行费、租车服务费和保险除外责任。</p>
-          </aside>
-          <div className="pretrip-checklist">
-            <h2>临行复核清单</h2>
-            <a href="https://www.vegvesen.no/en/traffic-information/traffic-information/" target="_blank" rel="noreferrer">
-              <span>出发前 30 天</span><strong>复核挪威数字类规则与收费说明</strong><b>↗</b>
-            </a>
-            <a href="https://umferdin.is/en" target="_blank" rel="noreferrer">
-              <span>出发前 7 天</span><strong>检查冰岛封路、风速与道路通行状态</strong><b>↗</b>
-            </a>
-            <a href="https://www.ruv.is/utvarp/spila/kvoldfr%C3%A9ttir-utvarps/25296/bj8fur" target="_blank" rel="noreferrer">
-              <span>2026-07-06 核验</span><strong>RÚV 报道 Vaðlaheiði 的 Akureyri 侧已设无接触 POS；运营方网页未列操作细节，使用前再确认</strong><b>↗</b>
-            </a>
-            <button onClick={() => exportProgress(progress)}>
-              <span>出发前 24 小时</span><strong>导出学习进度并重新打开 App 验证离线</strong><b>↓</b>
-            </button>
-          </div>
-          <div className="source-heading"><h2>依据与素材来源</h2><span>{sources.length} 项</span></div>
-          <div className="source-list">
-            {sources.map((source) => (
-              <a href={source.url} target="_blank" rel="noreferrer" key={source.id}>
-                <span>{source.country}</span>
-                <div><strong>{source.title}</strong><small>{source.publisher} · 访问于 {source.accessedAt} · {source.archiveStatus === "snapshot" ? "页面快照" : "核验记录"}</small></div>
-                <b>↗</b>
-              </a>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {view !== "quiz" && (
-        <nav className="bottom-nav" aria-label="主导航">
-          <button className={view === "home" ? "active" : ""} onClick={() => setView("home")}><span>⌂</span>首页</button>
-          <button className={view === "learn" ? "active" : ""} onClick={() => setView("learn")}><span>▤</span>学习</button>
-          <button onClick={() => startQuiz("exam")}><span>✓</span>考试</button>
-          <button className={view === "review" ? "active" : ""} onClick={() => setView("review")}><span>↻</span>复习</button>
-        </nav>
-      )}
-    </main>
-  );
+    function finish(confirmed = false) {
+        if (!session)
+            return;
+        if (session.mode === "exam") {
+            if (Object.keys(session.answers).length < session.ids.length && !confirmed) {
+                setConfirmation({ text: `还有 ${session.ids.length - Object.keys(session.answers).length} 道未答题，交卷后按错误计。可以取消并继续作答。`, label: "确认交卷", accept: () => finish(true) });
+                return;
+            }
+            let p = progressRef.current;
+            for (const id of session.ids) {
+                const q = published.find(q => q.id === id)!;
+                p = recordAnswer(p, id, isCorrect(q, session.answers[id] ?? []), new Date(), session.id + ":" + id);
+            }
+            persist(p);
+        }
+        saveSession({ ...session, finished: true });
+        setSelection([]);
+    }
+    function advance() { if (!session)
+        return; if (session.index === session.ids.length - 1) {
+        finish();
+        return;
+    } saveSession({ ...session, index: session.index + 1 }); setSelection([]); window.scrollTo(0, 0); }
+    function favorite(id: string) { const p = progressRef.current; persist({ ...p, favorites: p.favorites.includes(id) ? p.favorites.filter(x => x !== id) : [...p.favorites, id] }); }
+    function markRead(id: string) { const p = progressRef.current; persist({ ...p, readIds: [...new Set([...p.readIds, id])] }); }
+    async function packAction(type: "DOWNLOAD" | "VERIFY") {
+        setOfflineBusy(true);
+        setPack(null);
+        setOfflineMessage("正在连接离线服务…");
+        try {
+            const status = await offlineAction(type, setOfflineMessage);
+            setPack(status);
+            setOfflineMessage(status.ready ? "完整性校验通过，可进行飞行模式演练。" : status.reason || "尚未就绪");
+        }
+        catch (e) {
+            setOfflineMessage(message(e));
+        }
+        finally {
+            setOfflineBusy(false);
+        }
+    }
+    function evidence(q: Question) {
+        return <details className="evidence-details"><summary>本题依据与适用条件</summary><p>核验：{q.lastReviewedAt} · 适用：{q.appliesFrom || "未限定起始日"} 至 {q.appliesTo || "未限定结束日"}。这不代表永久有效。</p>{q.sourceIds.map(id => { const s = sources.find(s => s.id === id); return s ? <p key={id}><a href={s.url} target="_blank" rel="noreferrer">{s.publisher} · {s.title} ↗</a><small>{s.archiveStatus === "snapshot" ? "原始页面已存档" : "仅有证据记录，非原页快照"} · {s.accessedAt}</small></p> : null; })}<p>同一机构的不同语言页面不算两份独立证据。在线原文需联网；本题中文解释可离线阅读。</p></details>;
+    }
+    function pictures(q: Question, quiz = false) {
+        const images = questionAssets(q, assets, !quiz);
+        if (!images.length)
+            return null;
+        return <div className="question-gallery">{images.map((a, i) => <figure key={a.id}><button className="image-button" onClick={() => setZoom(a)} aria-label={quiz ? "放大本题图片" : `放大：${a.alt}`}><img src={assetSrc(a)} alt={quiz ? "本题官方标志图；文字辅助请转入学习模式" : a.alt} loading={quiz ? "eager" : "lazy"} decoding="async"/></button>{!quiz && <figcaption>{i === 0 ? "主图" : "对照图"} · {a.title}<br /><a href={a.sourcePageUrl || a.url} target="_blank" rel="noreferrer">图片来源 ↗</a> · {a.attribution} · {a.license}</figcaption>}</figure>)}</div>;
+    }
+    function answerPanel(q: Question) { return <div className="answer-panel"><strong>正确做法：{q.options.filter(o => q.correctOptionIds.includes(o.id)).map(o => o.text).join("；")}</strong><p>{q.explanation}</p>{evidence(q)}</div>; }
+    function lesson(q: Question) {
+        const state = questionState(q, activeDate);
+        return <article className="study-card" id={q.id} key={q.id}><div className="tag-line"><span>{countryName[q.country]}</span><span>{categoryName[q.category]}</span><span>{progress.items[q.id]?.mastered ? "已掌握" : progress.items[q.id] ? "已练习" : progress.readIds.includes(q.id) ? "已阅读" : "未学习"}</span>{state && <span className="warning">{state}</span>}</div><h2>{q.prompt}</h2>{pictures(q)}{answerPanel(q)}<div className="action-row"><button onClick={() => markRead(q.id)} disabled={!loaded || progress.readIds.includes(q.id)}>{progress.readIds.includes(q.id) ? "已阅读" : "标记已阅读"}</button><button onClick={() => start([q])} disabled={!loaded || Boolean(state)}>练习此题</button><button aria-pressed={progress.favorites.includes(q.id)} onClick={() => favorite(q.id)} disabled={!loaded}>{progress.favorites.includes(q.id) ? "取消收藏" : "收藏"}</button></div></article>;
+    }
+    const navigation = [["home", "首页"], ["learn", "课程"], ["review", "复习"], ["quick", "出行速查"], ["offline", "离线与设置"]];
+    return <main className="app-shell" id="top">
+ <button className="skip-link" onClick={() => { document.getElementById("main-content")?.focus(); document.getElementById("main-content")?.scrollIntoView(); }}>跳到内容</button>
+ <header className="topbar"><button className="brand-button" onClick={() => navigate("#/")} aria-label="返回首页"><span className="brand-mark">N·I</span><span><small>NORDIC ROAD READY</small><strong>北境自驾课</strong></span></button><span className="connection-label">{online ? "在线" : "离线"} · {contentVersion}</span></header>
+ <nav className="main-nav" aria-label="主导航">{navigation.map(([id, label]) => <a key={id} href={id === "home" ? "#/" : `#/${id}`} aria-current={view === id ? "page" : undefined}>{label}{id === "review" && due.length > 0 ? <span> {due.length}</span> : null}</a>)}</nav>
+ {notice && <div className="notice" role="alert">{notice}<button onClick={() => setNotice("")} aria-label="关闭提示">×</button></div>}
+ {!loaded && <p role="status">正在读取学习记录…</p>}
+ <div id="main-content" tabIndex={-1}>
+ {view === "home" && <>
+  <section className="hero-card"><div><p className="hero-kicker">从基础到独立判断</p><h1>学会规则<br />从容出发</h1><p className="hero-copy">基本交规 → 官方标志 → 两国差异 → 开放自检。到期复习与新课一起安排，不用背题号。</p><div className="action-row"><button className="primary-action" disabled={!loaded} onClick={daily}>开始今日学习 →</button>{session && !session.finished && <button className="hero-secondary" onClick={() => navigate("#/quiz")}>继续上次 · {session.index + 1}/{session.ids.length}</button>}</div></div><div className="hero-progress"><strong>{mastered}<small> / {published.length}</small></strong><span>跨日复习后掌握</span><p>已阅读 {progress.readIds.filter(id => published.some(q => q.id === id)).length} · 已练习 {published.filter(q => progress.items[q.id]).length}</p></div></section>
+  <section className="stats-row" aria-label="学习状态"><div><strong>{due.length}</strong><span>到期复习</span></div><div><strong>{wrong.length}</strong><span>最近答错</span></div><div><strong>{published.filter(q => questionState(q, activeDate)).length}</strong><span>暂不计分／待复核</span></div></section>
+  <section className="section-block"><div className="section-heading"><h2>按顺序学，也可直接查</h2><a href="#/learn">全部课程 →</a></div><div className="chapter-grid">{chapters.map((c, i) => <a href={`#/learn/${c.id}`} key={c.id}><small>0{i + 1}</small><h3>{c.title}</h3><p>{c.summary}</p><span>{c.questionIds.filter(id => progress.items[id]?.mastered).length}/{c.questionIds.length} 已掌握 →</span></a>)}</div></section>
+  <section className="section-block"><div className="section-heading"><h2>本次行程优先课</h2><a href="#/offline">设置行程</a></div><div className="country-grid">{(["NO", "IS"] as const).map(code => <button key={code} className={`country-card ${code === "NO" ? "norway" : "iceland"}`} onClick={() => { setCountry(code); setCategory("ALL"); navigate("#/learn"); }}><div className="country-code">{code}</div><p>{date || "按出发日期复核动态规则"}</p><h3>{countryName[code]}</h3><div className="card-footer"><span>{published.filter(q => q.country === code).length} 个学习题目</span><span className="arrow-button">↗</span></div></button>)}</div></section>
+  <div className="action-row"><a href="#/scenarios">开放自检 →</a><a href="#/exam">配置模拟考试 →</a><a href="#/sources">来源与覆盖边界 →</a></div>
+ </>}
+ {view === "learn" && <section className="workspace-view"><div className="view-heading"><div><p className="eyebrow">先读规则，再练习</p><h1>{chapters.find(c => c.id === chapterId)?.title || "专题学习"}</h1></div><a href="#/exam">模拟考试 →</a></div>
+ <div className="chapter-tabs"><a href="#/learn" aria-current={chapterId === "ALL" ? "page" : undefined}>全部章节</a>{chapters.map(c => <a href={`#/learn/${c.id}`} key={c.id} aria-current={chapterId === c.id ? "page" : undefined}>{c.title}</a>)}<a href="#/scenarios">开放自检</a></div>
+ {chapters.filter(c => c.id === chapterId).map(c => <section className="primer" key={c.id}><h2>这一章先理解什么</h2>{c.primer.map(t => <p key={t}>{t}</p>)}</section>)}
+ <div className="filters"><label>国家<select value={country} onChange={e => setCountry(e.target.value as Country)}><option value="ALL">两国</option><option value="NO">挪威</option><option value="IS">冰岛</option></select></label><label>专题<select value={category} onChange={e => setCategory(e.target.value)}><option value="ALL">全部专题</option>{Object.entries(categoryName).map(([id, n]) => <option value={id} key={id}>{n}</option>)}</select></label><label>状态<select value={stateFilter} onChange={e => setStateFilter(e.target.value)}><option value="ALL">全部状态</option><option value="new">尚未练习</option><option value="wrong">最近答错</option><option value="mastered">已掌握</option><option value="pending">待复核／不适用</option></select></label><label className="search-label">搜索<input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="例如：环岛、车牌、5 m"/></label></div>
+ <div className="action-row"><p>找到 {filtered.length} 题 · 时效参考 {activeDate}</p><button onClick={() => start(filtered)} disabled={!loaded || !filtered.some(q => !questionState(q, activeDate))}>练习当前范围</button><button onClick={() => { setCountry("ALL"); setCategory("ALL"); setStateFilter("ALL"); setSearch(""); navigate("#/learn"); }}>清除筛选</button></div>
+ {filtered.length ? <div className="lesson-list">{filtered.map(q => lesson(q))}</div> : <p className="empty-state">没有匹配题目，请清除筛选或换个关键词。</p>}
+ </section>}
+ {view === "quiz" && <section className="quiz-view">{!session ? <div className="empty-state"><h1>还没有进行中的练习</h1><button onClick={daily}>开始今日学习</button></div> : session.finished ? <div>
+ <h1>{session.mode === "exam" ? "考试结果" : "本轮完成"}</h1><p className="result-score">{session.ids.filter(id => isCorrect(published.find(q => q.id === id)!, session.answers[id] ?? [])).length} / {session.ids.length}</p><p>这是本轮答题结果，不代表已经掌握。第一次答对也会安排复习。</p>
+ <div className="result-breakdown">{[...new Set(session.ids.map(id => published.find(q => q.id === id)!.category))].map(cat => { const ids = session.ids.filter(id => published.find(q => q.id === id)!.category === cat); return <p key={cat}>{categoryName[cat]}：{ids.filter(id => isCorrect(published.find(q => q.id === id)!, session.answers[id] ?? [])).length}/{ids.length}</p>; })}</div>
+ <div className="action-row"><button onClick={() => navigate(session.returnTo)}>返回原页面</button><button onClick={daily}>继续下一组</button><button onClick={() => start(session.ids.map(id => published.find(q => q.id === id)!).filter(q => !isCorrect(q, session.answers[q.id] ?? [])))}>巩固本轮错题</button></div>
+ {session.ids.map(id => { const q = published.find(q => q.id === id)!; return <details className="result-item" key={id}><summary>{isCorrect(q, session.answers[id] ?? []) ? "✓ 正确" : "✕ 待巩固"} · {q.prompt}</summary><p>你的答案：{q.options.filter(o => session.answers[id]?.includes(o.id)).map(o => o.text).join("；") || "未作答"}</p>{pictures(q)}{answerPanel(q)}</details>; })}
+ </div> : current ? <div>
+ <div className="action-row quiz-controls"><button onClick={() => navigate(session.returnTo)}>暂停并返回</button><span>{session.mode === "exam" ? "模拟考试 · 交卷后统一解析" : "学习练习"} · {session.index + 1}/{session.ids.length}</span>{session.mode === "exam" && <button onClick={() => finish()}>提前交卷</button>}</div>
+ <progress max={session.ids.length} value={Object.keys(session.answers).length} aria-label="本轮作答进度"/>
+ <div className="tag-line"><span>{countryName[current.country]}</span><span>{categoryName[current.category]}</span><span>{current.type === "multiple_choice" ? "多选题" : "单选题"}</span></div><h1 className="question-title">{current.prompt}</h1>{pictures(current, !checked || session.mode === "exam")}
+ {current.assetIds.length > 0 && <details><summary>文字辅助学习（不计分）</summary><p>图片的文字说明可能直接给出答案。如需读屏辅助，请退出本题的计分流程阅读规则。</p><button onClick={() => { setCountry("ALL"); setCategory("ALL"); setSearch(current.prompt); navigate("#/question/" + current.id); }}>转到此题学习</button></details>}
+ <div className="option-list" role="group" aria-label="答案选项">{session.order[current.id].map((id, i) => { const o = current.options.find(o => o.id === id)!; const selected = (answered || selection).includes(id); return <button key={id} className={`quiz-option ${selected ? "selected" : ""} ${checked && session.mode === "practice" ? (current.correctOptionIds.includes(id) ? "correct" : selected ? "wrong" : "") : ""}`} aria-pressed={selected} disabled={checked} onClick={() => setSelection(v => current.type === "multiple_choice" ? (v.includes(id) ? v.filter(x => x !== id) : [...v, id]) : [id])}><span>{String.fromCharCode(65 + i)}</span>{o.text}</button>; })}</div>
+ {!checked ? <button className="submit-answer" disabled={!selection.length || !loaded} onClick={submit}>{session.mode === "exam" ? "保存本题答案" : "检查答案"}</button> : <><p role="status">{session.mode === "exam" ? "答案已保存，交卷后查看解析。" : isCorrect(current, answered!) ? "✓ 答对了，仍需跨日复习。" : "✕ 这题需要巩固，先理解下面的规则。"}</p>{session.mode === "practice" && answerPanel(current)}<button className="submit-answer" onClick={advance}>{session.index === session.ids.length - 1 ? "完成并查看结果" : "下一题 →"}</button></>}
+ {session.mode === "exam" && <div className="action-row"><button disabled={session.index === 0} onClick={() => { saveSession({ ...session, index: session.index - 1 }); setSelection([]); }}>上一题</button>{checked ? <button onClick={() => { const answers = { ...session.answers }; delete answers[current.id]; setSelection(answered || []); saveSession({ ...session, answers }); }}>修改本题答案</button> : <button onClick={advance}>暂时跳过</button>}</div>}
+ <button className="text-action favorite-action" aria-pressed={progress.favorites.includes(current.id)} onClick={() => favorite(current.id)}>{progress.favorites.includes(current.id) ? "取消收藏" : "收藏此题"}</button>
+ </div> : <p>题目已更新，请重新开始练习。</p>}</section>}
+ {view === "question" && <section className="workspace-view"><p><a href="#/learn">← 课程</a></p>{published.some(q => q.id === chapterId) ? lesson(published.find(q => q.id === chapterId)!) : <p>题目已更新或退役。</p>}</section>}
+ {view === "review" && <section className="workspace-view"><h1>复习与收藏</h1><p>答对后按 1 / 3 / 7 / 15 天安排巩固。未到期或同日反复答对不会跳级；答错回到 1 天后再练。</p><div className="review-grid">{[
+                { title: "到期复习", pool: due.map(id => eligible.find(q => q.id === id)!), copy: "按最早到期排序，一次包含全部到期题" },
+                { title: "最近答错", pool: wrong, copy: "先补薄弱点；到期后答对才推进复习" },
+                { title: "收藏题目", pool: eligible.filter(q => progress.favorites.includes(q.id)), copy: "完整收藏队列，不随机截断" }
+            ].map(x => <article className="review-card" key={x.title}><span>{x.title}</span><strong>{x.pool.length}</strong><p>{x.copy}</p><button disabled={!loaded || !x.pool.length} onClick={() => start(x.pool)}>开始复习</button></article>)}</div>
+ <h2>接下来要复习</h2>{Object.entries(progress.items).filter(([id, x]) => x.dueAt && eligible.some(q => q.id === id)).sort((a, b) => a[1].dueAt!.localeCompare(b[1].dueAt!)).slice(0, 20).map(([id, x]) => <p key={id}>{new Date(x.dueAt!).toLocaleDateString("zh-CN")} · {published.find(q => q.id === id)?.prompt}</p>)}<p><a href="#/offline">备份与恢复学习记录 →</a></p></section>}
+ {view === "exam" && <section className="workspace-view"><h1>配置模拟考试</h1><p>考试不继承课程页筛选；按国家和专题分层抽题。只有当前适用且未标记待复核的题进入考试，交卷后统一显示解析。</p><div className="filters"><label>考试范围<select value={examCountry} onChange={e => setExamCountry(e.target.value as Country)}><option value="ALL">挪威 + 冰岛</option><option value="NO">仅挪威</option><option value="IS">仅冰岛</option></select></label><label>计划题数<select value={examCount} onChange={e => setExamCount(Number(e.target.value))}>{[10, 20, 40].map(n => <option key={n} value={n}>{n} 题</option>)}</select></label></div><p>按 {activeDate} 判断时效；本卷实际 {Math.min(examCount, eligible.filter(q => examCountry === "ALL" || q.country === examCountry).length)} 题。不是两国官方驾照考试。</p><button className="exam-button" disabled={!loaded} onClick={() => start(stratifiedExam(eligible.filter(q => examCountry === "ALL" || q.country === examCountry), examCount), "exam")}>开始模拟考试</button></section>}
+ {view === "scenarios" && <section className="workspace-view"><h1>开放自检</h1><p>先写自己的处理顺序，再展开要点对照。没有联网 AI 判分，也不计入正确率；你的草稿只存于当前设备。</p>{scenarios.map(s => <article className="study-card" key={s.id}><p className="eyebrow">{countryName[s.country as "NO" | "IS"]}</p><h2>{s.title}</h2><p>{s.prompt}</p><label>我的处理步骤<textarea rows={4} maxLength={5000} value={drafts[s.id] || ""} onChange={e => { const next = { ...drafts, [s.id]: e.target.value }; setDrafts(next); try {
+        localStorage.setItem("nordic-road-ready:scenarios", JSON.stringify(next));
+    }
+    catch {
+        setNotice("开放自检草稿保存失败，请自行复制备份。");
+    } }}/></label><button disabled={!(drafts[s.id] || "").trim()} onClick={() => setRevealed(v => ({ ...v, [s.id]: !v[s.id] }))}>{revealed[s.id] ? "收起对照" : "写完了，对照处理要点"}</button>{revealed[s.id] && <div className="primer"><ol>{s.steps.map(t => <li key={t}>{t}</li>)}</ol><p>请自查：是否遗漏？顺序是否合理？哪些条件还要查合同或现场信息？</p>{s.questionIds.map(id => { const q = published.find(q => q.id === id); return q ? <div key={id}>{evidence(q)}</div> : null; })}</div>}</article>)}</section>}
+ {view === "quick" && <section className="workspace-view"><h1>出行速查</h1><p>停车后再查阅，行车中不要操作。实时开放、天气和付费链接需联网；以下检查顺序可离线使用。</p>
+ <div className="quick-grid">{[
+                { title: "取车检查", items: ["核对车牌、许可总重、轮胎和已存在损伤，拍照留存。", "询问道路使用费与通行费由谁结算，避免重复支付。", "分别确认允许道路、保险除外责任、免赔额和救援联系方式。"], links: [["公里费日费模式", "https://island.is/en/daily-fee-for-rental-cars"]] },
+                { title: "停车与缴费", items: ["看主牌、副牌、时段、区域和地面标线，再决定是否能停。", "输入车牌并核对区域、时长与金额；确认支付成功并保存凭证。", "回来时确认未超时，不把付费成功当成可以停在禁停位置的许可。"], links: [["挪威停车指引", "https://www.vegvesen.no/en/traffic-information/traffic-information/drive-safe-in-norway/drive-safe-in-norway/parking-in-norway/"], ["雷克雅未克停车", "https://reykjavik.is/en/parking"]] },
+                { title: "封路、强风与高地", items: ["当天查路况与天气，途中发现变化就重新评估。", "关闭道路不要进入；四驱不能替代开放许可。", "涉水或风力是否安全无法只靠题库判断，不确定时掉头或等待。"], links: [["挪威路况", "https://www.vegvesen.no/trafikk/"], ["冰岛路况", "https://umferdin.is/en"], ["冰岛安全出行", "https://safetravel.is/"]] },
+                { title: "需要救援", items: ["先确保自身安全并防止二次事故，再说明位置和情况。", "挪威：112 紧急警务，113 医疗急救；非紧急警务 02800。", "冰岛：112 紧急服务。租车故障另联系合同里的道路救援号码。"], links: [["冰岛 112", "https://www.112.is/en"]] }
+            ].map(x => <article className="study-card" key={x.title}><h2>{x.title}</h2><ol>{x.items.map(t => <li key={t}>{t}</li>)}</ol>{x.links.map(([n, url]) => <p key={url}><a href={url} target="_blank" rel="noreferrer">{n} ↗</a></p>)}</article>)}</div><a href="#/sources">数字类题目临行复核清单 →</a></section>}
+ {view === "offline" && <section className="workspace-view"><h1>离线与行程设置</h1><section className="primer"><h2>联网时准备，飞机上学习</h2><p>请在手机浏览器中打开本站，添加到主屏幕。先下载完整包，再开启飞行模式，彻底关闭并重新打开应用，检查题图和答题保存。</p><p>浏览器仍可能回收数据。出发前重新验证缓存并导出进度；持久化授权不是永不清除的保证。</p><div className="action-row"><button disabled={offlineBusy} onClick={() => void packAction("DOWNLOAD")}>下载／更新完整离线包</button><button disabled={offlineBusy} onClick={() => void packAction("VERIFY")}>检查离线就绪</button></div><p role="status">{offlineMessage}</p>{pack?.ready && <p>版本 {pack.version} · {((pack.totalBytes || 0) / 1048576).toFixed(1)} MiB · {pack.files} 文件<br />下载日期 {pack.at ? new Date(pack.at).toLocaleString("zh-CN") : "未知"}。完整包更新成功后重新打开页面使用新版本。</p>}<p>单包上限 100 MiB；完整更新后最多保留本应用两个版本。失败不会替换上一个完整包。下载期间请保持页面打开。</p></section>
+ <section className="study-card"><h2>按你的行程看时效</h2><div className="filters"><label>出发／复核日期<input type="date" value={date} onChange={e => setDate(e.target.value)}/></label><label>车型<select value={vehicle} onChange={e => setVehicle(e.target.value)}><option value="car">普通轿车／SUV</option><option value="camper">房车／露营车</option><option value="heavy">许可总重超过 3.5 t</option></select></label></div><p>{vehicle === "car" ? "车辆外观不等于道路许可。仍需核对车辆总重、轮胎和租车合同。" : vehicle === "camper" ? "额外检查车高、车宽、风力、过夜许可和车辆总重；房车不一定超过 3.5 t。" : "普通车费率与轮胎规则不可直接套用。请单独核对重型车辆官方规定和租车合同。"}车型只调整提醒，不隐藏基础安全内容。</p><p>未选日期时按今天判断。收费等动态内容超过 30 天会标记待复核，并暂停计分。</p></section>
+ <section className="study-card"><h2>学习记录备份</h2><p>本站没有账户同步。更换浏览器或手机前导出 JSON；旧版记录按“练习过”迁移，不直接算掌握。开放自检草稿不在进度备份内，请另行复制。</p><div className="action-row"><button disabled={!loaded} onClick={() => { exportProgress(progress); setNotice("已发起进度备份下载，请确认文件保存成功。"); }}>导出进度 JSON</button><button disabled={!loaded} onClick={() => importRef.current?.click()}>导入备份</button><button onClick={() => void requestPersistentStorage().then(s => setNotice(s.granted ? "已获得持久化存储授权；仍建议导出备份。" : "未获持久化授权或不支持，请定期导出备份。")).catch(e => setNotice(message(e)))}>请求持久化存储</button></div><input ref={importRef} type="file" accept=".json,application/json" hidden onChange={e => { const f = e.target.files?.[0]; if (f)
+            void importProgress(f).then(setImported).catch(x => setNotice("导入失败：" + message(x))); e.target.value = ""; }}/>
+ {imported && <div className="notice"><p>备份含 {imported.completedIds.length} 个练习记录。合并按每题较新记录保留；统计不简单相加以避免重复。替换前建议先导出当前记录。</p><div className="action-row"><button onClick={() => { persist(mergeProgress(progress, imported)); setImported(null); setNotice("已合并备份。"); }}>合并（推荐）</button><button onClick={() => setConfirmation({ text: "备份会替换当前学习记录。建议先导出当前记录；合并不会清空当前记录。", label: "确认替换记录", accept: () => {
+            persist(imported);
+            setImported(null);
+            setNotice("已载入备份。");
+        } })}>替换</button><button onClick={() => setImported(null)}>取消</button></div></div>}
+ </section><p><a href="#/sources">法规来源、核验日期与覆盖边界 →</a></p></section>}
+ {view === "sources" && <section className="workspace-view"><h1>来源与临行复核</h1><p>内容版本 {contentVersion}。题量按独立学习目标决定，不设凑数配额。原始快照与证据记录分开标示；不把社区经验当法律依据。</p><div className="scope-note"><strong>学习辅助，不替代现场标志、现行法规及你的租车合同</strong><p>未完成逐项证据确认的细节不作为计分答案。复核日期不代表适用于所有车辆或所有城市。实际出行前请检查下列动态信息。</p></div><h2>数字与动态规则复核清单</h2><p>建议出发前一个月集中复核；收费、天气和开放状态在临行／当天再次查看。点击题目可找到其对应官方原文。</p>{published.filter(q => q.riskType === "cost" || q.tags.includes("dynamic") || /\d/.test(q.options.find(o => q.correctOptionIds.includes(o.id))?.text || "")).map(q => <details className="result-item" key={q.id}><summary>{countryName[q.country]} · {q.prompt} · {q.lastReviewedAt}{questionState(q, activeDate) ? " · " + questionState(q, activeDate) : ""}</summary>{answerPanel(q)}</details>)}
+ <h2>覆盖清单：哪些已做，哪些不猜</h2><div className="coverage-list">{coverage.topics.map(t => <details className="result-item" key={t.title}><summary>{t.title} · {t.status}</summary><p>{t.note}</p><button onClick={() => { setCountry("ALL"); setSearch(""); setCategory("ALL"); navigate("#/learn"); }}>查阅课程</button></details>)}</div><details className="result-item"><summary>社区线索映射（{coverage.community.length} 条）</summary><p>以下为历史采集记录，本轮没有重新核验帖子。主题关联不是对帖子金额、事故或观点的背书；法律答案看官方依据。</p>{coverage.community.map(c => <div key={c.id}><p><a href={c.url} target="_blank" rel="noreferrer">{c.id} · {c.platform} · {c.title}</a></p><p>{c.status} · 关联 {c.questionIds.length} 个题目</p></div>)}</details><h2>材料类型与边界</h2><p>{sources.filter(s => s.archiveStatus === "snapshot").length} 项原始快照、{sources.filter(s => s.archiveStatus === "evidence-record").length} 项证据记录；这两类不能互相替代。图片仅用两国官方标志及有来源许可的当地照片，装饰风景不当作交规证据。</p><p>右方优先、停车支付、城市钉胎费等新增核验进度见交付覆盖表；尚未证实的组合副牌／标线细节保留待核验，不补造题目。</p><h2>全部官方与素材来源</h2><div className="source-list">{sources.map(s => <a key={s.id} href={s.url} target="_blank" rel="noreferrer"><span>{s.country}</span><div><strong>{s.title}</strong><small>{s.publisher} · {s.accessedAt} · {s.archiveStatus === "snapshot" ? "原始快照" : "证据记录"}</small></div><b>↗</b></a>)}</div></section>}
+ {!["home", "learn", "quiz", "review", "exam", "scenarios", "quick", "offline", "sources", "question"].includes(view) && <section className="empty-state"><h1>页面不存在</h1><a href="#/">返回首页</a></section>}
+ </div>
+ <footer className="app-footer"><a href="#/sources">来源与内容边界</a><span>请停车后使用 · 学习进度仅在当前浏览器保存</span></footer>
+ <dialog ref={confirmDialog} onClose={() => setConfirmation(null)} className="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-description"><h2 id="confirm-title">请确认操作</h2><p id="confirm-description">{confirmation?.text}</p><div className="action-row"><button onClick={() => setConfirmation(null)}>取消，保留当前状态</button><button className="exam-button" onClick={() => { const accept = confirmation?.accept; setConfirmation(null); accept?.(); }}>{confirmation?.label || "确认"}</button></div></dialog>
+ <dialog ref={dialog} onClose={() => setZoom(null)} className="image-dialog"><button className="dialog-close" onClick={() => setZoom(null)} aria-label="关闭放大图">关闭 ×</button>{zoom && <><img src={assetSrc(zoom)} alt={view === "quiz" && session && !session.finished ? "放大的题目图片" : zoom.alt}/>{view !== "quiz" && <p>{zoom.title} · {zoom.attribution} · <a href={zoom.sourcePageUrl || zoom.url} target="_blank" rel="noreferrer">原始出处</a></p>}</>}</dialog>
+ </main>;
 }

@@ -20,13 +20,13 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Restore bundled visual assets
-        run: test ! -f github-assets.zip || unzip -q github-assets.zip -d .
+        run: test ! -f github-assets.zip || unzip -q -o github-assets.zip -x 'public/sw.js' 'public/manifest.webmanifest' -d .
       - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build:pages
+      - run: npm run test:pages
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

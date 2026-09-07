@@ -1,0 +1,1876 @@
+{
+  "checkedAt": "2026-09-07T03:43:39.911Z",
+  "records": [
+    {
+      "id": "src-no-rules",
+      "path": "source-archive/src-no-rules.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 74317,
+      "sha256": "1c9de5b7b41951427c2a4ac2bb359f087dc5a85922f0c64fb06858fa5e05bbf3",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-no-roundabouts",
+      "path": "source-archive/src-no-roundabouts.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 79884,
+      "sha256": "b9963a9f40f4a154fc8cb297c20a57b8eba7f163578f2741f6bd810b38516401",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-no-lights",
+      "path": "source-archive/src-no-lights.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 76225,
+      "sha256": "fd1275b9b1236a8621c5094386ad2600fc665188b50b40a01166aff2aee74dfe",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-no-signs",
+      "path": "source-archive/src-no-signs.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 102921,
+      "sha256": "41a65777d4d90f79b9455d44fdb8b5b77140a830775cdc43fc258d1a997a0bc3",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-no-tourist-safety",
+      "path": "source-archive/src-no-tourist-safety.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 45169,
+      "sha256": "a0f8a2691a3c4e2dc1e8b74972600cfb639a8c356d0cf94ec5e47bf1dc6b3b19",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-no-safe-driving",
+      "path": "source-archive/src-no-safe-driving.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 38784,
+      "sha256": "41a55a379394ce4c9f43c1516c3b0da02bf4b403e98de670df36f6c333b4c457",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-no-tyres",
+      "path": "source-archive/src-no-tyres.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 76787,
+      "sha256": "b7a517d01243416d6928d1d0875c76c923038da06e44cd6d1ae0ba81890c431c",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-no-autopass",
+      "path": "source-archive/src-no-autopass.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 22352,
+      "sha256": "60e0003839d85d1a63fd55f2d6de9e3b16b3dd649501e01404915c1a82fb4e2d",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-is-driving",
+      "path": "source-archive/src-is-driving.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 149798,
+      "sha256": "4bb4f598d7368a690bd3cb532d094dce095e19d2cad1b00f80a75fc4dd1e665d",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-is-driving-pdf",
+      "path": "research/archive-recovery.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-is-safetravel",
+      "path": "source-archive/src-is-safetravel.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 149795,
+      "sha256": "1caa9517eb2c4afce23cdd56f165740ca7b068a441be5bd51c87290187491b6f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-is-signs",
+      "path": "source-archive/src-is-signs.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 150193,
+      "sha256": "e478a0750c9cc0b8c828d9404ce7858f54e94dce55785eb182f447155de951a1",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-is-road-info",
+      "path": "research/archive-recovery.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-is-mountain-roads",
+      "path": "research/archive-recovery.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-is-lights",
+      "path": "source-archive/src-is-lights.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 199649,
+      "sha256": "ba25371bed16ed93e73e5f2c8ed151c13c66773e6e783a3ab4dfd26c7df797a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-eu-no-rules",
+      "path": "source-archive/src-eu-no-rules.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 169505,
+      "sha256": "7d5a9efb9234aab69111bc946df88072df1a173933ebe3f1791424a66324654b",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-no-trams",
+      "path": "source-archive/src-no-trams.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 77248,
+      "sha256": "f1cff45313d5a5e85203857bc091ce96d21a7307219c70551e973bcc5dfdcfe1",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-eu-is-rules",
+      "path": "source-archive/src-eu-is-rules.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 154042,
+      "sha256": "5ec6a2b0ea3d99e5deaa7cacb28534627bbb0bb0b50b5a89d842e2019d6e4bb1",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-speed-law",
+      "path": "research/snapshots/NO-speed-law.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 340113,
+      "sha256": "bfeab3b7d58b4f3b5977696b61d481715ca3d68f7d91ea40320c58db26746216",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-motorcycle",
+      "path": "research/snapshots/NO-motorcycle.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 48601,
+      "sha256": "4b0ceeb4de01989dfdaf319a03d5b2a5d46e39649d952b8eb0ad1d056d87bf8e",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-lights-no",
+      "path": "research/snapshots/NO-lights-no.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 84059,
+      "sha256": "6b87f781a786092170e03a9423dfdcb4fa77a41a13f6e058babe02ee72d07077",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-points",
+      "path": "research/snapshots/NO-points.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 79315,
+      "sha256": "ad0ef1f66f21d6841e10ba1c3cbf13f8ae227e35a8ceec5124da42c84940649b",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-speed-control",
+      "path": "research/snapshots/NO-speed-control.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 41732,
+      "sha256": "cda1a018e2fce769fa1cf13ef34fadd7c434e1094e89c5295e51911a1b7e7e5d",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-police-alcohol",
+      "path": "research/snapshots/NO-police-alcohol.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 63576,
+      "sha256": "ec462e634a4e0cf12bd3369d080dd607c6f30c1999016612888ca4cbdee97a82",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-alcohol-22",
+      "path": "research/snapshots/NO-alcohol-22.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 342022,
+      "sha256": "e7629f99ea2e77744801bf6a47a6a9e07804c4190922c5bb1692662c2cfe809f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-alcohol-31",
+      "path": "research/snapshots/NO-alcohol-31.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 340133,
+      "sha256": "5a38a979dc02499dde3116ab4b6888c9482e0e32b5f497cfd3aedcce216e081a",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-tyres-current",
+      "path": "research/snapshots/NO-tyres.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 77195,
+      "sha256": "662bf8e5dad3ecf16639372abbc51ba1e2495186949625f088c0664268432f36",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-important-dates",
+      "path": "research/snapshots/NO-important-dates.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 9744,
+      "sha256": "be04576a1bc758e4b1be531d8f744797c3c1464eb3a42920960be47d605e4660",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-heavy-tyres",
+      "path": "research/snapshots/NO-heavy-tyres.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 43208,
+      "sha256": "258cc7fc7664e31c17d0a905ee82e94e90611e9ab1e5d63fb93238c32056ed4c",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-trucker",
+      "path": "source-archive/src-research-no-trucker.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 45042,
+      "sha256": "2b9d8f9910a518c8dcd9130027b6401a18831b89b1aeb29b1aa616c351967c59",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-parking",
+      "path": "research/snapshots/NO-parking.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 45176,
+      "sha256": "3672d5cb621e614c8cbf2820dcf0cde7e6600e631db1a3b2a7f1c08ce21aaf17",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-parking-no",
+      "path": "research/snapshots/NO-parking-no.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 51657,
+      "sha256": "67b7a820948135a0f888680f54534ae2c58407b59d85cc881b86fb5c5749f2c3",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-signs",
+      "path": "research/snapshots/NO-signs.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 102863,
+      "sha256": "7c7d0dd3e76cea2b03ca1f5709c0ee588b5c061cd560d63a671e776545266c7d",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-loading",
+      "path": "research/snapshots/NO-loading.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 53606,
+      "sha256": "8760ec4aea4d66ccb1e8e67224f6e3fe2b1a7dc778937df5f2e0507cb9676dcd",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-loading-no",
+      "path": "research/snapshots/NO-loading-no.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 86063,
+      "sha256": "0797a0e1d20b304772ade3a00ca1085ad6fda97ffff909dd9d6138263e01b006",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-speed",
+      "path": "research/snapshots/IS-speed.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 133897,
+      "sha256": "ce38505dbad6bda7486e071322c803bca6c08c8ddea1f0a732839ce84daccdaf",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-alcohol",
+      "path": "research/snapshots/IS-alcohol.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 146447,
+      "sha256": "bf4cfb990f6bb3f4dfa59878d4f1d79391fd1844cd25d407b2647f4bc475e60c",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-law-current",
+      "path": "research/archive-recovery.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-police-alcohol-test",
+      "path": "research/snapshots/IS-police-alcohol-test.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 142725,
+      "sha256": "2662b9561c0f9051665563622065887f10a97adb55486942390c309f024390fd",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-lights",
+      "path": "research/snapshots/IS-lights.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 199627,
+      "sha256": "278b31c8f03461f3723929d1b6f30a95021d8c17aefc49b22a245e3fb54418c7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-fine-calculator",
+      "path": "research/snapshots/IS-fine-calculator.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 250874,
+      "sha256": "716c97f78c00ea5b283747f626d7a461b4d15f85f3113917d3eaacd66c3ce3e4",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-parking",
+      "path": "research/snapshots/IS-parking.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 127953,
+      "sha256": "dd8383fd52e31192abc5fff11213acb9e0860a359ae12c29225a10c028787f6b",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-police-driving",
+      "path": "research/snapshots/IS-police-driving.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 192606,
+      "sha256": "8ff5a5651172c4cba8087974fe351278e1cdc938f7ac0abb68da85b594559291",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-children",
+      "path": "research/snapshots/IS-children.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 182097,
+      "sha256": "bcca83fbd0be0d00d19e3521ea77aec5391d7a792f811a0a08d695b76473b2a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-250-gazette",
+      "path": "source-archive/src-research-is-250-gazette.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 453899,
+      "sha256": "085c5e727d3dfee8bfd1f8cd6720b194463cb64c9211e0dba9e6288636f127bb",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-signals",
+      "path": "research/snapshots/IS-signals.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 412455,
+      "sha256": "d473409c821a85a70d32f2fd99981b8e49fa9304f734765d0eb114b04ef73b9a",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-km-general",
+      "path": "research/snapshots/IS-km-general.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 594850,
+      "sha256": "5bb3398926878f68062f11dbe03ee15ed3ded16169f7741f846f6a4e153c7827",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-km-under10",
+      "path": "research/snapshots/IS-km-under10.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 530266,
+      "sha256": "ed5d703be63d667207b59d26698e19e33dd8838fb61adf90490b3ae66af08f13",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-km-news",
+      "path": "research/snapshots/IS-km-news.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 113490,
+      "sha256": "176794c4cfb486a3c77bbdf01fe89382c0715655aa583b0ad0f7c701cf4d6110",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-vadla-price",
+      "path": "research/snapshots/IS-vadla-price.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 103253,
+      "sha256": "c98c1c52d267e860b7de02240cf61f7cffd91a04cd98dcbd9668a29c2f5ae423",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-vadla-price-pdf",
+      "path": "source-archive/src-research-is-vadla-price-pdf.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 103257,
+      "sha256": "3cb0aebff77cbef0a138c9486a30de015b5dcd5ff518b3d7a15ae0722b945e2c",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-vadla-faq",
+      "path": "research/snapshots/IS-vadla-faq.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 228912,
+      "sha256": "7c5af7136dc92b5c2300a07c5b4eb97add33c016efc3f7ecf9ee474d0b890e4d",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-horna-en",
+      "path": "research/archive-recovery.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-horna-is",
+      "path": "research/archive-recovery.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-hval-news-en",
+      "path": "research/archive-recovery.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-hval-news-is",
+      "path": "research/archive-recovery.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-vakt",
+      "path": "research/archive-recovery.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-tunnels",
+      "path": "research/archive-recovery.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-no-official-signs",
+      "path": "research/images/no-official-signs.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 10779,
+      "sha256": "914cd1f1cf59dac8fb45710e0c37a65a35fbc1ce881de81e871fb3b8fe482d1c",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-is-official-signs",
+      "path": "research/images/is-official-signs.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 8977,
+      "sha256": "92dcd2c05d1a0e175beadf3d02580892574bc0d7ec485d025646d5833d9e78e4",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-no-photo-sandnes",
+      "path": "research/images/no-photo-sandnes-rv44.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 1736,
+      "sha256": "2d4f71d66d0c8c09ede8953254439b15d289af2f4aa9890445e996dd2f925e7c",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-no-photo-rallarvegen",
+      "path": "research/images/no-photo-rallarvegen-haugastol.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 1836,
+      "sha256": "dbe561c5692c1c33f06f6983eddb31dd1c9a3799b74e9104d2bd2589f4705064",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-is-photo-skaftafell",
+      "path": "research/images/is-photo-skaftafell-route1.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 1867,
+      "sha256": "8611b1e1a50db3e07f43f8ed710e813198f75f7713e6f32b8937b34c94dd9b50",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-is-photo-road60",
+      "path": "research/images/is-photo-road60-gravel.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 1889,
+      "sha256": "3d74c4457f06a0e95bb3830c358806f49fa6161fba90470a63f2b06cc7b93d6e",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-no-photo-maridalen",
+      "path": "research/images/no-photo-maridalen-oslo.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 2262,
+      "sha256": "02d7c8e1eb30f6ead7dfb62cbbc81360b07e68e6320344698630ea3692ab7df1",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-no-photo-gamle",
+      "path": "research/images/no-photo-gamle-aurlandsvegen.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 2237,
+      "sha256": "084323c11a7ded1d574f3899e8223f44eadc6b2c453f3b7a759f3af26ff79085",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-no-photo-butunnelen",
+      "path": "research/images/no-photo-butunnelen-hardangerbridge.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 2288,
+      "sha256": "90f4e79aeb1224e96a732f3216cb08a52e2cf1906da42f71cb22aa2f9e6849a0",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-is-photo-f35",
+      "path": "research/images/is-photo-route-f35.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 2004,
+      "sha256": "e36fed53e2bb520725a80965b5db400ef435c99f9d0936cee8a45cd445931968",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-is-photo-foss",
+      "path": "research/images/is-photo-foss-a-sidu-ring-road.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 2299,
+      "sha256": "9bb07aaa3768f55c4131d0d54517330b42146eeb0a29e926aaaa63c3c25963b0",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-is-photo-landmannaleid",
+      "path": "research/images/is-photo-landmannaleid-f225.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 2184,
+      "sha256": "37c60b28a0c89212465b60de90f2d6d46a4bacf57c7cee811b1434b886ec531f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-assets-is-photo-namafjall",
+      "path": "research/images/is-photo-namafjall-route1.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 2394,
+      "sha256": "651ff58ee47a42fd902e8e3c8e4780221e1c03c4a0efda4df447eb88915077e1",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-no-loss-rights",
+      "path": "research/snapshots/NO-loss-rights.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 73156,
+      "sha256": "cb8327a410c6f4ebdc6aa2aa2c66476cf69ae57593952ea3d3ba804e9e606775",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-research-is-hval-risk",
+      "path": "research/archive-recovery.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-recovery-is-hval-toll-ended",
+      "path": "research/archive-recovery.json",
+      "anchor": "hardRiskChecks.hvalfjordur.tollEndedEvidence",
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-recovery-is-hval-2028-proposal",
+      "path": "research/archive-recovery.json",
+      "anchor": "hardRiskChecks.hvalfjordur.publicMediaEvidenceUrl",
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-recovery-is-rental-daily-fee",
+      "path": "research/archive-recovery.json",
+      "anchor": "hardRiskChecks.kilometerFee.officialRentalDailyFeeUrl",
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-recovery-is-km-collection",
+      "path": "research/archive-recovery.json",
+      "anchor": "hardRiskChecks.kilometerFee.officialCollectionNoticeUrl",
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-recovery-is-km-estimate",
+      "path": "research/archive-recovery.json",
+      "anchor": "hardRiskChecks.kilometerFee.officialMissingReadingUrl",
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-recovery-is-1240-index",
+      "path": "research/archive-recovery.json",
+      "anchor": "hardRiskChecks.regulation1240_2019.officialIndexUrl",
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-recovery-is-1240-current",
+      "path": "research/archive-recovery.json",
+      "anchor": "hardRiskChecks.regulation1240_2019.officialCurrentUrl",
+      "kind": "evidence-record",
+      "bytes": 23928,
+      "sha256": "91d020db5c7b7752ab64bb6f003f046b11ba819fb6b7402c2259410a42172f2f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-fjellet-phus-tromso",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-frafjordtunnelen",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-klostergarasjen-bergen",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-oppdal-station-parking",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-riksveg50-aurland",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-rv15-strynefjellet",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-rv827-closed-nordland",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-rv827-brattlitunnel",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-sandefjord-parkomat",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-skibotndalen-e8",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-sthansfjell-tunnel",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-stromsastunnelen-drammen",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-sorastunnelen-bergen",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-tindevegen-hurrungbotn",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-no-photo-vesttunnelen-sandvika",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-fossholli-ring-road-bridge",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-gjadalsa-road1-bridge",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-f910-kreppa-bridge",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-landmannalaugar-dirt-road",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-f910-jokulsa-bridge",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-f35-bridge",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-skeidararsandur-dust-storm",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-f98-highland-road",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-highway35",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-icelandic-sheep-road-risk",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-ring-road-vatnajokull",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-hoffell-single-lane-bridge",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-road1-jokulsa-loni-bridge",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-asset-is-photo-monikubru-austurdalur",
+      "path": "research/image-manifest.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 217199,
+      "sha256": "de339bb6cf4988db7bbdbb248c77c602beda35924b77005bf56568a7678d82a7",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-02-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-02.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-02-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-02.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-04-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-04.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-04-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-04.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-05-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-05.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-05-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-05.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-07-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-07.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-07-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-07.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-08-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-08.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-08-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-08.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-09-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-09.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-09-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-09.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-10-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-10.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-10-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-10.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-11-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-11.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-11-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-11.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-12-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-12.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-12-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-12.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-13-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-13.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-13-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-13.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-15-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-15.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-15-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-15.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-16-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-16.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-16-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-16.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-21-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-21.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-21-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-21.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-23-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-23.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-no-p3-23-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.NO-P3-23.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-01-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-01.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-01-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-01.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-02-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-02.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-02-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-02.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-03-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-03.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-03-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-03.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-05-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-05.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-05-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-05.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-06-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-06.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-06-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-06.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-08-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-08.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-08-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-08.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-09-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-09.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-09-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-09.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-11-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-11.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-11-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-11.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-12-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-12.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-12-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-12.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-13-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-13.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-13-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-13.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-16-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-16.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-16-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-16.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-19-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-19.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-19-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-19.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-20-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-20.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-20-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-20.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-21-primary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-21.primary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-phase3-is-p3-21-secondary",
+      "path": "research/official-sources-phase3.json",
+      "anchor": "facts.IS-P3-21.secondary",
+      "kind": "evidence-record",
+      "bytes": 66937,
+      "sha256": "f642f559989af6c0a380d586ce39ef9acc420f017f9cb06295f103b95924e649",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-law-current",
+      "path": "source-archive/review-2026-09-07/src-audit-is-law-current.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 2149,
+      "sha256": "eca8e5614d03cbe344a4f6292f36b5523392b57d4c4952c6248ce0c6a5067219",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-fines-current",
+      "path": "source-archive/review-2026-09-07/src-audit-is-fines-current.pdf",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 218761,
+      "sha256": "7f19ce85893a54b562cb56a3ae05a78fa1a4886af28e6b13b8056bd21f155975",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-no-oslo-studs",
+      "path": "source-archive/review-2026-09-07/src-audit-no-oslo-studs.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 43223,
+      "sha256": "85c46564f437ff8ca35ab8797b50c2eb459134d4a6923700549b28eb2bf3c25a",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-reyk-meter",
+      "path": "source-archive/review-2026-09-07/src-audit-is-reyk-meter.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 46493,
+      "sha256": "e0619f0fa79c0ff9a34ed969096bb2f7c48a188fed578c7239ba5d6b082c1228",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-no-yield-current",
+      "path": "source-archive/review-2026-09-07/src-audit-no-yield-current.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 114356,
+      "sha256": "bab3b09221ab4b1f479812042155e5b6c8ae90e6bff30249cf58d76701501502",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-reyk-garage",
+      "path": "source-archive/review-2026-09-07/src-audit-is-reyk-garage.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 46734,
+      "sha256": "c5dec0c2290b035575a74a874f4bdcdc42059b1937892efb131168abca94f96c",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-reyk-parking",
+      "path": "source-archive/review-2026-09-07/src-audit-is-reyk-parking.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 66852,
+      "sha256": "ba6ca4afbdccbc4ceed740f6ed8be68ea9a61c9bd3de8bfada4fa1aac03e463f",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-vadla-current",
+      "path": "source-archive/review-2026-09-07/src-audit-is-vadla-current.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 97878,
+      "sha256": "7d0416758dfe06dfbe0a5eb8402c0f186d75a6cebf8b0ba22ca297a0065e4242",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-spolur-price",
+      "path": "source-archive/review-2026-09-07/src-audit-is-spolur-price.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 691750,
+      "sha256": "fe454bc6b96ad8c9d80ede7d6866bd309a27fad3db375484324b7cda4c28b424",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-spolur-faq",
+      "path": "source-archive/review-2026-09-07/src-audit-is-spolur-faq.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 1028116,
+      "sha256": "eb341c079812b78b95c6f98bbec6f527ff1d427f5bc68e687392de9fd780eaf4",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-no-rules-pdf",
+      "path": "source-archive/review-2026-09-07/src-audit-no-rules-pdf.pdf",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 158603,
+      "sha256": "9b7b0b6ee5e3b4768ce8bd5f3c285c14cba56e4a973d62bf896a347f8172d1fb",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-km-current",
+      "path": "source-archive/review-2026-09-07/src-audit-is-km-current.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 599192,
+      "sha256": "c89532c03c74d26e91f67c9f3ebf61bceec8fb19c5d08dedc8e994adbaf669ce",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-daily-current",
+      "path": "source-archive/review-2026-09-07/src-audit-is-daily-current.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 251103,
+      "sha256": "5c6914e875ec917a91de23137195e43963d00269466ee74a1557cf59e4b3be65",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-blue-waiver",
+      "path": "source-archive/review-2026-09-07/src-audit-is-blue-waiver.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 52561,
+      "sha256": "9b5386c16866418eb904b19f3933e8357b6dc3107e648a6d4b7597c76a0d58f8",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-blue-contract",
+      "path": "source-archive/review-2026-09-07/src-audit-is-blue-contract.html",
+      "anchor": null,
+      "kind": "snapshot",
+      "bytes": 64475,
+      "sha256": "9958ab87300a39bc915acb70a1b8c9bf611911408301dc979058d62d3169d253",
+      "recordedHashMatches": true
+    },
+    {
+      "id": "src-audit-is-horna-announcement",
+      "path": "source-archive/review-2026-09-07/src-audit-is-horna-announcement.json",
+      "anchor": null,
+      "kind": "evidence-record",
+      "bytes": 1225,
+      "sha256": "3272a3834489e4f352ce8121ccec89dcf795d429c267fa960dd68e532508a9b4",
+      "recordedHashMatches": true
+    }
+  ],
+  "originals": [
+    {
+      "id": "no-photo-sandnes-rv44",
+      "path": "research/original-assets/photos/norway/norway-sandnes-rv44.png",
+      "sha256": "8739d20bbd76033df7ea4d4391cde8954f4afa7603d2e410729fbcb7eeb4bb54",
+      "bytes": 2790191
+    },
+    {
+      "id": "no-photo-rallarvegen-haugastol",
+      "path": "research/original-assets/photos/norway/norway-rallarvegen-haugastol.jpg",
+      "sha256": "9c01591964c81b0fb72f061f7a345bbf5b00b980cf4a0697c338a63ff55e8418",
+      "bytes": 44755
+    },
+    {
+      "id": "is-photo-skaftafell-route1",
+      "path": "research/original-assets/photos/iceland/iceland-skaftafell-route1-single-lane-bridge.jpg",
+      "sha256": "d6d9b9bc4c901ddbe1faaab5bfd23228aaa33b3ef55315aeffe2d517db722b9b",
+      "bytes": 396431
+    },
+    {
+      "id": "is-photo-road60-gravel",
+      "path": "research/original-assets/photos/iceland/iceland-road60-gravel-road-ahead.JPG",
+      "sha256": "91897fe748cffdf63d23ae7bf36b3b0c729671ff43680a2eb63a821b929aeb5e",
+      "bytes": 4236687
+    },
+    {
+      "id": "no-photo-maridalen-oslo",
+      "path": "research/original-assets/photos/norway/norway-maridalen-oslo.jpg",
+      "sha256": "8161f0bda223d7cd38437a82625512ef4ba8dfc5dcabc0ca4142b8967ca6a150",
+      "bytes": 7915031
+    },
+    {
+      "id": "no-photo-gamle-aurlandsvegen",
+      "path": "research/original-assets/photos/norway/norway-gamle-aurlandsvegen.jpg",
+      "sha256": "ae656294974a19731ed0daf750fa1aedb2cba89128cf0a14248d41f561069a1f",
+      "bytes": 3707357
+    },
+    {
+      "id": "no-photo-butunnelen-hardangerbridge",
+      "path": "research/original-assets/photos/norway/norway-butunnelen-hardangerbridge.jpg",
+      "sha256": "afd36fcb631c82fc6e99624b17b77e006001d7190f6d25bff18c5ee753cbf4a3",
+      "bytes": 10206720
+    },
+    {
+      "id": "is-photo-route-f35",
+      "path": "research/original-assets/photos/iceland/iceland-route-f35.jpg",
+      "sha256": "23d481349eee8d8d682912899678cbda5c6f07f40152f10c060a6e61e831e7b2",
+      "bytes": 50707
+    },
+    {
+      "id": "is-photo-foss-a-sidu-ring-road",
+      "path": "research/original-assets/photos/iceland/iceland-foss-a-sidu-ring-road.jpg",
+      "sha256": "a7a4329b44d28b9cfd2a54fab5189704ea287b96050901b2299c58149d07d7d3",
+      "bytes": 1922967
+    },
+    {
+      "id": "is-photo-landmannaleid-f225",
+      "path": "research/original-assets/photos/iceland/iceland-landmannaleid-f225.jpg",
+      "sha256": "247078de514fe3b0bf7503a66c17346868279792db6fd5650c54bc9451475127",
+      "bytes": 2039351
+    },
+    {
+      "id": "is-photo-namafjall-route1",
+      "path": "research/original-assets/photos/iceland/iceland-namafjall-route1.jpg",
+      "sha256": "56a9302c4f6fe93993b064fe5eaf6d36a9262445206886b288b4144cc0680500",
+      "bytes": 25985805
+    },
+    {
+      "id": "no-photo-fjellet-phus-tromso",
+      "path": "research/original-assets/photos/norway/norway-fjellet-phus-tromso.jpg",
+      "sha256": "9872c9c8c2abbac138eae2717be92082d72a21cb288bfb79950900ebcaf8d851",
+      "bytes": 2867646
+    },
+    {
+      "id": "no-photo-frafjordtunnelen",
+      "path": "research/original-assets/photos/norway/norway-frafjordtunnelen.jpg",
+      "sha256": "2f3b8392ca92d8015bb9f75b1aa4f3eda75d623cd7600e04d01d4f8452700055",
+      "bytes": 215052
+    },
+    {
+      "id": "no-photo-klostergarasjen-bergen",
+      "path": "research/original-assets/photos/norway/norway-klostergarasjen-bergen.jpg",
+      "sha256": "42b353379b740891b3bd9b489f5484f5aceadef624a1ce8f89fb014227677be4",
+      "bytes": 128347
+    },
+    {
+      "id": "no-photo-oppdal-station-parking",
+      "path": "research/original-assets/photos/norway/norway-oppdal-station-parking.jpg",
+      "sha256": "6c5071fafa791babbf850141913fa0cbf536147e5101c581fc214d6fcefe6c66",
+      "bytes": 325549
+    },
+    {
+      "id": "no-photo-riksveg50-aurland",
+      "path": "research/original-assets/photos/norway/norway-riksveg50-aurland.jpg",
+      "sha256": "3a3f7491032d4456b71445fef03bd41c9b38dbdee8a498cbb9c70cc90617444c",
+      "bytes": 461374
+    },
+    {
+      "id": "no-photo-rv15-strynefjellet",
+      "path": "research/original-assets/photos/norway/norway-rv15-strynefjellet.jpg",
+      "sha256": "bab52ee1d5907dba3a80ed2ba3c608984c52fdfa9811ad21fec688e00c8130c3",
+      "bytes": 170522
+    },
+    {
+      "id": "no-photo-rv827-closed-nordland",
+      "path": "research/original-assets/photos/norway/norway-rv827-closed-nordland.jpg",
+      "sha256": "8ffb7a8f8fe1b57f8c08fa04af3edaa54c6d3a34c59b0e70e46c3ec11c1b7d6d",
+      "bytes": 329978
+    },
+    {
+      "id": "no-photo-rv827-brattlitunnel",
+      "path": "research/original-assets/photos/norway/norway-rv827-brattlitunnel.jpg",
+      "sha256": "fc465cafe2baa32a1623abfc272ebb1973955a19ad3bdbf253ae2c65601b1fa2",
+      "bytes": 378865
+    },
+    {
+      "id": "no-photo-sandefjord-parkomat",
+      "path": "research/original-assets/photos/norway/norway-sandefjord-parkomat.jpg",
+      "sha256": "a705016737e56cdd5985ee200bbeb024589cbcfd8533432242599f7c68e63a5a",
+      "bytes": 609563
+    },
+    {
+      "id": "no-photo-skibotndalen-e8",
+      "path": "research/original-assets/photos/norway/norway-skibotndalen-e8.jpg",
+      "sha256": "86d3e43c4cade1c07500430bbee62c1b6461cbb01560c8c3cd7cf3a401495dd2",
+      "bytes": 232482
+    },
+    {
+      "id": "no-photo-sthansfjell-tunnel",
+      "path": "research/original-assets/photos/norway/norway-sthansfjell-tunnel.jpg",
+      "sha256": "995ccf2a836869db8d4c1ae8b49e9992faeb5aa79f97efb58a763b155bd99ae0",
+      "bytes": 311945
+    },
+    {
+      "id": "no-photo-stromsastunnelen-drammen",
+      "path": "research/original-assets/photos/norway/norway-stromsastunnelen-drammen.jpg",
+      "sha256": "f531bb920f0e78a2a8511dd0a05ea74d2df38e2564c6af0f8ab76a739ff25266",
+      "bytes": 415726
+    },
+    {
+      "id": "no-photo-sorastunnelen-bergen",
+      "path": "research/original-assets/photos/norway/norway-sorastunnelen-bergen.jpg",
+      "sha256": "d689e1bfbe795e35baff58675316b0e101ad9b8096df60dddf5d9b6ec174b0a6",
+      "bytes": 444415
+    },
+    {
+      "id": "no-photo-tindevegen-hurrungbotn",
+      "path": "research/original-assets/photos/norway/norway-tindevegen-hurrungbotn.jpg",
+      "sha256": "979b15744b2175e5c4124086898792634aa987f91dd01926ab24897b16c2c4aa",
+      "bytes": 344509
+    },
+    {
+      "id": "no-photo-vesttunnelen-sandvika",
+      "path": "research/original-assets/photos/norway/norway-vesttunnelen-sandvika.jpg",
+      "sha256": "560a9c408e82f3f8dc698179f668a38c5064179b34ca665eb5d299ed27aeaecf",
+      "bytes": 223681
+    },
+    {
+      "id": "is-photo-fossholli-ring-road-bridge",
+      "path": "research/original-assets/photos/iceland/iceland-fossholli-ring-road-bridge.jpg",
+      "sha256": "0ecaa23362c6da0b696775d44ec2330deea295656251ee4b7cbfea2417af9f90",
+      "bytes": 351144
+    },
+    {
+      "id": "is-photo-gjadalsa-road1-bridge",
+      "path": "research/original-assets/photos/iceland/iceland-gjadalsa-road1-bridge.jpg",
+      "sha256": "2f964c494a865142da9338e813a7aceb329d717db09c578e87eefe7afd22695e",
+      "bytes": 349161
+    },
+    {
+      "id": "is-photo-f910-kreppa-bridge",
+      "path": "research/original-assets/photos/iceland/iceland-f910-kreppa-bridge.jpg",
+      "sha256": "d829ee5675026fd1660d891e19aa73bbb662e4b33da5be1ac871ceeae10ac5c6",
+      "bytes": 278230
+    },
+    {
+      "id": "is-photo-landmannalaugar-dirt-road",
+      "path": "research/original-assets/photos/iceland/iceland-landmannalaugar-dirt-road.jpg",
+      "sha256": "0695662dbc8865f256cb92e89012fdc9dbb36ba44a47d8097c3a127d5f19add0",
+      "bytes": 349912
+    },
+    {
+      "id": "is-photo-f910-jokulsa-bridge",
+      "path": "research/original-assets/photos/iceland/iceland-f910-jokulsa-bridge.jpg",
+      "sha256": "959bba8e41578d1771b210c7f08530c04f161c94c7a3b3cc952d23ada7985a2b",
+      "bytes": 274831
+    },
+    {
+      "id": "is-photo-f35-bridge",
+      "path": "research/original-assets/photos/iceland/iceland-f35-bridge.jpg",
+      "sha256": "613eba29a72ca2c697dd9608f085f1e2a93f042e32c7c1884ba9c2b8ba6185d8",
+      "bytes": 238702
+    },
+    {
+      "id": "is-photo-skeidararsandur-dust-storm",
+      "path": "research/original-assets/photos/iceland/iceland-skeidararsandur-dust-storm.jpg",
+      "sha256": "77c062341e9bad8a7f1e0a15d96e3031bd7bbf4c7d225475a8605dd2554f4436",
+      "bytes": 143594
+    },
+    {
+      "id": "is-photo-f98-highland-road",
+      "path": "research/original-assets/photos/iceland/iceland-f98-highland-road.jpg",
+      "sha256": "b1d7e2433eadeb6ab84ebfb6f080a2535a863f8571df539ade7a1aa77c917c2c",
+      "bytes": 260953
+    },
+    {
+      "id": "is-photo-highway35",
+      "path": "research/original-assets/photos/iceland/iceland-highway35.jpg",
+      "sha256": "dcf42fdd8ea9bf4a0126370663b50f5f8441e9743e0e6400a28b8d53a20e8ccb",
+      "bytes": 278208
+    },
+    {
+      "id": "is-photo-icelandic-sheep-road-risk",
+      "path": "research/original-assets/photos/iceland/icelandic-sheep-road-risk.jpg",
+      "sha256": "fc6f273c7dea3bba5c5e6c19dae17c9a84bceda6195c4cf3f1dfe34df6ec5a0f",
+      "bytes": 721957
+    },
+    {
+      "id": "is-photo-ring-road-vatnajokull",
+      "path": "research/original-assets/photos/iceland/iceland-ring-road-vatnajokull.jpg",
+      "sha256": "1e7249c0135545efc00eed6122a4c03cb9278fd89dfb510fc74a71eb8fc5717d",
+      "bytes": 238229
+    },
+    {
+      "id": "is-photo-hoffell-single-lane-bridge",
+      "path": "research/original-assets/photos/iceland/iceland-hoffell-single-lane-bridge.jpg",
+      "sha256": "8a7838c2a2e0f92e4a57debf2928e60958b2a9b205ef398b2f289fa7cbf63898",
+      "bytes": 216079
+    },
+    {
+      "id": "is-photo-road1-jokulsa-loni-bridge",
+      "path": "research/original-assets/photos/iceland/iceland-road1-jokulsa-loni-bridge.jpg",
+      "sha256": "6a205b4b3e7f6a66e284097dd6f9fa73f94340f6cba22c1863fdb41ba3de6c99",
+      "bytes": 293749
+    },
+    {
+      "id": "is-photo-monikubru-austurdalur",
+      "path": "research/original-assets/photos/iceland/iceland-monikubru-austurdalur.jpg",
+      "sha256": "19be3a8eb97b0bf8c8bb6c2f223da39fd61b634b7fb03b6de15dd68f2dcf316d",
+      "bytes": 443246
+    }
+  ]
+}

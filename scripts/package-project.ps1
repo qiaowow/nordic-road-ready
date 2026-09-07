@@ -12,6 +12,11 @@ if (-not $resolvedOutput.StartsWith($deliverablesRoot + [IO.Path]::DirectorySepa
 
 $items = @(
   ".openai",
+  ".github",
+  "github-pages",
+  "research",
+  "source-archive",
+  "vite.pages.config.ts",
   "app",
   "data",
   "db",
